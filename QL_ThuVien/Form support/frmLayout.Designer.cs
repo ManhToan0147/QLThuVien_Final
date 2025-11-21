@@ -57,6 +57,7 @@
             this.btnQLSach = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelControl.SuspendLayout();
             this.panelFooter.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -167,6 +168,8 @@
             // 
             this.panelSidebar.AutoScroll = true;
             this.panelSidebar.BackColor = System.Drawing.Color.White;
+            this.panelSidebar.Controls.Add(this.lblTenToChuc);
+            this.panelSidebar.Controls.Add(this.label3);
             this.panelSidebar.Controls.Add(this.btnQLDanhMuc);
             this.panelSidebar.Controls.Add(this.btnSignIn_Out);
             this.panelSidebar.Controls.Add(this.label2);
@@ -180,7 +183,6 @@
             this.panelSidebar.Controls.Add(this.btnQLSach);
             this.panelSidebar.Controls.Add(this.btnHome);
             this.panelSidebar.Controls.Add(this.panel1);
-            this.panelSidebar.Controls.Add(this.lblTenToChuc);
             this.panelSidebar.Controls.Add(this.pictureBox1);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 53);
@@ -214,7 +216,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(33, 1040);
+            this.label2.Location = new System.Drawing.Point(33, 1045);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 9;
@@ -225,7 +227,7 @@
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(35, 1016);
+            this.panel2.Location = new System.Drawing.Point(35, 1021);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(350, 2);
             this.panel2.TabIndex = 8;
@@ -235,7 +237,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(35, 429);
+            this.label1.Location = new System.Drawing.Point(35, 442);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 4;
@@ -246,7 +248,7 @@
             this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(35, 405);
+            this.panel1.Location = new System.Drawing.Point(35, 418);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 2);
             this.panel1.TabIndex = 2;
@@ -254,13 +256,13 @@
             // lblTenToChuc
             // 
             this.lblTenToChuc.AutoSize = true;
-            this.lblTenToChuc.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenToChuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
-            this.lblTenToChuc.Location = new System.Drawing.Point(50, 301);
+            this.lblTenToChuc.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenToChuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(154)))));
+            this.lblTenToChuc.Location = new System.Drawing.Point(133, 280);
             this.lblTenToChuc.Name = "lblTenToChuc";
-            this.lblTenToChuc.Size = new System.Drawing.Size(336, 65);
+            this.lblTenToChuc.Size = new System.Drawing.Size(171, 45);
             this.lblTenToChuc.TabIndex = 1;
-            this.lblTenToChuc.Text = "NEU LIBRARY";
+            this.lblTenToChuc.Text = "THƯ VIỆN";
             // 
             // panelContainer
             // 
@@ -308,7 +310,7 @@
             this.btnQLDanhMuc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQLDanhMuc.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnQLDanhMuc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnQLDanhMuc.Location = new System.Drawing.Point(33, 560);
+            this.btnQLDanhMuc.Location = new System.Drawing.Point(33, 573);
             this.btnQLDanhMuc.Name = "btnQLDanhMuc";
             this.btnQLDanhMuc.PressedColor = System.Drawing.Color.LightGray;
             this.btnQLDanhMuc.Size = new System.Drawing.Size(367, 79);
@@ -398,7 +400,7 @@
             this.btnBaoCao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoCao.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnBaoCao.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBaoCao.Location = new System.Drawing.Point(35, 900);
+            this.btnBaoCao.Location = new System.Drawing.Point(35, 913);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.PressedColor = System.Drawing.Color.LightGray;
             this.btnBaoCao.Size = new System.Drawing.Size(367, 79);
@@ -428,7 +430,7 @@
             this.btnQLMuonTra.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQLMuonTra.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnQLMuonTra.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnQLMuonTra.Location = new System.Drawing.Point(35, 815);
+            this.btnQLMuonTra.Location = new System.Drawing.Point(35, 828);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
             this.btnQLMuonTra.PressedColor = System.Drawing.Color.LightGray;
             this.btnQLMuonTra.Size = new System.Drawing.Size(367, 79);
@@ -458,7 +460,7 @@
             this.btnQLNguoiDung.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQLNguoiDung.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnQLNguoiDung.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnQLNguoiDung.Location = new System.Drawing.Point(35, 730);
+            this.btnQLNguoiDung.Location = new System.Drawing.Point(35, 743);
             this.btnQLNguoiDung.Name = "btnQLNguoiDung";
             this.btnQLNguoiDung.PressedColor = System.Drawing.Color.LightGray;
             this.btnQLNguoiDung.Size = new System.Drawing.Size(367, 79);
@@ -488,7 +490,7 @@
             this.btnQLSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQLSach.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnQLSach.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnQLSach.Location = new System.Drawing.Point(35, 645);
+            this.btnQLSach.Location = new System.Drawing.Point(35, 658);
             this.btnQLSach.Name = "btnQLSach";
             this.btnQLSach.PressedColor = System.Drawing.Color.LightGray;
             this.btnQLSach.Size = new System.Drawing.Size(367, 79);
@@ -518,7 +520,7 @@
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnHome.Location = new System.Drawing.Point(35, 475);
+            this.btnHome.Location = new System.Drawing.Point(35, 488);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.LightGray;
             this.btnHome.Size = new System.Drawing.Size(367, 79);
@@ -530,13 +532,24 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QL_ThuVien.Properties.Resources.Logo_DH_Kinh_Te_Quoc_Dan_NEU;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 48);
+            this.pictureBox1.Image = global::QL_ThuVien.Properties.Resources.New_Logo_School;
+            this.pictureBox1.Location = new System.Drawing.Point(92, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 225);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(57)))), ((int)(((byte)(154)))));
+            this.label3.Location = new System.Drawing.Point(52, 330);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(332, 65);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "LONG XUYÊN";
             // 
             // frmLayout
             // 
@@ -598,6 +611,7 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Button btnQLDanhMuc;
+        private System.Windows.Forms.Label label3;
     }
 }
 

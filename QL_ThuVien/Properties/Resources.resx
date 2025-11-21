@@ -127,6 +127,9 @@
   <data name="avatar_default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar_default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="New Logo School" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Logo School.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,14 +199,14 @@
   <data name="book-open-cover (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book-open-cover (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_reject" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_reject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="book-open-reader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book-open-reader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pen-nib" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pen-nib.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="member-list (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member-list (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +238,8 @@
   <data name="eye-crossed (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye-crossed (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pen-nib" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pen-nib.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_reject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_reject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="invite-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invite-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,9 +292,10 @@
   <data name="guide-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guide-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="caret-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caret-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
+  <data name="New Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

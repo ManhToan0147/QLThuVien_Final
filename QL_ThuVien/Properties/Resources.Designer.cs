@@ -513,6 +513,26 @@ namespace QL_ThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap New_Logo {
+            get {
+                object obj = ResourceManager.GetObject("New Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Logo_School {
+            get {
+                object obj = ResourceManager.GetObject("New Logo School", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pen_nib {
             get {
                 object obj = ResourceManager.GetObject("pen-nib", resourceCulture);

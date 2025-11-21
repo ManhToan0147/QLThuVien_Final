@@ -857,6 +857,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\avatar_default.png" />
+    <None Include="Resources\New Logo.png" />
+    <None Include="Resources\New Logo School.png" />
     <None Include="Resources\categories %283%29.png" />
     <None Include="Resources\categories %282%29.png" />
     <None Include="Resources\categories.png" />
