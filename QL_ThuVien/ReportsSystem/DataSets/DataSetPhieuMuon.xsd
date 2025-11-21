@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDGMuon" targetNamespace="http://tempuri.org/DataSetDGMuon.xsd" xmlns:mstns="http://tempuri.org/DataSetDGMuon.xsd" xmlns="http://tempuri.org/DataSetDGMuon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDGMuon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetDGMuon" msprop:Generator_DataSetName="DataSetDGMuon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTablePhieuMuon" msprop:Generator_RowEvHandlerName="DataTablePhieuMuonRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTablePhieuMuonRowDeleted" msprop:Generator_RowDeletingName="DataTablePhieuMuonRowDeleting" msprop:Generator_RowEvArgName="DataTablePhieuMuonRowChangeEvent" msprop:Generator_TablePropName="DataTablePhieuMuon" msprop:Generator_RowChangedName="DataTablePhieuMuonRowChanged" msprop:Generator_RowChangingName="DataTablePhieuMuonRowChanging" msprop:Generator_TableClassName="DataTablePhieuMuonDataTable" msprop:Generator_RowClassName="DataTablePhieuMuonRow" msprop:Generator_TableVarName="tableDataTablePhieuMuon" msprop:Generator_UserTableName="DataTablePhieuMuon">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaPhieuMuon" msprop:Generator_ColumnPropNameInRow="MaPhieuMuon" msprop:Generator_ColumnPropNameInTable="MaPhieuMuonColumn" msprop:Generator_ColumnVarNameInTable="columnMaPhieuMuon" msprop:Generator_UserColumnName="MaPhieuMuon" type="xs:string" minOccurs="0" />
+              <xs:element name="MaDocGia" msprop:Generator_ColumnPropNameInRow="MaDocGia" msprop:Generator_ColumnPropNameInTable="MaDocGiaColumn" msprop:Generator_ColumnVarNameInTable="columnMaDocGia" msprop:Generator_UserColumnName="MaDocGia" type="xs:string" minOccurs="0" />
+              <xs:element name="MaKieuMuon" msprop:Generator_ColumnPropNameInRow="MaKieuMuon" msprop:Generator_ColumnPropNameInTable="MaKieuMuonColumn" msprop:Generator_ColumnVarNameInTable="columnMaKieuMuon" msprop:Generator_UserColumnName="MaKieuMuon" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayMuon" msprop:Generator_ColumnPropNameInRow="NgayMuon" msprop:Generator_ColumnPropNameInTable="NgayMuonColumn" msprop:Generator_ColumnVarNameInTable="columnNgayMuon" msprop:Generator_UserColumnName="NgayMuon" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HanTra" msprop:Generator_ColumnPropNameInRow="HanTra" msprop:Generator_ColumnPropNameInTable="HanTraColumn" msprop:Generator_ColumnVarNameInTable="columnHanTra" msprop:Generator_UserColumnName="HanTra" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NgayThucTra" msprop:Generator_ColumnPropNameInRow="NgayThucTra" msprop:Generator_ColumnPropNameInTable="NgayThucTraColumn" msprop:Generator_ColumnVarNameInTable="columnNgayThucTra" msprop:Generator_UserColumnName="NgayThucTra" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MaThuThu" msprop:Generator_ColumnPropNameInRow="MaThuThu" msprop:Generator_ColumnPropNameInTable="MaThuThuColumn" msprop:Generator_ColumnVarNameInTable="columnMaThuThu" msprop:Generator_UserColumnName="MaThuThu" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

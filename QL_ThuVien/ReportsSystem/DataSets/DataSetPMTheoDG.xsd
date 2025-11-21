@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPMTheoDG" targetNamespace="http://tempuri.org/DataSetPMTheoDG.xsd" xmlns:mstns="http://tempuri.org/DataSetPMTheoDG.xsd" xmlns="http://tempuri.org/DataSetPMTheoDG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPMTheoDG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetPMTheoDG" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPMTheoDG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTablePMTDG" msprop:Generator_RowEvHandlerName="DataTablePMTDGRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTablePMTDGRowDeleted" msprop:Generator_RowDeletingName="DataTablePMTDGRowDeleting" msprop:Generator_RowEvArgName="DataTablePMTDGRowChangeEvent" msprop:Generator_TablePropName="DataTablePMTDG" msprop:Generator_RowChangedName="DataTablePMTDGRowChanged" msprop:Generator_UserTableName="DataTablePMTDG" msprop:Generator_RowChangingName="DataTablePMTDGRowChanging" msprop:Generator_RowClassName="DataTablePMTDGRow" msprop:Generator_TableClassName="DataTablePMTDGDataTable" msprop:Generator_TableVarName="tableDataTablePMTDG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaPhieuMuon" msprop:Generator_ColumnPropNameInTable="MaPhieuMuonColumn" msprop:Generator_ColumnPropNameInRow="MaPhieuMuon" msprop:Generator_UserColumnName="MaPhieuMuon" msprop:Generator_ColumnVarNameInTable="columnMaPhieuMuon" type="xs:string" minOccurs="0" />
+              <xs:element name="HoTen" msprop:Generator_ColumnPropNameInTable="HoTenColumn" msprop:Generator_ColumnPropNameInRow="HoTen" msprop:Generator_UserColumnName="HoTen" msprop:Generator_ColumnVarNameInTable="columnHoTen" type="xs:string" minOccurs="0" />
+              <xs:element name="TenKieuMuon" msprop:Generator_ColumnPropNameInTable="TenKieuMuonColumn" msprop:Generator_ColumnPropNameInRow="TenKieuMuon" msprop:Generator_UserColumnName="TenKieuMuon" msprop:Generator_ColumnVarNameInTable="columnTenKieuMuon" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayMuon" msprop:Generator_ColumnPropNameInTable="NgayMuonColumn" msprop:Generator_ColumnPropNameInRow="NgayMuon" msprop:Generator_UserColumnName="NgayMuon" msprop:Generator_ColumnVarNameInTable="columnNgayMuon" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HanTra" msprop:Generator_ColumnPropNameInTable="HanTraColumn" msprop:Generator_ColumnPropNameInRow="HanTra" msprop:Generator_UserColumnName="HanTra" msprop:Generator_ColumnVarNameInTable="columnHanTra" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TenDauSach" msprop:Generator_ColumnPropNameInTable="TenDauSachColumn" msprop:Generator_ColumnPropNameInRow="TenDauSach" msprop:Generator_UserColumnName="TenDauSach" msprop:Generator_ColumnVarNameInTable="columnTenDauSach" type="xs:string" minOccurs="0" />
+              <xs:element name="MaDocGia" msprop:Generator_UserColumnName="MaDocGia" msprop:Generator_ColumnPropNameInTable="MaDocGiaColumn" msprop:Generator_ColumnPropNameInRow="MaDocGia" msprop:Generator_ColumnVarNameInTable="columnMaDocGia" type="xs:string" minOccurs="0" />
+              <xs:element name="TienCoc" msprop:Generator_ColumnPropNameInRow="TienCoc" msprop:Generator_ColumnPropNameInTable="TienCocColumn" msprop:Generator_ColumnVarNameInTable="columnTienCoc" msprop:Generator_UserColumnName="TienCoc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
