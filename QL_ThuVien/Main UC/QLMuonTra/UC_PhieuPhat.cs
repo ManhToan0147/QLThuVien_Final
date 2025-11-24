@@ -394,7 +394,12 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            int currentIndex = dgvPhieuPhat.CurrentRow.Index;
+            if (dgvPhieuPhat.CurrentRow == null || dgvPhieuPhat.Rows.Count == 0)
+            {
+                return;
+            }
+
+                int currentIndex = dgvPhieuPhat.CurrentRow.Index;
             string currentMaPP = selectedMaPP;
 
             // 1. Load lại danh sách phiếu phạt (cập nhật TongTienPhat)
@@ -445,6 +450,39 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 {
                     reportForm.ShowDialog();
                 }
+            }
+        }
+
+        private void dgvPhieuMuon_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex < 0 || dvPP == null) return;
+
+            string maPhieuMuon = dgvPhieuMuon.Rows[e.RowIndex].Cells["MaPhieuMuon1"].Value?.ToString();
+            if (string.IsNullOrEmpty(maPhieuMuon)) return;
+
+            // Check xem phiếu mượn này có trong dvPP (danh sách phiếu phạt) không
+            bool daTonTai = false;
+            foreach (DataRowView row in dvPP)
+            {
+                if (row["MaPhieuMuon"].ToString() == maPhieuMuon)
+                {
+                    daTonTai = true;
+                    break;
+                }
+            }
+
+            // Nếu đã có phiếu phạt → màu đỏ, in nghiêng
+            if (daTonTai)
+            {
+                dgvPhieuMuon.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Red;
+                dgvPhieuMuon.Rows[e.RowIndex].DefaultCellStyle.Font =
+                    new Font(dgvPhieuMuon.Font, FontStyle.Regular);
+            }
+            else
+            {
+                dgvPhieuMuon.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Black;
+                dgvPhieuMuon.Rows[e.RowIndex].DefaultCellStyle.Font =
+                    new Font(dgvPhieuMuon.Font, FontStyle.Regular);
             }
         }
 

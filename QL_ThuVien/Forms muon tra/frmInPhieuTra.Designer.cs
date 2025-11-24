@@ -33,18 +33,18 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.reportViewer1.AutoSize = true;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1459, 972);
+            this.reportViewer1.Size = new System.Drawing.Size(1194, 1013);
             this.reportViewer1.TabIndex = 0;
             // 
             // frmInPhieuTra
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1459, 969);
+            this.ClientSize = new System.Drawing.Size(1194, 1013);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmInPhieuTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

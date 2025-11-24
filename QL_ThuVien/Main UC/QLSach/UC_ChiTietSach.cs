@@ -90,7 +90,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                 using (con = new SqlConnection(strCon))
                 {
                     con.Open();
-                    string sql = $"SELECT {columnName} FROM {tableName}";
+                    string sql = $"SELECT {columnName} FROM {tableName} order by {columnName}";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

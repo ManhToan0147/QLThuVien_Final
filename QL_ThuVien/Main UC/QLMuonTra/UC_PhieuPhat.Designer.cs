@@ -241,6 +241,7 @@
             this.dgvPhieuMuon.RowTemplate.Height = 50;
             this.dgvPhieuMuon.Size = new System.Drawing.Size(874, 210);
             this.dgvPhieuMuon.TabIndex = 0;
+            this.dgvPhieuMuon.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPhieuMuon_CellFormatting);
             this.dgvPhieuMuon.SelectionChanged += new System.EventHandler(this.dgvPhieuMuon_SelectionChanged);
             this.dgvPhieuMuon.DoubleClick += new System.EventHandler(this.dgvPhieuMuon_DoubleClick);
             // 
