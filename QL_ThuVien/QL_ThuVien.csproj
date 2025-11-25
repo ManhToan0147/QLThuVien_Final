@@ -103,6 +103,12 @@
     <Compile Include="Form danh muc\frmChuDe.Designer.cs">
       <DependentUpon>frmChuDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form support\frmLocNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form support\frmLocNgay.Designer.cs">
+      <DependentUpon>frmLocNgay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form support\frmNhapTacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -466,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form danh muc\frmChuDe.resx">
       <DependentUpon>frmChuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form support\frmLocNgay.resx">
+      <DependentUpon>frmLocNgay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form support\frmNhapTacGia.resx">
       <DependentUpon>frmNhapTacGia.cs</DependentUpon>

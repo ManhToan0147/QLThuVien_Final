@@ -1436,3 +1436,4 @@ D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVie
 D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.Up2Date
 D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\obj\Debug\QL_ThuVien.exe
 D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
+D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\obj\Debug\QL_ThuVien.Form_support.frmLocNgay.resources

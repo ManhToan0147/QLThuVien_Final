@@ -45,6 +45,7 @@ namespace QL_ThuVien
 
         private void frmLayout_Load(object sender, EventArgs e)
         {
+
             btnHome.Checked = true;
             var uc = new UC_TrangChu();
 
@@ -95,7 +96,7 @@ namespace QL_ThuVien
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            var uc = new UC_TrangChu();
+            var uc = new UC_Dashboard();
             addUserControl(uc); 
         }
 

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|d:\\downloads\\k\u00EC 2 - n\u0103m 3\\project t\u1ED5ng h\u1EE3p\\quanlythuvien_new -v4\\ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qldanhmuc\\uc_dmkhosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|d:\\downloads\\k\u00EC 2 - n\u0103m 3\\project t\u1ED5ng h\u1EE3p\\quanlythuvien_new -v4\\ql_thuvien\\main uc\\qlnguoidung\\uc_qlthuthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qlnguoidung\\uc_qlthuthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlnguoidung\\uc_qlthuthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlsach\\uc_chitietsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|d:\\downloads\\k\u00EC 2 - n\u0103m 3\\project t\u1ED5ng h\u1EE3p\\quanlythuvien_new -v4\\ql_thuvien\\main uc\\trangchu\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\trangchu\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\trangchu\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -514,7 +514,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -527,8 +527,7 @@
               "ViewState": "AgIAAC8BAAAAAAAAAAAAAD4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T20:46:05.235Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -540,44 +539,7 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\TrangChu\\UC_TrangChu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T03:45:52.236Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_QLThuThu.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
-              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:31:35.119Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UC_DMKhoSach.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
-              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T14:55:25.116Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_QLTaiKhoan.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
-              "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:23:56.402Z",
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -590,6 +552,39 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T16:18:25.978Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_QLThuThu.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:31:35.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_DMKhoSach.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T14:55:25.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_QLTaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:23:56.402Z"
             },
             {
               "$type": "Document",
@@ -633,8 +628,174 @@
               "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
               "RelativeToolTip": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:20:26.74Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-20T19:20:26.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 128,
+              "Title": "frmSignIn.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
+              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
+              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:21:23.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 126,
+              "Title": "frmHienThiBanDau.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
+              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
+              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:53:06.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 125,
+              "Title": "frmLayout.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
+              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
+              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:20:40.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "frmInPhieuPhat.Designer.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:06:44.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "frmInPhieuPhat.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T15:46:51.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "frmInPhieuTra.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T15:47:01.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "frmPhieuTra.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T08:20:21.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "frmTraSach.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T09:36:31.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "frmNXB.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:21:07.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "frmLoaiSach.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:20:43.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "frmKhoSach.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:20:32.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "frmChuDe.cs",
+              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
+              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:20:26.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 129,
+              "Title": "ChiTietSach.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
+              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
+              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:18:09.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 133,
+              "Title": "UC_QLThuThu.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
+              "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
+              "RelativeToolTip": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T16:34:55.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 134,
+              "Title": "UC_QLDocGia.cs",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
+              "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
+              "RelativeToolTip": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:37:22.366Z"
             },
             {
               "$type": "Bookmark",
@@ -915,173 +1076,6 @@
               "RelativeToolTip": "..\\QuanLyThuVien_New -v3\\QL_ThuVien\\Form support\\frmLayout.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T18:41:46.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 128,
-              "Title": "frmSignIn.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
-              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
-              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:21:23.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 126,
-              "Title": "frmHienThiBanDau.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
-              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
-              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:53:06.097Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 125,
-              "Title": "frmLayout.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
-              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
-              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:20:40.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 103,
-              "Title": "frmInPhieuPhat.Designer.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:06:44.141Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 104,
-              "Title": "frmInPhieuPhat.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:46:51.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 105,
-              "Title": "frmInPhieuTra.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:47:01.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 109,
-              "Title": "frmPhieuTra.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T08:20:21.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 110,
-              "Title": "frmTraSach.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T09:36:31.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 111,
-              "Title": "frmNXB.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:21:07.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 112,
-              "Title": "frmLoaiSach.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:20:43.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 113,
-              "Title": "frmKhoSach.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:20:32.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 114,
-              "Title": "frmChuDe.cs",
-              "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
-              "ToolTip": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:20:26.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 129,
-              "Title": "ChiTietSach.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
-              "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
-              "RelativeToolTip": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T06:18:09.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 133,
-              "Title": "UC_QLThuThu.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
-              "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
-              "RelativeToolTip": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:34:55.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 134,
-              "Title": "UC_QLDocGia.cs",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
-              "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
-              "RelativeToolTip": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:37:22.366Z"
             },
             {
               "$type": "Document",
@@ -1846,8 +1840,7 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
               "ViewState": "AgIAAH0AAAAAAAAAAAAiwPcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:29:31.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:29:31.268Z"
             },
             {
               "$type": "Document",
@@ -1981,8 +1974,7 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T13:11:51.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T13:11:51.843Z"
             },
             {
               "$type": "Document",
@@ -2006,8 +1998,7 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:07:46.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T14:07:46.608Z"
             },
             {
               "$type": "Document",

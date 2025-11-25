@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\caidat\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\caidat\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qldanhmuc\\uc_dmkhosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qldanhmuc\\uc_dmkhosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|d:\\downloads\\k\u00EC 2 - n\u0103m 3\\project t\u1ED5ng h\u1EE3p\\quanlythuvien_new -v4\\ql_thuvien\\main uc\\qlnguoidung\\uc_qlthuthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlnguoidung\\uc_qlthuthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qlsach\\uc_chitietsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlsach\\uc_chitietsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|d:\\downloads\\k\u00EC 2 - n\u0103m 3\\project t\u1ED5ng h\u1EE3p\\quanlythuvien_new -v4\\ql_thuvien\\main uc\\trangchu\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\trangchu\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qlsach\\uc_cuonsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlsach\\uc_cuonsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qlsach\\uc_chitietsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qlsach\\uc_chitietsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qlmuontra\\uc_phieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -63,20 +79,8 @@
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qldanhmuc\\uc_dmloaisach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\qldanhmuc\\uc_dmkhosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\qldanhmuc\\uc_dmkhosach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\caidat\\uc_saoluu\u0026phuchoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\caidat\\uc_saoluu\u0026phuchoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\caidat\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\caidat\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|solutionrelative:ql_thuvien\\main uc\\baocao\\uc_baocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D4FDF0E-2818-4976-B626-DFC92D270DD9}|QL_ThuVien\\QL_ThuVien.csproj|D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\ql_thuvien\\forms muon tra\\frmphieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -510,11 +514,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "UC_TrangChu.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\TrangChu\\UC_TrangChu.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\TrangChu\\UC_TrangChu.cs",
@@ -528,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UC_TrangChu.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\TrangChu\\UC_TrangChu.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\TrangChu\\UC_TrangChu.cs",
@@ -540,34 +544,56 @@
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmInPhieuMuon.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:02:07.391Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmInPhieuPhat.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs [Design]",
+              "Title": "UC_QLThuThu.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLNguoiDung\\UC_QLThuThu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:02:09.176Z"
+              "WhenOpened": "2025-11-21T16:31:35.119Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UC_DMKhoSach.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T14:55:25.116Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_QLTaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:23:56.402Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UC_BaoCao.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:18:25.978Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UC_DMChuDe.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMChuDe.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMChuDe.cs",
@@ -578,7 +604,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
+              "Title": "frmInPhieuPhat.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs [Design]",
+              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuPhat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T18:02:09.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmInPhieuMuon.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs [Design]",
+              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Forms muon tra\\frmInPhieuMuon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T18:02:07.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_ChiTietSach.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
+              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
+              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
+              "RelativeToolTip": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T19:20:26.74Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UC_Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\TrangChu\\UC_Dashboard.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\TrangChu\\UC_Dashboard.cs",
@@ -589,18 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UC_ChiTietSach.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:20:26.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UC_PhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.cs",
@@ -611,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "UC_CuonSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_CuonSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_CuonSach.cs",
@@ -622,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "UC_DauSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_DauSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_DauSach.cs",
@@ -633,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "UC_PhieuPhat.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuPhat.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuPhat.cs",
@@ -644,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "UC_PhieuMuon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.cs",
@@ -655,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "UC_DMViPham.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMViPham.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMViPham.cs",
@@ -666,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "UC_DMNhaXB.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMNhaXB.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMNhaXB.cs",
@@ -677,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "UC_DMLoaiSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMLoaiSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMLoaiSach.cs",
@@ -688,18 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UC_DMKhoSach.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMKhoSach.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T14:55:25.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "UC_DMTacGia.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMTacGia.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_DMTacGia.cs",
@@ -710,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "UC_SaoLuu\u0026PhucHoi.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_SaoLuu\u0026PhucHoi.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_SaoLuu\u0026PhucHoi.cs",
@@ -721,29 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UC_QLTaiKhoan.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:23:56.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UC_BaoCao.cs [Design]",
-              "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs",
-              "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs",
-              "ToolTip": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs [Design]",
-              "RelativeToolTip": "..\\QuanLyThuVien_New -v3 - Copy\\QL_ThuVien\\Main UC\\BaoCao\\UC_BaoCao.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:18:25.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "frmNhapSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmNhapSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmNhapSach.cs",
@@ -754,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "frmInPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmInPhieuTra.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmInPhieuTra.cs",
@@ -765,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "frmPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmPhieuTra.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmPhieuTra.cs",
@@ -776,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ChiTietSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\ChiTietSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\ChiTietSach.cs",
@@ -787,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "frmNXB.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form danh muc\\frmNXB.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form danh muc\\frmNXB.cs",
@@ -798,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "frmLoaiSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form danh muc\\frmLoaiSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form danh muc\\frmLoaiSach.cs",
@@ -809,7 +829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "frmKhoSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form danh muc\\frmKhoSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form danh muc\\frmKhoSach.cs",
@@ -820,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "frmChuDe.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form danh muc\\frmChuDe.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form danh muc\\frmChuDe.cs",
@@ -831,7 +851,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "UC_ThongTinCaNhan.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Support UC\\UC_ThongTinCaNhan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Support UC\\UC_ThongTinCaNhan.cs",
@@ -842,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "frmPhieuTra.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmPhieuTra.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmPhieuTra.Designer.cs",
@@ -854,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "frmTraSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Forms muon tra\\frmTraSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Forms muon tra\\frmTraSach.cs",
@@ -865,7 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "frmHienThiBanDau.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmHienThiBanDau.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmHienThiBanDau.cs",
@@ -876,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Logo-DH-Kinh-Te-Quoc-Dan-NEU.png - PNG [1200x1200, 32 bit, PNG]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Resources\\Logo-DH-Kinh-Te-Quoc-Dan-NEU.png",
               "RelativeDocumentMoniker": "QL_ThuVien\\Resources\\Logo-DH-Kinh-Te-Quoc-Dan-NEU.png",
@@ -887,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "frmLayout.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmLayout.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmLayout.cs",
@@ -898,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 128,
               "Title": "frmSignIn.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
@@ -909,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 126,
               "Title": "frmHienThiBanDau.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
@@ -920,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 125,
               "Title": "frmLayout.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
@@ -931,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "frmInPhieuPhat.Designer.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.Designer.cs",
@@ -943,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "frmInPhieuPhat.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
@@ -954,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "frmInPhieuTra.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
@@ -965,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "frmPhieuTra.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
@@ -976,7 +996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "frmTraSach.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
@@ -987,7 +1007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "frmNXB.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNXB.cs",
@@ -999,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "frmLoaiSach.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
@@ -1010,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "frmKhoSach.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
@@ -1021,7 +1041,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 114,
               "Title": "frmChuDe.cs",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
@@ -1032,7 +1052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 129,
               "Title": "ChiTietSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
@@ -1043,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 133,
               "Title": "UC_QLThuThu.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
               "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
@@ -1054,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 134,
               "Title": "UC_QLDocGia.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
               "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
@@ -1065,7 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "UC_QLSach_Ribbon.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.cs",
@@ -1077,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "frmBCPhPhatTheoDG.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCPhPhatTheoDG.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCPhPhatTheoDG.cs",
@@ -1089,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "UC_QLSach_Ribbon.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.Designer.cs",
@@ -1101,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "UC_QLSach_Ribbon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLSach_Ribbon.cs",
@@ -1112,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "DBConfig.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\DBConfig.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\DBConfig.cs",
@@ -1124,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "frmHienThiBanDau.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmHienThiBanDau.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmHienThiBanDau.cs",
@@ -1136,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "UC_QLTacGia.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_QLTacGia.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_QLTacGia.cs",
@@ -1148,7 +1168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UC_QLTacGia.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLDanhMuc\\UC_QLTacGia.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLDanhMuc\\UC_QLTacGia.cs",
@@ -1159,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Program.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Program.cs",
@@ -1171,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "UC_QLNguoiDung_Ribbon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLNguoiDung_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLNguoiDung_Ribbon.cs",
@@ -1182,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "UC_CuonSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_CuonSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_CuonSach.cs",
@@ -1194,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "frmLayout.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmLayout.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmLayout.cs",
@@ -1206,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "UC_CaiDat_Ribbon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_CaiDat_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_CaiDat_Ribbon.cs",
@@ -1217,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "UC_QLMuonTra_Ribbon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLMuonTra_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLMuonTra_Ribbon.cs",
@@ -1228,7 +1248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 131,
               "Title": "UC_QLDocGia.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
               "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLDocGia\\UC_QLDocGia.cs",
@@ -1239,7 +1259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "frmSignIn.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmSignIn.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmSignIn.cs",
@@ -1250,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "frmSignIn.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmSignIn.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmSignIn.cs",
@@ -1262,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "UC_CaiDat_Ribbon.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_CaiDat_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_CaiDat_Ribbon.cs",
@@ -1274,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "frmHienThiBanDau.resx",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\frmHienThiBanDau.resx",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\frmHienThiBanDau.resx",
@@ -1285,7 +1305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "ChiTietSach.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\ChiTietSach.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\ChiTietSach.Designer.cs",
@@ -1297,7 +1317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "ChiTietSach.resx",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\ChiTietSach.resx",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\ChiTietSach.resx",
@@ -1308,7 +1328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "UC_PhieuMuon.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.cs",
@@ -1320,7 +1340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "UC_DauSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_DauSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_DauSach.cs",
@@ -1332,7 +1352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "rptPhPhatTheoDG.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptPhPhatTheoDG.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptPhPhatTheoDG.rdlc",
@@ -1343,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "UC_SaoLuu\u0026PhucHoi.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_SaoLuu\u0026PhucHoi.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_SaoLuu\u0026PhucHoi.cs",
@@ -1355,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "ChiTietSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Form support\\ChiTietSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Form support\\ChiTietSach.cs",
@@ -1367,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "frmBCPhPhatTheoDG.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCPhPhatTheoDG.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCPhPhatTheoDG.cs",
@@ -1378,7 +1398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "frmBCTongHopTheoLoaiVP.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCTongHopTheoLoaiVP.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCTongHopTheoLoaiVP.cs",
@@ -1390,7 +1410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "frmBCTongHopTheoLoaiVP.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCTongHopTheoLoaiVP.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCTongHopTheoLoaiVP.cs",
@@ -1401,7 +1421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 117,
               "Title": "frmTraSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmTraSach.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmTraSach.cs",
@@ -1412,7 +1432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 118,
               "Title": "frmNhapSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmNhapSach.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmNhapSach.cs",
@@ -1423,7 +1443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 119,
               "Title": "frmPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmPhieuTra.cs",
@@ -1434,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 120,
               "Title": "frmInPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuTra.cs",
@@ -1445,7 +1465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 121,
               "Title": "frmInPhieuPhat.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuPhat.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuPhat.cs",
@@ -1456,7 +1476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 122,
               "Title": "frmInPhieuMuon.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuMuon.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\Form muon tra\\frmInPhieuMuon.cs",
@@ -1467,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 123,
               "Title": "frmLayout.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmLayout.cs",
@@ -1478,7 +1498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 132,
               "Title": "UC_QLThuThu.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
               "RelativeDocumentMoniker": "..\\QuanLyThuVien_New\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_QLThuThu.cs",
@@ -1489,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "rptTongHopTheoLoaiVP.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptTongHopTheoLoaiVP.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptTongHopTheoLoaiVP.rdlc",
@@ -1500,7 +1520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "rptSachTraHu.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptSachTraHu.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptSachTraHu.rdlc",
@@ -1511,7 +1531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "rptSachBiMat.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptSachBiMat.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptSachBiMat.rdlc",
@@ -1522,7 +1542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "rptPMQuaHan.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptPMQuaHan.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptPMQuaHan.rdlc",
@@ -1533,7 +1553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "rptDSPhMuonDG.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptDSPhMuonDG.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptDSPhMuonDG.rdlc",
@@ -1544,7 +1564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "rptLuotMuonDS.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptLuotMuonDS.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptLuotMuonDS.rdlc",
@@ -1555,7 +1575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "rptDGViPham.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptDGViPham.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptDGViPham.rdlc",
@@ -1566,7 +1586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "rptDSDocGiaMoi.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptDSDocGiaMoi.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptDSDocGiaMoi.rdlc",
@@ -1577,7 +1597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "rptDGHetHan.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Reports\\rptDGHetHan.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Reports\\rptDGHetHan.rdlc",
@@ -1588,7 +1608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "frmBCDGHetHan.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGHetHan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGHetHan.cs",
@@ -1599,7 +1619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "frmBCSachTraHu.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachTraHu.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachTraHu.cs",
@@ -1610,7 +1630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "frmBCSachTraHu.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachTraHu.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachTraHu.cs",
@@ -1622,7 +1642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "rptInPhieuTra.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\rptInPhieuTra.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\rptInPhieuTra.rdlc",
@@ -1633,7 +1653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "rptInPhieuPhat.rdlc [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\rptInPhieuPhat.rdlc",
               "RelativeDocumentMoniker": "QL_ThuVien\\rptInPhieuPhat.rdlc",
@@ -1644,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "frmBCPMQuaHan.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCPMQuaHan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCPMQuaHan.cs",
@@ -1655,7 +1675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "frmBCPMQuaHan.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCPMQuaHan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCPMQuaHan.cs",
@@ -1667,7 +1687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "frmBCSachMat.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachMat.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachMat.cs",
@@ -1679,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "frmBCLuotMuonDS.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCLuotMuonDS.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCLuotMuonDS.cs",
@@ -1691,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 124,
               "Title": "frmSignIn.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmSignIn.cs",
@@ -1702,7 +1722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 127,
               "Title": "frmHienThiBanDau.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\frmHienThiBanDau.cs",
@@ -1713,7 +1733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "frmBCSachMat.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachMat.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCSachMat.cs",
@@ -1724,7 +1744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "frmBCLuotMuonDS.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCLuotMuonDS.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCLuotMuonDS.cs",
@@ -1735,7 +1755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "frmBCDocGiaMoi.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDocGiaMoi.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDocGiaMoi.cs",
@@ -1747,7 +1767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "frmBCDocGiaMoi.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDocGiaMoi.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDocGiaMoi.cs",
@@ -1758,7 +1778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "frmBCDGViPham.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGViPham.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGViPham.cs",
@@ -1770,7 +1790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "frmBCDGHetHan.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGHetHan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGHetHan.cs",
@@ -1782,7 +1802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "frmBCDGMuonSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGMuonSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\ReportsSystem\\Forms\\frmBCDGMuonSach.cs",
@@ -1794,7 +1814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "UC_PhieuPhat.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuPhat.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuPhat.cs",
@@ -1806,7 +1826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "UC_QLMuonTra_Ribbon.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Ribbon\\UC_QLMuonTra_Ribbon.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Ribbon\\UC_QLMuonTra_Ribbon.cs",
@@ -1818,7 +1838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "UC_QLTaiKhoan.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
@@ -1826,11 +1846,12 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.cs",
               "ViewState": "AgIAAH0AAAAAAAAAAAAiwPcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T03:29:31.268Z"
+              "WhenOpened": "2024-11-20T03:29:31.268Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "frmInPhieuMuon.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuMuon.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuMuon.cs",
@@ -1841,7 +1862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "frmLoaiSach.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmLoaiSach.cs",
@@ -1852,7 +1873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "frmInPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuTra.cs",
@@ -1863,7 +1884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "frmInPhieuPhat.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmInPhieuPhat.cs",
@@ -1874,7 +1895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "DSInPhieuPhat.xsd",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\DSInPhieuPhat.xsd",
               "RelativeDocumentMoniker": "QL_ThuVien\\DSInPhieuPhat.xsd",
@@ -1885,7 +1906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "DSInPhieuTra.xsd",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\DSInPhieuTra.xsd",
               "RelativeDocumentMoniker": "QL_ThuVien\\DSInPhieuTra.xsd",
@@ -1896,7 +1917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "UC_PhieuTra.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.cs",
@@ -1908,7 +1929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "frmPhieuTra.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmPhieuTra.cs",
@@ -1919,7 +1940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "frmNhapSach.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNhapSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmNhapSach.cs",
@@ -1930,7 +1951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "frmTraSach.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmTraSach.cs",
@@ -1941,7 +1962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "DSInPhieuMuon.xsd",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\DSInPhieuMuon.xsd",
               "RelativeDocumentMoniker": "QL_ThuVien\\DSInPhieuMuon.xsd",
@@ -1952,7 +1973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "UC_ChiTietSach.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
@@ -1960,11 +1981,12 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\QLSach\\UC_ChiTietSach.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T13:11:51.843Z"
+              "WhenOpened": "2024-11-16T13:11:51.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "UC_PhieuTra.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuTra.Designer.cs",
@@ -1976,7 +1998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "UC_QLTaiKhoan.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.Designer.cs",
@@ -1984,11 +2006,12 @@
               "RelativeToolTip": "QL_ThuVien\\Main UC\\CaiDat\\UC_QLTaiKhoan.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:07:46.608Z"
+              "WhenOpened": "2024-11-15T14:07:46.608Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "UC_PhieuMuon.Designer.cs",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\QuanLyThuVien_New -v4\\QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.Designer.cs",
               "RelativeDocumentMoniker": "QL_ThuVien\\Main UC\\QLMuonTra\\UC_PhieuMuon.Designer.cs",
@@ -2000,7 +2023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 115,
               "Title": "frmKhoSach.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmKhoSach.cs",
@@ -2011,7 +2034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 130,
               "Title": "ChiTietSach.cs [Design]",
               "DocumentMoniker": "D:\\Downloads\\K\u00EC 2 - n\u0103m 3\\Project t\u1ED5ng h\u1EE3p\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
               "RelativeDocumentMoniker": "..\\Ph\u1EA7n m\u1EC1m qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n NEU\\QLThuVien-.net-framework-\\QL_ThuVien\\ChiTietSach.cs",
@@ -2022,7 +2045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 116,
               "Title": "frmChuDe.cs [Design]",
               "DocumentMoniker": "D:\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\My Project\\QL_ThuVien new - new version\\QL_ThuVien\\frmChuDe.cs",
