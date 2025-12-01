@@ -275,7 +275,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -571,11 +573,6 @@
                       <GroupExpression>=Fields!NgayCapThe.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!NgayCapThe.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
                   <TablixHeader>
                     <Size>2.6449cm</Size>
                     <CellContents>
@@ -590,6 +587,7 @@
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
                                   <FontSize>11pt</FontSize>
+                                  <Format>d</Format>
                                   <Color>Blue</Color>
                                 </Style>
                               </TextRun>
@@ -610,6 +608,7 @@
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
+                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                   <TablixMembers>

@@ -141,10 +141,54 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = "select pm.MaPhieuMuon, pm.MaDocGia, sum(ct_pm.TienCoc) as TongTienCoc, pm.NgayThucTra " +
-                    "from PhieuMuon pm join CT_PhieuMuon ct_pm on pm.MaPhieuMuon = ct_pm.MaPhieuMuon " +
-                    "where pm.NgayThucTra is not null " +
-                    "group by pm.MaPhieuMuon, pm.MaDocGia, pm.NgayThucTra";
+                string sql = @"
+                    SELECT 
+                        pm.MaPhieuMuon,
+                        pm.MaDocGia,
+                        pm.NgayMuon,
+                        pm.HanTra,
+                        pm.NgayThucTra,
+                        SUM(ct_pm.TienCoc) AS TongTienCoc,
+                
+                        -- Cột 1: Quá hạn
+                        CASE 
+                            WHEN pm.NgayThucTra > pm.HanTra THEN 1 
+                            ELSE 0 
+                        END AS QuaHan,
+                
+                        -- Cột 2: Tình trạng thay đổi (bit)
+                        CASE 
+                            WHEN EXISTS (
+                                SELECT 1 
+                                FROM CT_PhieuMuon ct 
+                                WHERE ct.MaPhieuMuon = pm.MaPhieuMuon 
+                                  AND ct.TinhTrangMuon != ct.TinhTrangTra
+                            ) THEN 1
+                            ELSE 0
+                        END AS TinhTrangThayDoi,
+                
+                        -- Cột 3: Mất sách 
+                        CASE 
+                            WHEN EXISTS (
+                                SELECT 1 
+                                FROM CT_PhieuMuon ct 
+                                WHERE ct.MaPhieuMuon = pm.MaPhieuMuon 
+                                  AND ct.DaTraSach = 0
+                            ) THEN 1
+                            ELSE 0
+                        END AS MatSach
+                
+                    FROM PhieuMuon pm 
+                    JOIN CT_PhieuMuon ct_pm ON pm.MaPhieuMuon = ct_pm.MaPhieuMuon
+                    WHERE pm.NgayThucTra IS NOT NULL
+                    GROUP BY 
+                        pm.MaPhieuMuon, 
+                        pm.MaDocGia, 
+                        pm.NgayMuon,
+                        pm.HanTra,
+                        pm.NgayThucTra
+                    ORDER BY pm.NgayThucTra DESC";
+
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);

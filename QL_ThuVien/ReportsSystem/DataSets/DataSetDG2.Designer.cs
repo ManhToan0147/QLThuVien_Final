@@ -289,6 +289,8 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             private global::System.Data.DataColumn columnNgayCapThe;
             
+            private global::System.Data.DataColumn columnSoNgayConLai;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DataTableDGDataTable() {
@@ -364,6 +366,14 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SoNgayConLaiColumn {
+                get {
+                    return this.columnSoNgayConLai;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +409,15 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTableDGRow AddDataTableDGRow(string MaDocGia, string HoTen, string NgheNghiep, System.DateTime NgayHanThe, System.DateTime NgayCapThe) {
+            public DataTableDGRow AddDataTableDGRow(string MaDocGia, string HoTen, string NgheNghiep, System.DateTime NgayHanThe, System.DateTime NgayCapThe, int SoNgayConLai) {
                 DataTableDGRow rowDataTableDGRow = ((DataTableDGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaDocGia,
                         HoTen,
                         NgheNghiep,
                         NgayHanThe,
-                        NgayCapThe};
+                        NgayCapThe,
+                        SoNgayConLai};
                 rowDataTableDGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableDGRow);
                 return rowDataTableDGRow;
@@ -434,6 +445,7 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                 this.columnNgheNghiep = base.Columns["NgheNghiep"];
                 this.columnNgayHanThe = base.Columns["NgayHanThe"];
                 this.columnNgayCapThe = base.Columns["NgayCapThe"];
+                this.columnSoNgayConLai = base.Columns["SoNgayConLai"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,6 +461,8 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                 base.Columns.Add(this.columnNgayHanThe);
                 this.columnNgayCapThe = new global::System.Data.DataColumn("NgayCapThe", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNgayCapThe);
+                this.columnSoNgayConLai = new global::System.Data.DataColumn("SoNgayConLai", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoNgayConLai);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -671,6 +685,22 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SoNgayConLai {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTableDG.SoNgayConLaiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoNgayConLai\' in table \'DataTableDG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableDG.SoNgayConLaiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaDocGiaNull() {
                 return this.IsNull(this.tableDataTableDG.MaDocGiaColumn);
             }
@@ -727,6 +757,18 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNgayCapTheNull() {
                 this[this.tableDataTableDG.NgayCapTheColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSoNgayConLaiNull() {
+                return this.IsNull(this.tableDataTableDG.SoNgayConLaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSoNgayConLaiNull() {
+                this[this.tableDataTableDG.SoNgayConLaiColumn] = global::System.Convert.DBNull;
             }
         }
         

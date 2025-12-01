@@ -25,7 +25,7 @@ namespace QL_ThuVien
 
         private void frmBCDocGiaMoi_Load(object sender, EventArgs e)
         {
-            constr = @"Data Source=DESKTOP-HPGDAGQ\SQLEXPRESS;Initial Catalog=QuanLyThuVien3;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            constr = DBConfig.ConnectionString;
             conn.ConnectionString = constr;
             conn.Open();
 
@@ -64,40 +64,60 @@ namespace QL_ThuVien
 
         private void btnInBC_Click(object sender, EventArgs e)
         {
-            // Điều kiện lọc theo nghề nghiệp
             string ngheNghiepCondition = "";
-            if (cboNgheNghiep.SelectedIndex > 0 && cboNgheNghiep.Text != "Tất cả") // Không phải "Tất cả"
+            if (cboNgheNghiep.SelectedIndex > 0 && cboNgheNghiep.Text != "Tất cả")
             {
                 ngheNghiepCondition = $" AND NgheNghiep = N'{cboNgheNghiep.Text}'";
             }
 
-            // Câu lệnh SQL với điều kiện lọc bổ sung
-            sql = "SELECT MaDocGia, HoTen, NgheNghiep, FORMAT(NgayCapThe, 'dd/MM/yyyy') AS NgayCapThe, " +
-                  "FORMAT(NgayHanThe, 'dd/MM/yyyy') AS NgayHanThe " +
-                  $"FROM dbo.DocGia " +
-                  $"WHERE NgayCapThe BETWEEN CONVERT(date, '{dtTuNgay.Text}', 103) AND CONVERT(date, '{dtDenNgay.Text}', 103) " +
-                  ngheNghiepCondition;
+            sql = @"
+                SELECT 
+                    MaDocGia, 
+                    HoTen, 
+                    NgheNghiep, 
+                    NgayCapThe,
+                    NgayHanThe,
+                    FORMAT(NgayCapThe, 'dd/MM/yyyy') AS NgayCapThe_Display,
+                    FORMAT(NgayHanThe, 'dd/MM/yyyy') AS NgayHanThe_Display
+                FROM dbo.DocGia
+                WHERE NgayCapThe BETWEEN CONVERT(date, '" + dtTuNgay.Text + @"', 103) 
+                                      AND CONVERT(date, '" + dtDenNgay.Text + @"', 103) "
+                            + ngheNghiepCondition + @"
+                ORDER BY NgayCapThe";
 
-            // Truy vấn dữ liệu
             adapter = new SqlDataAdapter(sql, conn);
-            dt.Clear();
-            adapter.Fill(dt);
+            DataTable dtTemp = new DataTable();
+            adapter.Fill(dtTemp);
 
-            // Đưa dữ liệu vào báo cáo
+            dt = new DataTable();
+            dt.Columns.Add("MaDocGia", typeof(string));
+            dt.Columns.Add("HoTen", typeof(string));
+            dt.Columns.Add("NgheNghiep", typeof(string));
+            dt.Columns.Add("NgayCapThe", typeof(string));
+            dt.Columns.Add("NgayHanThe", typeof(string));
+
+            foreach (DataRow row in dtTemp.Rows)
+            {
+                DataRow newRow = dt.NewRow();
+                newRow["MaDocGia"] = row["MaDocGia"];
+                newRow["HoTen"] = row["HoTen"];
+                newRow["NgheNghiep"] = row["NgheNghiep"];
+                newRow["NgayCapThe"] = row["NgayCapThe_Display"];
+                newRow["NgayHanThe"] = row["NgayHanThe_Display"];
+                dt.Rows.Add(newRow);
+            }
+
             ReportDataSource reportDataSource = new ReportDataSource("DataSetDG", dt);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);
             reportViewer1.LocalReport.ReportEmbeddedResource = "QL_ThuVien.ReportsSystem.Reports.rptDSDocGiaMoi.rdlc";
 
-            // Lấy nghề nghiệp đăng ký thẻ nhiều nhất
             string topNgheNghiep = GetTopNgheNghiep();
-
-            // Thêm tham số thời gian và nghề nghiệp nhiều nhất vào báo cáo
             para1 = "Từ ngày " + dtTuNgay.Text + " Đến ngày " + dtDenNgay.Text;
             ReportParameter[] reportParameters = new ReportParameter[]
             {
-                new ReportParameter("prThoiGian", para1), // Thời gian
-                new ReportParameter("prNgheNghiepTop", topNgheNghiep) // Nghề nghiệp đăng ký thẻ nhiều nhất
+                new ReportParameter("prThoiGian", para1),
+                new ReportParameter("prNgheNghiepTop", topNgheNghiep)
             };
             reportViewer1.LocalReport.SetParameters(reportParameters);
             reportViewer1.RefreshReport();

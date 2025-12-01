@@ -27,7 +27,7 @@ namespace QL_ThuVien
         private void frmBCPhPhatTheoDG_Load(object sender, EventArgs e)
         {
             // Thiết lập chuỗi kết nối
-            constr = @"Data Source=DESKTOP-HPGDAGQ\SQLEXPRESS;Initial Catalog=QuanLyThuVien3;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            constr = DBConfig.ConnectionString;
             conn.ConnectionString = constr;
             conn.Open();
 
@@ -49,7 +49,7 @@ namespace QL_ThuVien
                          "JOIN DauSach AS ds ON cs.MaDauSach = ds.MaDauSach " +
                          "JOIN ViPham AS vp ON ctp.MaViPham = vp.MaViPham " +
                          $"WHERE pp.NgayNopPhat BETWEEN CONVERT(date, '{dtTuNgay.Text}', 103) AND CONVERT(date, '{dtDenNgay.Text}', 103) " +
-                         "ORDER BY dg.MaDocGia";
+                         "ORDER BY pp.NgayNopPhat";
 
             // Thực hiện truy vấn chính
             SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);

@@ -47,7 +47,7 @@ namespace QL_ThuVien
         {
 
             btnHome.Checked = true;
-            var uc = new UC_TrangChu();
+            var uc = new UC_Dashboard();
 
             addUserControl(uc);
             if (currentUserRole == "thuthu")

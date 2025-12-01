@@ -27,7 +27,7 @@ namespace QL_ThuVien
         private void frmBCSachTraHu_Load(object sender, EventArgs e)
         {
             // Thiết lập chuỗi kết nối
-            constr = @"Data Source=DESKTOP-HPGDAGQ\SQLEXPRESS;Initial Catalog=QuanLyThuVien3;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            constr = DBConfig.ConnectionString;
             conn.ConnectionString = constr;
             conn.Open();
 
@@ -82,7 +82,7 @@ namespace QL_ThuVien
                   "JOIN DauSach AS ds ON cs.MaDauSach = ds.MaDauSach " +
                   "JOIN KieuMuon AS km ON pm.MaKieuMuon = km.MaKieuMuon " +
                   $"WHERE pm.NgayThucTra BETWEEN CONVERT(date, '{dtTuNgay.Text}', 103) AND CONVERT(date, '{dtDenNgay.Text}', 103) " +
-                  "AND ct.TinhTrangTra IS NOT NULL AND ct.TinhTrangTra NOT LIKE N'OK' " +
+                  "AND ct.TinhTrangTra IS NOT NULL AND ct.TinhTrangMuon not like ct.TinhTrangTra " +
                   kieuMuonCondition +
                   " ORDER BY pm.NgayThucTra";
 

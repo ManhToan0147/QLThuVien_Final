@@ -1161,7 +1161,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Parameters!prThoiGian.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>times New Roman</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>

@@ -17,13 +17,12 @@
             <xs:sequence>
               <xs:element name="MaChuDe" msprop:Generator_ColumnPropNameInTable="MaChuDeColumn" msprop:Generator_ColumnPropNameInRow="MaChuDe" msprop:Generator_UserColumnName="MaChuDe" msprop:Generator_ColumnVarNameInTable="columnMaChuDe" type="xs:string" minOccurs="0" />
               <xs:element name="MaDauSach" msprop:Generator_ColumnPropNameInTable="MaDauSachColumn" msprop:Generator_ColumnPropNameInRow="MaDauSach" msprop:Generator_UserColumnName="MaDauSach" msprop:Generator_ColumnVarNameInTable="columnMaDauSach" type="xs:string" minOccurs="0" />
-              <xs:element name="MaSach" msprop:Generator_ColumnPropNameInTable="MaSachColumn" msprop:Generator_ColumnPropNameInRow="MaSach" msprop:Generator_UserColumnName="MaSach" msprop:Generator_ColumnVarNameInTable="columnMaSach" type="xs:string" minOccurs="0" />
               <xs:element name="MaPhieuMuon" msprop:Generator_ColumnPropNameInTable="MaPhieuMuonColumn" msprop:Generator_ColumnPropNameInRow="MaPhieuMuon" msprop:Generator_UserColumnName="MaPhieuMuon" msprop:Generator_ColumnVarNameInTable="columnMaPhieuMuon" type="xs:string" minOccurs="0" />
               <xs:element name="NgayMuon" msprop:Generator_ColumnPropNameInTable="NgayMuonColumn" msprop:Generator_ColumnPropNameInRow="NgayMuon" msprop:Generator_UserColumnName="NgayMuon" msprop:Generator_ColumnVarNameInTable="columnNgayMuon" type="xs:dateTime" minOccurs="0" />
               <xs:element name="TenChuDe" msprop:Generator_ColumnPropNameInTable="TenChuDeColumn" msprop:Generator_ColumnPropNameInRow="TenChuDe" msprop:Generator_UserColumnName="TenChuDe" msprop:Generator_ColumnVarNameInTable="columnTenChuDe" type="xs:string" minOccurs="0" />
               <xs:element name="TenDauSach" msprop:Generator_ColumnPropNameInTable="TenDauSachColumn" msprop:Generator_ColumnPropNameInRow="TenDauSach" msprop:Generator_UserColumnName="TenDauSach" msprop:Generator_ColumnVarNameInTable="columnTenDauSach" type="xs:string" minOccurs="0" />
               <xs:element name="MaDocGia" msprop:Generator_ColumnPropNameInTable="MaDocGiaColumn" msprop:Generator_ColumnPropNameInRow="MaDocGia" msprop:Generator_UserColumnName="MaDocGia" msprop:Generator_ColumnVarNameInTable="columnMaDocGia" type="xs:string" minOccurs="0" />
-              <xs:element name="SoLuotMuon" msprop:Generator_ColumnPropNameInRow="SoLuotMuon" msprop:Generator_ColumnPropNameInTable="SoLuotMuonColumn" msprop:Generator_ColumnVarNameInTable="columnSoLuotMuon" msprop:Generator_UserColumnName="SoLuotMuon" type="xs:string" minOccurs="0" />
+              <xs:element name="SoLuotMuon" msprop:Generator_UserColumnName="SoLuotMuon" msprop:Generator_ColumnPropNameInTable="SoLuotMuonColumn" msprop:Generator_ColumnPropNameInRow="SoLuotMuon" msprop:Generator_ColumnVarNameInTable="columnSoLuotMuon" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

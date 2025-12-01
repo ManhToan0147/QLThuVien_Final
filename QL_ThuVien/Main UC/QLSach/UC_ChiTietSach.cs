@@ -113,9 +113,24 @@ namespace QL_ThuVien.Main_UC.QLSach
             }
         }
 
-        private void btnXemChiTiet_Click(object sender, EventArgs e)
+        private void btnReset_Click_1(object sender, EventArgs e)
         {
-            if (dgvChiTietDauSach.SelectedRows.Count > 0) 
+            if (dgvChiTietDauSach == null)
+            {
+                return;
+            }
+            txtSearch.Text = string.Empty;
+            cboChuDe.SelectedIndex = 0;
+            cboLoaiSach.SelectedIndex = 0;
+            cboTacGia.SelectedIndex = 0;
+            cboNXB.SelectedIndex = 0;
+            cboKho.SelectedIndex = 0;
+            dv.RowFilter = null;
+        }
+
+        private void btnXemChiTiet_Click_1(object sender, EventArgs e)
+        {
+            if (dgvChiTietDauSach.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvChiTietDauSach.SelectedRows[0];
                 string maDauSach;
@@ -135,21 +150,6 @@ namespace QL_ThuVien.Main_UC.QLSach
             {
                 MessageBox.Show("Vui lòng chọn một đầu sách để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            if (dgvChiTietDauSach == null)
-            {
-                return;
-            }
-            txtSearch.Text = string.Empty;
-            cboChuDe.SelectedIndex = 0;
-            cboLoaiSach.SelectedIndex = 0;
-            cboTacGia.SelectedIndex = 0;
-            cboNXB.SelectedIndex = 0;
-            cboKho.SelectedIndex = 0;
-            dv.RowFilter = null;
         }
     }
 }

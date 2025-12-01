@@ -40,7 +40,7 @@ namespace QL_ThuVien
 
             // Câu lệnh SQL với điều kiện lọc nghề nghiệp
             sql = $"SELECT MaDocGia, HoTen, NgheNghiep, NgayCapThe, NgayHanThe, " +
-                  $"DATEDIFF(DAY, GETDATE(), NgayHanThe) AS SoNgayConLai " +
+                  $"DATEDIFF(DAY,CONVERT(date, '{dtTuNgay.Text}', 103) , NgayHanThe) AS SoNgayConLai " +
                   $"FROM DocGia " +
                   $"WHERE NgayHanThe BETWEEN CONVERT(date, '{dtTuNgay.Text}', 103) AND CONVERT(date, '{dtDenNgay.Text}', 103) " +
                   ngheNghiepCondition + // Thêm điều kiện nghề nghiệp
@@ -67,11 +67,9 @@ namespace QL_ThuVien
             reportViewer1.RefreshReport();
         }
 
-
-
         private void frmDGHetHan_Load(object sender, EventArgs e)
         {
-            constr = @"Data Source=DESKTOP-HPGDAGQ\SQLEXPRESS;Initial Catalog=QuanLyThuVien3;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            constr = DBConfig.ConnectionString;
             conn.ConnectionString = constr;
             conn.Open();
 

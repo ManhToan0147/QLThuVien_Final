@@ -21,29 +21,35 @@ namespace QL_ThuVien
 
         private void btnInBC_Click(object sender, EventArgs e)
         {
-            // Câu lệnh SQL chính cho báo cáo
-            sql = "SELECT cd.TenChuDe, ds.MaDauSach, ds.TenDauSach, cs.MaSach, " +
-                  $"SUM(CASE WHEN pm.NgayMuon BETWEEN CONVERT(date, '{dtTuNgay.Text}', 103) AND CONVERT(date, '{dtDenNgay.Text}', 103) THEN 1 ELSE 0 END) AS SoLuotMuon " +
-                  "FROM DauSach AS ds " +
-                  "JOIN ChuDe AS cd ON ds.MaChuDe = cd.MaChuDe " +
-                  "JOIN CuonSach AS cs ON ds.MaDauSach = cs.MaDauSach " +
-                  "LEFT JOIN CT_PhieuMuon AS ct ON cs.MaSach = ct.MaSach " +
-                  "LEFT JOIN PhieuMuon AS pm ON ct.MaPhieuMuon = pm.MaPhieuMuon " +
-                  "GROUP BY cd.TenChuDe, ds.MaDauSach, ds.TenDauSach, cs.MaSach " +
-                  "ORDER BY cd.TenChuDe, ds.MaDauSach, SoLuotMuon DESC";
+            sql = @"
+                SELECT 
+                    cd.MaChuDe,
+                    cd.TenChuDe, 
+                    ds.MaDauSach, 
+                    ds.TenDauSach,
+                    NULL AS MaPhieuMuon,
+                    NULL AS NgayMuon,
+                    NULL AS MaDocGia,
+                    ISNULL(COUNT(DISTINCT pm.MaPhieuMuon), 0) AS SoLuotMuon
+                FROM DauSach AS ds
+                JOIN ChuDe AS cd ON ds.MaChuDe = cd.MaChuDe
+                LEFT JOIN CuonSach AS cs ON ds.MaDauSach = cs.MaDauSach
+                LEFT JOIN CT_PhieuMuon AS ct ON cs.MaSach = ct.MaSach
+                LEFT JOIN PhieuMuon AS pm ON ct.MaPhieuMuon = pm.MaPhieuMuon
+                    AND pm.NgayMuon BETWEEN CONVERT(date, '" + dtTuNgay.Text + @"', 103) 
+                                         AND CONVERT(date, '" + dtDenNgay.Text + @"', 103)
+                GROUP BY cd.MaChuDe, cd.TenChuDe, ds.MaDauSach, ds.TenDauSach
+                ORDER BY cd.TenChuDe, SoLuotMuon DESC, ds.MaDauSach";
 
-            // Truy vấn dữ liệu chính
             adapter = new SqlDataAdapter(sql, conn);
-            dt.Clear();
+            dt = new DataTable();
             adapter.Fill(dt);
 
-            // Đưa dữ liệu vào Report Viewer
             ReportDataSource reportDataSource = new ReportDataSource("DataSetLuotMuonDS", dt);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);
             reportViewer1.LocalReport.ReportEmbeddedResource = "QL_ThuVien.ReportsSystem.Reports.rptLuotMuonDS.rdlc";
 
-            // Thêm tham số thời gian vào báo cáo
             para1 = "Từ ngày " + dtTuNgay.Text + " Đến ngày " + dtDenNgay.Text;
             ReportParameter[] reportParameters = new ReportParameter[]
             {

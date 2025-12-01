@@ -85,14 +85,14 @@
             this.grbDocgia = new System.Windows.Forms.GroupBox();
             this.panelDocGia = new System.Windows.Forms.Panel();
             this.dgvDocGia = new System.Windows.Forms.DataGridView();
-            this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DaTraSach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cboTruong1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearch1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnInPhieuMuon = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaTraSach = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.grbPhieuMuon.SuspendLayout();
             this.panelDSPhieuMuon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
@@ -768,27 +768,6 @@
             this.dgvDocGia.TabIndex = 0;
             this.dgvDocGia.DoubleClick += new System.EventHandler(this.dgvDocGia_DoubleClick);
             // 
-            // MaDG
-            // 
-            this.MaDG.DataPropertyName = "MaDocGia";
-            this.MaDG.HeaderText = "Mã độc giả";
-            this.MaDG.MinimumWidth = 9;
-            this.MaDG.Name = "MaDG";
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            this.HoTen.HeaderText = "Họ tên";
-            this.HoTen.MinimumWidth = 9;
-            this.HoTen.Name = "HoTen";
-            // 
-            // DaTraSach
-            // 
-            this.DaTraSach.DataPropertyName = "DaTraSach";
-            this.DaTraSach.HeaderText = "Đủ điều kiện";
-            this.DaTraSach.MinimumWidth = 9;
-            this.DaTraSach.Name = "DaTraSach";
-            // 
             // cboTruong1
             // 
             this.cboTruong1.BackColor = System.Drawing.Color.Transparent;
@@ -906,6 +885,27 @@
             this.txtSearch2.TabIndex = 18;
             this.txtSearch2.TextOffset = new System.Drawing.Point(10, 0);
             this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            // 
+            // MaDG
+            // 
+            this.MaDG.DataPropertyName = "MaDocGia";
+            this.MaDG.HeaderText = "Mã độc giả";
+            this.MaDG.MinimumWidth = 9;
+            this.MaDG.Name = "MaDG";
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.MinimumWidth = 9;
+            this.HoTen.Name = "HoTen";
+            // 
+            // DaTraSach
+            // 
+            this.DaTraSach.DataPropertyName = "DaTraSach";
+            this.DaTraSach.HeaderText = "Đã trả sách";
+            this.DaTraSach.MinimumWidth = 9;
+            this.DaTraSach.Name = "DaTraSach";
             // 
             // UC_PhieuMuon
             // 

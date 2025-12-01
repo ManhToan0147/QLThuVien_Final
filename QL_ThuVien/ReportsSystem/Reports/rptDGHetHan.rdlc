@@ -37,10 +37,14 @@
           <DataField>NgayCapThe</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="SoNgayConLai">
+          <DataField>SoNgayConLai</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetDG</rd:DataSetName>
-        <rd:SchemaPath>D:\Học tập\C#\QLTV update\QLThuVien-.net-framework-\QL_ThuVien\DataSetDG.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\ReportsSystem\DataSets\DataSetDG.xsd</rd:SchemaPath>
         <rd:TableName>DataTableDG</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -451,7 +455,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox35</rd:DefaultName>
@@ -594,14 +600,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox12">
+                        <Textbox Name="SoNgayConLai">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=DateDiff("d", Now(), CDate(Fields!NgayHanThe.Value))</Value>
+                                  <Value>=Fields!SoNgayConLai.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
@@ -610,7 +616,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <rd:DefaultName>SoNgayConLai</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -782,11 +788,6 @@
                       <GroupExpression>=Fields!NgayHanThe.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!NgayHanThe.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
                   <TablixHeader>
                     <Size>2.5cm</Size>
                     <CellContents>
@@ -805,7 +806,9 @@
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>NgayHanThe1</rd:DefaultName>

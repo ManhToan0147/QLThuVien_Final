@@ -63,7 +63,24 @@ namespace QL_ThuVien.Main_UC.QLSach
         {
             using (con = new SqlConnection(strCon))
             {
-                string sql = "Select MaDauSach, TenDauSach, ks.TenKho from DauSach ds left join KhoSach ks on ds.MaKho = ks.MaKho";
+                string sql = @"
+                    SELECT 
+                        ds.MaDauSach,
+                        ds.TenDauSach,
+                        ks.TenKho,
+                        -- Đếm tổng số cuốn sách
+                        COUNT(cs.MaSach) AS TongSoCuon,
+                        -- Đếm số cuốn còn (có thể mượn)
+                        SUM(CASE WHEN cs.TinhTrang = N'Còn' THEN 1 ELSE 0 END) AS SanSangMuon,
+                        -- Đếm số cuốn đang mượn
+                        SUM(CASE WHEN cs.TinhTrang = N'Đang mượn' THEN 1 ELSE 0 END) AS SoCuonDangMuon,
+                        SUM(CASE WHEN cs.TinhTrang = N'Mất' THEN 1 ELSE 0 END) AS SoCuonMat
+                    FROM DauSach ds
+                    LEFT JOIN KhoSach ks ON ds.MaKho = ks.MaKho
+                    LEFT JOIN CuonSach cs ON ds. MaDauSach = cs.MaDauSach
+                    GROUP BY ds.MaDauSach, ds.TenDauSach, ks.TenKho
+                    ORDER BY ds.MaDauSach";
+
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -71,6 +88,45 @@ namespace QL_ThuVien.Main_UC.QLSach
             dv = new DataView(dt);
             dgvDauSach.DataSource = dv;
         }
+
+        private void ReloadDauSachAndKeepPosition()
+        {
+            // Lưu vị trí đầu sách hiện tại
+            string currentMaDauSach = selectedMaDauSach;
+            int currentScrollIndex = -1;
+
+            if (dgvDauSach.FirstDisplayedScrollingRowIndex >= 0)
+            {
+                currentScrollIndex = dgvDauSach.FirstDisplayedScrollingRowIndex;
+            }
+
+            showDauSach();
+
+            // Tìm và chọn lại đầu sách cũ
+            if (!string.IsNullOrEmpty(currentMaDauSach))
+            {
+                foreach (DataGridViewRow row in dgvDauSach.Rows)
+                {
+                    if (row.Cells["MaDauSach"].Value?.ToString() == currentMaDauSach)
+                    {
+                        dgvDauSach.ClearSelection();
+                        dgvDauSach.CurrentCell = row.Cells["TenDauSach"]; // Chọn cột TenDauSach
+                        row.Selected = true;
+
+                        // Giữ vị trí scroll
+                        if (currentScrollIndex >= 0 && currentScrollIndex < dgvDauSach.Rows.Count)
+                        {
+                            dgvDauSach.FirstDisplayedScrollingRowIndex = currentScrollIndex;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            // Reload bảng Cuốn Sách của đầu sách đang chọn
+            ShowCuonSach_DauSach();
+        }
+
 
         private string selectedMaDauSach;
         private void ShowCuonSach_DauSach()
@@ -244,7 +300,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                 }
 
                 // Reload
-                ShowCuonSach_DauSach();
+                ReloadDauSachAndKeepPosition();
 
                 // Reset về 1
                 numSoLuongNhap.Value = 1;
@@ -280,7 +336,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                         }
                     }
                     MessageBox.Show($"Đã xóa thành công {count} bản ghi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ShowCuonSach_DauSach();
+                    ReloadDauSachAndKeepPosition();
                 }
             }
             else
@@ -329,7 +385,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                 MessageBox.Show($"Đã sửa thành công bản ghi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            ShowCuonSach_DauSach();
+            ReloadDauSachAndKeepPosition();
         }
 
         private void dgvDauSach_SelectionChanged_1(object sender, EventArgs e)

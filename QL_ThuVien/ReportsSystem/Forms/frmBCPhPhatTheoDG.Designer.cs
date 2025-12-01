@@ -56,10 +56,9 @@
             this.btnThoat.HoverState.BorderColor = System.Drawing.Color.Red;
             this.btnThoat.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat.Location = new System.Drawing.Point(1687, 1233);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Location = new System.Drawing.Point(1380, 1136);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(165, 66);
+            this.btnThoat.Size = new System.Drawing.Size(135, 55);
             this.btnThoat.TabIndex = 38;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -69,10 +68,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(51, 182);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(42, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 37);
+            this.label4.Size = new System.Drawing.Size(244, 32);
             this.label4.TabIndex = 35;
             this.label4.Text = "Thời gian vi phạm:";
             // 
@@ -81,11 +79,10 @@
             this.reportViewer1.AutoSize = true;
             this.reportViewer1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportViewer1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.reportViewer1.Location = new System.Drawing.Point(58, 514);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Location = new System.Drawing.Point(47, 403);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1794, 695);
+            this.reportViewer1.Size = new System.Drawing.Size(1468, 694);
             this.reportViewer1.TabIndex = 34;
             // 
             // btnInBC
@@ -105,10 +102,9 @@
             this.btnInBC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnInBC.HoverState.FillColor = System.Drawing.Color.White;
             this.btnInBC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnInBC.Location = new System.Drawing.Point(1627, 358);
-            this.btnInBC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInBC.Location = new System.Drawing.Point(1331, 288);
             this.btnInBC.Name = "btnInBC";
-            this.btnInBC.Size = new System.Drawing.Size(226, 66);
+            this.btnInBC.Size = new System.Drawing.Size(185, 55);
             this.btnInBC.TabIndex = 33;
             this.btnInBC.Text = "In báo cáo";
             this.btnInBC.Click += new System.EventHandler(this.btnInBC_Click);
@@ -122,12 +118,11 @@
             this.dtDenNgay.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDenNgay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.dtDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDenNgay.Location = new System.Drawing.Point(216, 358);
-            this.dtDenNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtDenNgay.Location = new System.Drawing.Point(177, 298);
             this.dtDenNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtDenNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtDenNgay.Name = "dtDenNgay";
-            this.dtDenNgay.Size = new System.Drawing.Size(318, 54);
+            this.dtDenNgay.Size = new System.Drawing.Size(260, 45);
             this.dtDenNgay.TabIndex = 32;
             this.dtDenNgay.Value = new System.DateTime(2024, 11, 20, 22, 40, 0, 0);
             // 
@@ -140,12 +135,11 @@
             this.dtTuNgay.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtTuNgay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.dtTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTuNgay.Location = new System.Drawing.Point(216, 258);
-            this.dtTuNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtTuNgay.Location = new System.Drawing.Point(177, 215);
             this.dtTuNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtTuNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtTuNgay.Name = "dtTuNgay";
-            this.dtTuNgay.Size = new System.Drawing.Size(318, 54);
+            this.dtTuNgay.Size = new System.Drawing.Size(260, 45);
             this.dtTuNgay.TabIndex = 31;
             this.dtTuNgay.Value = new System.DateTime(2024, 1, 1, 22, 40, 0, 0);
             // 
@@ -154,10 +148,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(52, 358);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(43, 304);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 33);
+            this.label3.Size = new System.Drawing.Size(110, 27);
             this.label3.TabIndex = 30;
             this.label3.Text = "Đến ngày:";
             // 
@@ -166,10 +159,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(52, 258);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(43, 225);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 33);
+            this.label2.Size = new System.Drawing.Size(97, 27);
             this.label2.TabIndex = 29;
             this.label2.Text = "Từ ngày:";
             // 
@@ -178,20 +170,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(503, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(412, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1011, 53);
+            this.label1.Size = new System.Drawing.Size(864, 45);
             this.label1.TabIndex = 28;
             this.label1.Text = "BÁO CÁO CHI TIẾT VI PHẠM CỦA ĐỘC GIẢ";
             // 
             // frmBCPhPhatTheoDG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1904, 1328);
+            this.ClientSize = new System.Drawing.Size(1558, 1217);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.reportViewer1);
@@ -201,7 +192,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBCPhPhatTheoDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBCPhPhatDG";

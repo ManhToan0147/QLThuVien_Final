@@ -283,8 +283,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             private global::System.Data.DataColumn columnMaDauSach;
             
-            private global::System.Data.DataColumn columnMaSach;
-            
             private global::System.Data.DataColumn columnMaPhieuMuon;
             
             private global::System.Data.DataColumn columnNgayMuon;
@@ -343,14 +341,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             public global::System.Data.DataColumn MaDauSachColumn {
                 get {
                     return this.columnMaDauSach;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MaSachColumn {
-                get {
-                    return this.columnMaSach;
                 }
             }
             
@@ -439,12 +429,11 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTableLuotMuonDSRow AddDataTableLuotMuonDSRow(string MaChuDe, string MaDauSach, string MaSach, string MaPhieuMuon, System.DateTime NgayMuon, string TenChuDe, string TenDauSach, string MaDocGia, string SoLuotMuon) {
+            public DataTableLuotMuonDSRow AddDataTableLuotMuonDSRow(string MaChuDe, string MaDauSach, string MaPhieuMuon, System.DateTime NgayMuon, string TenChuDe, string TenDauSach, string MaDocGia, string SoLuotMuon) {
                 DataTableLuotMuonDSRow rowDataTableLuotMuonDSRow = ((DataTableLuotMuonDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaChuDe,
                         MaDauSach,
-                        MaSach,
                         MaPhieuMuon,
                         NgayMuon,
                         TenChuDe,
@@ -475,7 +464,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             internal void InitVars() {
                 this.columnMaChuDe = base.Columns["MaChuDe"];
                 this.columnMaDauSach = base.Columns["MaDauSach"];
-                this.columnMaSach = base.Columns["MaSach"];
                 this.columnMaPhieuMuon = base.Columns["MaPhieuMuon"];
                 this.columnNgayMuon = base.Columns["NgayMuon"];
                 this.columnTenChuDe = base.Columns["TenChuDe"];
@@ -491,8 +479,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                 base.Columns.Add(this.columnMaChuDe);
                 this.columnMaDauSach = new global::System.Data.DataColumn("MaDauSach", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaDauSach);
-                this.columnMaSach = new global::System.Data.DataColumn("MaSach", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaSach);
                 this.columnMaPhieuMuon = new global::System.Data.DataColumn("MaPhieuMuon", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaPhieuMuon);
                 this.columnNgayMuon = new global::System.Data.DataColumn("NgayMuon", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -679,22 +665,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string MaSach {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTableLuotMuonDS.MaSachColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaSach\' in table \'DataTableLuotMuonDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableLuotMuonDS.MaSachColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string MaPhieuMuon {
                 get {
                     try {
@@ -811,18 +781,6 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMaDauSachNull() {
                 this[this.tableDataTableLuotMuonDS.MaDauSachColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMaSachNull() {
-                return this.IsNull(this.tableDataTableLuotMuonDS.MaSachColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMaSachNull() {
-                this[this.tableDataTableLuotMuonDS.MaSachColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

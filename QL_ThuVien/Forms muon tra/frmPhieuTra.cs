@@ -155,9 +155,9 @@ namespace QL_ThuVien
                             tienNopPhat = tienCoc / 2; // Phạt bằng nửa tiền cọc
                             break;
 
-                        default:
-                            MessageBox.Show("Mã vi phạm không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            continue;
+                        //default:
+                        //    MessageBox.Show("Mã vi phạm không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //    continue;
                     }
                     //Them thong tin phat vao dgvSachPhat
                     using (con = new SqlConnection(strCon))

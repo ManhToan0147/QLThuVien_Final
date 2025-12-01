@@ -30,26 +30,26 @@
         {
             this.panelContainer = new System.Windows.Forms.Panel();
             this.chkRememberMe = new System.Windows.Forms.CheckBox();
+            this.btnTogglePassword = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line1 = new System.Windows.Forms.Panel();
             this.panelImage = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnTogglePassword = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContainer.SuspendLayout();
-            this.panelImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelImage.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContainer
@@ -82,6 +82,47 @@
             this.chkRememberMe.TabIndex = 15;
             this.chkRememberMe.Text = "Remember Me";
             this.chkRememberMe.UseVisualStyleBackColor = true;
+            // 
+            // btnTogglePassword
+            // 
+            this.btnTogglePassword.BackColor = System.Drawing.Color.White;
+            this.btnTogglePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTogglePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTogglePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTogglePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTogglePassword.FillColor = System.Drawing.Color.White;
+            this.btnTogglePassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTogglePassword.ForeColor = System.Drawing.Color.White;
+            this.btnTogglePassword.Image = global::QL_ThuVien.Properties.Resources.eye__1_;
+            this.btnTogglePassword.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTogglePassword.Location = new System.Drawing.Point(470, 416);
+            this.btnTogglePassword.Name = "btnTogglePassword";
+            this.btnTogglePassword.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnTogglePassword.Size = new System.Drawing.Size(35, 35);
+            this.btnTogglePassword.TabIndex = 14;
+            this.btnTogglePassword.Click += new System.EventHandler(this.btnTogglePassword_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::QL_ThuVien.Properties.Resources._lock;
+            this.pictureBox3.Location = new System.Drawing.Point(69, 416);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::QL_ThuVien.Properties.Resources.circle_user;
+            this.pictureBox2.Location = new System.Drawing.Point(69, 321);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // btnExit
             // 
@@ -190,6 +231,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Chào mừng người dùng đến";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QL_ThuVien.Properties.Resources.New_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(216, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // line1
             // 
             this.line1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -247,57 +298,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Book Smart,";
             // 
-            // btnTogglePassword
-            // 
-            this.btnTogglePassword.BackColor = System.Drawing.Color.White;
-            this.btnTogglePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTogglePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTogglePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTogglePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTogglePassword.FillColor = System.Drawing.Color.White;
-            this.btnTogglePassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTogglePassword.ForeColor = System.Drawing.Color.White;
-            this.btnTogglePassword.Image = global::QL_ThuVien.Properties.Resources.eye__1_;
-            this.btnTogglePassword.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTogglePassword.Location = new System.Drawing.Point(470, 416);
-            this.btnTogglePassword.Name = "btnTogglePassword";
-            this.btnTogglePassword.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnTogglePassword.Size = new System.Drawing.Size(35, 35);
-            this.btnTogglePassword.TabIndex = 14;
-            this.btnTogglePassword.Click += new System.EventHandler(this.btnTogglePassword_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::QL_ThuVien.Properties.Resources._lock;
-            this.pictureBox3.Location = new System.Drawing.Point(69, 416);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::QL_ThuVien.Properties.Resources.circle_user;
-            this.pictureBox2.Location = new System.Drawing.Point(69, 321);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QL_ThuVien.Properties.Resources.New_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(216, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmSignIn
             // 
             this.AcceptButton = this.btnSignIn;
@@ -312,11 +312,11 @@
             this.Text = "SignIn";
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
-            this.panelImage.ResumeLayout(false);
-            this.panelImage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelImage.ResumeLayout(false);
+            this.panelImage.PerformLayout();
             this.ResumeLayout(false);
 
         }
