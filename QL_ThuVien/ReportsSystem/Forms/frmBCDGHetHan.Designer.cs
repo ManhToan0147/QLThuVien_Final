@@ -97,7 +97,7 @@
             this.btnThoat.HoverState.BorderColor = System.Drawing.Color.Red;
             this.btnThoat.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat.Location = new System.Drawing.Point(1380, 1124);
+            this.btnThoat.Location = new System.Drawing.Point(1421, 1124);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(135, 55);
@@ -113,7 +113,7 @@
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1468, 692);
+            this.reportViewer1.Size = new System.Drawing.Size(1532, 692);
             this.reportViewer1.TabIndex = 38;
             // 
             // btnInBC
@@ -133,7 +133,7 @@
             this.btnInBC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnInBC.HoverState.FillColor = System.Drawing.Color.White;
             this.btnInBC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnInBC.Location = new System.Drawing.Point(1331, 273);
+            this.btnInBC.Location = new System.Drawing.Point(1395, 284);
             this.btnInBC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInBC.Name = "btnInBC";
             this.btnInBC.Size = new System.Drawing.Size(184, 55);
@@ -216,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1558, 1217);
+            this.ClientSize = new System.Drawing.Size(1641, 1217);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboNgheNghiep);
             this.Controls.Add(this.label4);

@@ -58,7 +58,7 @@
             this.btnThoat.HoverState.BorderColor = System.Drawing.Color.Red;
             this.btnThoat.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat.Location = new System.Drawing.Point(1380, 1126);
+            this.btnThoat.Location = new System.Drawing.Point(1559, 1126);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(135, 55);
             this.btnThoat.TabIndex = 38;
@@ -111,7 +111,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(47, 395);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1468, 692);
+            this.reportViewer1.Size = new System.Drawing.Size(1647, 692);
             this.reportViewer1.TabIndex = 34;
             // 
             // btnInBC
@@ -131,7 +131,7 @@
             this.btnInBC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnInBC.HoverState.FillColor = System.Drawing.Color.White;
             this.btnInBC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnInBC.Location = new System.Drawing.Point(1331, 288);
+            this.btnInBC.Location = new System.Drawing.Point(1509, 288);
             this.btnInBC.Name = "btnInBC";
             this.btnInBC.Size = new System.Drawing.Size(185, 55);
             this.btnInBC.TabIndex = 33;
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1558, 1217);
+            this.ClientSize = new System.Drawing.Size(1756, 1217);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboKieuMuon);

@@ -51,16 +51,20 @@
         </Field>
         <Field Name="NgayMuon">
           <DataField>NgayMuon</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="NgayThucTra">
           <DataField>NgayThucTra</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TinhTrangMuon">
+          <DataField>TinhTrangMuon</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetSachTraHu</rd:DataSetName>
-        <rd:SchemaPath>D:\Học tập\C#\QLTV update\QLThuVien-.net-framework-\QL_ThuVien\DataSetSachTraHu.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Downloads\Kì 2 - năm 3\Project tổng hợp\QuanLyThuVien_New -v4\QL_ThuVien\ReportsSystem\DataSets\DataSetSachTraHu.xsd</rd:SchemaPath>
         <rd:TableName>DataTableSachTraHu</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -85,12 +89,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.1988in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.34463in</Top>
+            <Left>1.62798in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <Style>
@@ -112,7 +118,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -124,8 +129,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.41894in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.59463in</Top>
+            <Left>1.62798in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <ZIndex>1</ZIndex>
@@ -158,8 +163,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>1.1988in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.34463in</Top>
+            <Left>7.91858in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>2</ZIndex>
@@ -182,7 +187,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -194,8 +198,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.41894in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.59463in</Top>
+            <Left>7.91858in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>3</ZIndex>
@@ -216,13 +220,13 @@
                   <Width>1.738cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>7.25219cm</Width>
+                  <Width>9.078cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.50517cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>6.04243cm</Width>
+                  <Width>5.97187cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
@@ -459,6 +463,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
                                   <Value>=Fields!TenDauSach.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -496,7 +506,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MaKho</rd:DefaultName>
@@ -520,6 +532,12 @@
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                                 <TextRun>
                                   <Value>=Fields!TinhTrangTra.Value</Value>
                                   <Style>
@@ -580,7 +598,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.68819cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -596,7 +614,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Blue</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -640,9 +657,8 @@
                                   <Value>="Thống kê tổng cộng sách trả bị hư hỏng: " &amp; Count(Fields!TenDauSach.Value) &amp; " cuốn sách"</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
-                                    <FontSize>13pt</FontSize>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -686,7 +702,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>2.06188cm</Size>
+                    <Size>2.41514cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox79">
                         <CanGrow>true</CanGrow>
@@ -780,7 +796,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>2.06188cm</Size>
+                    <Size>2.41514cm</Size>
                     <CellContents>
                       <Textbox Name="TenKieuMuon1">
                         <CanGrow>true</CanGrow>
@@ -792,7 +808,6 @@
                                 <Value>=Fields!TenKieuMuon.Value</Value>
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <Color>Blue</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -839,7 +854,6 @@
                                     <Value>=Fields!MaPhieuMuon.Value</Value>
                                     <Style>
                                       <FontFamily>Times New Roman</FontFamily>
-                                      <Color>Blue</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -886,7 +900,6 @@
                                       <FontFamily>Times New Roman</FontFamily>
                                       <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
-                                      <Color>Blue</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -914,7 +927,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>4.98301cm</Size>
+                    <Size>5.33627cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox169">
                         <CanGrow>true</CanGrow>
@@ -926,7 +939,6 @@
                                 <Value />
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <Color>Blue</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -955,8 +967,8 @@
             <DataSetName>DataSetSachTraHu</DataSetName>
             <Top>0.29563cm</Top>
             <Left>1.23296cm</Left>
-            <Height>2.4cm</Height>
-            <Width>24.0208cm</Width>
+            <Height>2.48819cm</Height>
+            <Width>26.12931cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -965,10 +977,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.8888in</Height>
+        <Height>2.40963in</Height>
         <Style />
       </Body>
-      <Width>10.42784in</Width>
+      <Width>11.12671in</Width>
       <Page>
         <PageHeader>
           <Height>3.85234cm</Height>
@@ -997,7 +1009,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>2.20529cm</Top>
-              <Left>7.57423cm</Left>
+              <Left>8.60526cm</Left>
               <Height>0.6cm</Height>
               <Width>11.05133cm</Width>
               <Style>
@@ -1031,7 +1043,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
               <Top>0.46305in</Top>
-              <Left>7.48108in</Left>
+              <Left>8.05727in</Left>
               <Height>0.25in</Height>
               <Width>2.71528in</Width>
               <ZIndex>1</ZIndex>
@@ -1065,7 +1077,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian1</rd:DefaultName>
               <Top>2.9464cm</Top>
-              <Left>9.23725cm</Left>
+              <Left>10.48909cm</Left>
               <Height>0.6cm</Height>
               <Width>7.28367cm</Width>
               <ZIndex>2</ZIndex>
@@ -1152,7 +1164,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1163,7 +1174,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>0.15417in</Top>
-              <Left>8.19636in</Left>
+              <Left>8.77255in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <Style>
@@ -1186,7 +1197,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1197,7 +1207,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.15417in</Top>
-              <Left>9.19636in</Left>
+              <Left>9.77255in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>

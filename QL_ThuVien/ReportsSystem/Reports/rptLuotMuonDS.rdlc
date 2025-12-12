@@ -77,7 +77,9 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
@@ -104,7 +106,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -116,7 +117,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>4.45002in</Top>
+            <Top>4.47988in</Top>
             <Left>0.76414in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
@@ -174,7 +175,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -186,7 +186,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>4.45002in</Top>
+            <Top>4.47988in</Top>
             <Left>7.05474in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
@@ -253,7 +253,7 @@
             <Top>4.81753cm</Top>
             <Left>14.34848cm</Left>
             <Height>2.01817cm</Height>
-            <Width>11.517cm</Width>
+            <Width>10.63903cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -317,7 +317,7 @@
             <Top>8.37144cm</Top>
             <Left>14.34848cm</Left>
             <Height>2.01817cm</Height>
-            <Width>11.517cm</Width>
+            <Width>10.63903cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -348,9 +348,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox43</rd:DefaultName>
-            <Top>4.11169cm</Top>
+            <Top>3.95294cm</Top>
             <Left>0.62122cm</Left>
-            <Height>0.6cm</Height>
+            <Height>0.75875cm</Height>
             <Width>4.8651cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
@@ -382,9 +382,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox43</rd:DefaultName>
-            <Top>7.66561cm</Top>
+            <Top>7.54567cm</Top>
             <Left>0.62122cm</Left>
-            <Height>0.6cm</Height>
+            <Height>0.71994cm</Height>
             <Width>4.86511cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
@@ -401,7 +401,7 @@
             <Top>7.36928cm</Top>
             <Left>0.62122cm</Left>
             <Height>0cm</Height>
-            <Width>25.24426cm</Width>
+            <Width>24.36629cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -414,13 +414,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.85549cm</Width>
+                  <Width>3.49049cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>13.86342cm</Width>
+                  <Width>11.83892cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.80528cm</Width>
+                  <Width>3.64653cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -538,7 +538,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.79403cm</Height>
+                  <Height>0.6cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -581,6 +581,12 @@
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                                 <TextRun>
                                   <Value>=Fields!TenDauSach.Value</Value>
                                   <Style>
@@ -651,17 +657,24 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Số lượt mượn của các đầu sách theo chủ đề là: "</Value>
+                                  <Value xml:space="preserve">     </Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Blue</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>="Số lượt mượn của các đầu sách theo chủ đề là: " &amp; Sum(Fields!SoLuotMuon.Value, "TenChuDe").ToString() &amp; " lượt mượn"</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -676,44 +689,11 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>2</ColSpan>
+                        <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox17">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>= Sum(Fields!SoLuotMuon.Value, "TenChuDe") &amp; " lượt mượn"</Value>
-                                  <Style>
-                                    <FontFamily>Times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Color>Blue</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox17</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -728,12 +708,22 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Tổng số đầu sách là: " &amp; Count(Fields!MaDauSach. Value) &amp; Microsoft.VisualBasic.Constants.vbCrLf &amp; "+ Số đầu sách không có lượt mượn là: " &amp; Count(IIF(Fields!SoLuotMuon. Value = 0, 1, Nothing)) &amp; Microsoft.VisualBasic.Constants.vbCrLf &amp; "+ Số đầu sách có lượt mượn là: " &amp; Count(IIF(Fields!SoLuotMuon.Value &gt; 0, 1, Nothing)) &amp; Microsoft.VisualBasic.Constants.vbCrLf &amp; Microsoft.VisualBasic.Constants.vbCrLf &amp; "Tổng số lượt mượn của các đầu sách: " &amp; Sum(Fields!SoLuotMuon.Value) &amp; " lượt"</Value>
+                                  <Value xml:space="preserve">     </Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>="Tổng số đầu sách: " &amp; Count(Fields!MaDauSach.Value) &amp; " đầu sách" &amp; vbCrLf &amp;
+"    + Số đầu sách không có lượt mượn: " &amp; Count(IIF(Fields!SoLuotMuon.Value = 0, 1, Nothing)) &amp; " đầu sách" &amp; vbCrLf &amp;
+"    + Số đầu sách có lượt mượn: " &amp; Count(IIF(Fields!SoLuotMuon.Value &gt; 0, 1, Nothing)) &amp; " đầu sách" &amp; vbCrLf &amp;
+"    Tổng số lượt mượn: " &amp; Sum(Fields!SoLuotMuon.Value) &amp; " lượt"</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -773,7 +763,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>3.31115cm</Size>
+                    <Size>4.70065cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox161">
                         <CanGrow>true</CanGrow>
@@ -826,7 +816,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>3.31115cm</Size>
+                    <Size>4.70065cm</Size>
                     <CellContents>
                       <Textbox Name="TenChuDe">
                         <CanGrow>true</CanGrow>
@@ -838,8 +828,7 @@
                                 <Value>=Fields!TenChuDe.Value</Value>
                                 <Style>
                                   <FontFamily>times New Roman</FontFamily>
-                                  <FontSize>12pt</FontSize>
-                                  <Color>Blue</Color>
+                                  <FontSize>11pt</FontSize>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -872,7 +861,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>3.31115cm</Size>
+                    <Size>4.70065cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox167">
                         <CanGrow>true</CanGrow>
@@ -908,8 +897,8 @@
             <DataSetName>DataSetLuotMuonDS</DataSetName>
             <Top>1.10983cm</Top>
             <Left>1.31092cm</Left>
-            <Height>2.62931cm</Height>
-            <Width>23.83534cm</Width>
+            <Height>2.43528cm</Height>
+            <Width>23.67659cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -918,7 +907,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.87213in</Height>
+        <Height>5.42074in</Height>
         <Style />
       </Body>
       <Width>10.66565in</Width>
@@ -949,9 +938,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.20529cm</Top>
-              <Left>6.64878cm</Left>
-              <Height>0.6cm</Height>
+              <Top>2.10718cm</Top>
+              <Left>6.9508cm</Left>
+              <Height>0.69811cm</Height>
               <Width>13.18916cm</Width>
               <Style>
                 <Border>
@@ -1018,7 +1007,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian1</rd:DefaultName>
               <Top>2.9464cm</Top>
-              <Left>9.09159cm</Left>
+              <Left>9.90354cm</Left>
               <Height>0.6cm</Height>
               <Width>7.28367cm</Width>
               <ZIndex>2</ZIndex>
@@ -1105,7 +1094,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1139,7 +1127,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>

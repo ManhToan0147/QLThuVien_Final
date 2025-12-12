@@ -93,12 +93,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.74922in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.64505in</Top>
+            <Left>1.2718in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <Style>
@@ -120,7 +122,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -132,8 +133,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.96936in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.89505in</Top>
+            <Left>1.2718in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <ZIndex>1</ZIndex>
@@ -166,8 +167,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>1.74922in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.64505in</Top>
+            <Left>7.5624in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>2</ZIndex>
@@ -190,7 +191,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -202,8 +202,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.96936in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.89505in</Top>
+            <Left>7.5624in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>3</ZIndex>
@@ -361,8 +361,16 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
                                 </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SoNguoiViPham</rd:DefaultName>
@@ -392,8 +400,16 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
                                 </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SoLanViPham</rd:DefaultName>
@@ -421,10 +437,20 @@
                                   <Value>=Fields!TongTienPhat.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TongTienPhat</rd:DefaultName>
@@ -459,7 +485,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -495,7 +520,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -531,7 +555,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -718,7 +741,9 @@
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>MaViPham</rd:DefaultName>
@@ -745,6 +770,12 @@
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
+                                  <TextRun>
+                                    <Value xml:space="preserve">  </Value>
+                                    <Style>
+                                      <FontFamily>Times New Roman</FontFamily>
+                                    </Style>
+                                  </TextRun>
                                   <TextRun>
                                     <Value>=Fields!TenViPham.Value</Value>
                                     <Style>
@@ -779,6 +810,12 @@
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
+                                      <TextRun>
+                                        <Value xml:space="preserve">  </Value>
+                                        <Style>
+                                          <FontFamily>Times New Roman</FontFamily>
+                                        </Style>
+                                      </TextRun>
                                       <TextRun>
                                         <Value>=Fields!HinhThucPhat.Value</Value>
                                         <Style>
@@ -828,7 +865,6 @@
                                   <FontFamily>Times New Roman</FontFamily>
                                   <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
-                                  <Color>Red</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -901,7 +937,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>2.3388in</Height>
+        <Height>2.98463in</Height>
         <Style />
       </Body>
       <Width>10.42784in</Width>
@@ -933,7 +969,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>2.20529cm</Top>
-              <Left>7.57423cm</Left>
+              <Left>7.71769cm</Left>
               <Height>0.6cm</Height>
               <Width>11.05133cm</Width>
               <Style>
@@ -1001,7 +1037,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian1</rd:DefaultName>
               <Top>2.9464cm</Top>
-              <Left>9.23725cm</Left>
+              <Left>9.60152cm</Left>
               <Height>0.6cm</Height>
               <Width>7.28367cm</Width>
               <ZIndex>2</ZIndex>
@@ -1088,7 +1124,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1122,7 +1157,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>

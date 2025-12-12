@@ -127,7 +127,7 @@
             this.btnInBC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnInBC.HoverState.FillColor = System.Drawing.Color.White;
             this.btnInBC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnInBC.Location = new System.Drawing.Point(1330, 275);
+            this.btnInBC.Location = new System.Drawing.Point(1316, 276);
             this.btnInBC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInBC.Name = "btnInBC";
             this.btnInBC.Size = new System.Drawing.Size(184, 55);
@@ -137,13 +137,14 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.reportViewer1.AutoSize = true;
             this.reportViewer1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportViewer1.Location = new System.Drawing.Point(46, 393);
+            this.reportViewer1.Location = new System.Drawing.Point(59, 393);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1468, 708);
+            this.reportViewer1.Size = new System.Drawing.Size(1441, 708);
             this.reportViewer1.TabIndex = 16;
             // 
             // btnThoat
@@ -163,7 +164,7 @@
             this.btnThoat.HoverState.BorderColor = System.Drawing.Color.Red;
             this.btnThoat.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat.Location = new System.Drawing.Point(1379, 1132);
+            this.btnThoat.Location = new System.Drawing.Point(1365, 1133);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(135, 55);
@@ -216,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1558, 1217);
+            this.ClientSize = new System.Drawing.Size(1556, 1217);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboNgheNghiep);
             this.Controls.Add(this.label4);

@@ -74,8 +74,8 @@ namespace QL_ThuVien
             }
 
             // Câu lệnh SQL với điều kiện lọc bổ sung
-            sql = "SELECT pm.MaPhieuMuon, ct.MaSach, ds.TenDauSach, km.TenKieuMuon, ds.MaKho, " +
-                  "ct.TinhTrangTra, pm.NgayMuon, pm.NgayThucTra " +
+            sql = "SELECT pm.MaPhieuMuon, ct.MaSach, ds.TenDauSach, km.TenKieuMuon, ds.MaKho,  " +
+                  "ct.TinhTrangTra, pm.NgayMuon, pm.NgayThucTra, ct.TinhTrangMuon " +
                   "FROM CT_PhieuMuon AS ct " +
                   "JOIN PhieuMuon AS pm ON pm.MaPhieuMuon = ct.MaPhieuMuon " +
                   "JOIN CuonSach AS cs ON cs.MaSach = ct.MaSach " +

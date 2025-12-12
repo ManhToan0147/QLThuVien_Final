@@ -100,7 +100,7 @@ namespace QL_ThuVien
             sqlTop3DocGia = "SELECT TOP 3 " +
                             "    dg.HoTen, " +
                             "    COUNT(ct.MaViPham) AS SoLanViPham, " +
-                            "    SUM(ct.NopPhat) AS TongTienPhat " +
+                            "    FORMAT(SUM(ct.NopPhat),'#,###') AS TongTienPhat " +
                             "FROM DocGia AS dg " +
                             "JOIN PhieuMuon AS pm ON dg.MaDocGia = pm.MaDocGia " +
                             "JOIN PhieuPhat AS pp ON pp.MaPhieuMuon = pm.MaPhieuMuon " +

@@ -85,12 +85,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>2.09955in</Top>
-            <Left>1.19048in</Left>
+            <Top>1.76677in</Top>
+            <Left>1.33977in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <Style>
@@ -112,9 +114,7 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -124,8 +124,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>2.31969in</Top>
-            <Left>1.19048in</Left>
+            <Top>2.03066in</Top>
+            <Left>1.33977in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <ZIndex>1</ZIndex>
@@ -158,8 +158,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>2.09955in</Top>
-            <Left>7.48108in</Left>
+            <Top>1.76677in</Top>
+            <Left>7.63037in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>2</ZIndex>
@@ -182,7 +182,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -194,8 +193,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>2.31969in</Top>
-            <Left>7.48108in</Left>
+            <Top>2.03066in</Top>
+            <Left>7.63037in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>3</ZIndex>
@@ -213,7 +212,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>4.12399cm</Width>
+                  <Width>3.36533cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.3415cm</Width>
@@ -314,9 +313,15 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
                                 </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -345,11 +350,19 @@
                                   <Value>=Fields!TongTienPhat.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -385,7 +398,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -421,7 +433,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -496,7 +507,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>6.04082cm</Size>
+                        <Size>6.67582cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox41">
                             <CanGrow>true</CanGrow>
@@ -535,7 +546,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>4.93417cm</Size>
+                            <Size>3.55834cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox39">
                                 <CanGrow>true</CanGrow>
@@ -629,7 +640,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>6.04082cm</Size>
+                        <Size>6.67582cm</Size>
                         <CellContents>
                           <Textbox Name="HoTen">
                             <CanGrow>true</CanGrow>
@@ -637,6 +648,12 @@
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
+                                  <TextRun>
+                                    <Value xml:space="preserve">  </Value>
+                                    <Style>
+                                      <FontFamily>Times New Roman</FontFamily>
+                                    </Style>
+                                  </TextRun>
                                   <TextRun>
                                     <Value>=Fields!HoTen.Value</Value>
                                     <Style>
@@ -663,7 +680,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>4.93417cm</Size>
+                            <Size>3.55834cm</Size>
                             <CellContents>
                               <Textbox Name="NgheNghiep">
                                 <CanGrow>true</CanGrow>
@@ -671,6 +688,12 @@
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
+                                      <TextRun>
+                                        <Value xml:space="preserve">  </Value>
+                                        <Style>
+                                          <FontFamily>Times New Roman</FontFamily>
+                                        </Style>
+                                      </TextRun>
                                       <TextRun>
                                         <Value>=Fields!NgheNghiep.Value</Value>
                                         <Style>
@@ -706,7 +729,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>13.98088cm</Size>
+                    <Size>13.24005cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox43">
                         <CanGrow>true</CanGrow>
@@ -720,7 +743,6 @@
                                   <FontFamily>Times New Roman</FontFamily>
                                   <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
-                                  <Color>Red</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -747,10 +769,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSetDGViPham</DataSetName>
-            <Top>0.98636cm</Top>
-            <Left>2.02018cm</Left>
+            <Top>0.14111cm</Top>
+            <Left>2.39939cm</Left>
             <Height>1.8cm</Height>
-            <Width>22.44637cm</Width>
+            <Width>20.94688cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -758,40 +780,6 @@
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="prLoaiViPham">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!prLoaiViPham.Value</Value>
-                    <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>11pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>prLoaiViPham</rd:DefaultName>
-            <Top>0.17639cm</Top>
-            <Left>2.02558cm</Left>
-            <Height>0.6cm</Height>
-            <Width>10.47892cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="prTop3DocGia">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -810,11 +798,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>prTop3DocGia</rd:DefaultName>
-            <Top>3.25119cm</Top>
-            <Left>2.02558cm</Left>
+            <Top>2.40594cm</Top>
+            <Left>2.40479cm</Left>
             <Height>1.21383cm</Height>
             <Width>9.04131cm</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -843,11 +831,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>prTop3DocGia</rd:DefaultName>
-            <Top>3.2512cm</Top>
-            <Left>16.85744cm</Left>
+            <Top>2.40595cm</Top>
+            <Left>15.63943cm</Left>
             <Height>1.21383cm</Height>
-            <Width>9.04131cm</Width>
-            <ZIndex>7</ZIndex>
+            <Width>7.70683cm</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -859,13 +847,13 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>2.79436in</Height>
+        <Height>3.32908in</Height>
         <Style />
       </Body>
-      <Width>10.42784in</Width>
+      <Width>10.20081in</Width>
       <Page>
         <PageHeader>
-          <Height>3.85234cm</Height>
+          <Height>4.61081cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -890,9 +878,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.20529cm</Top>
-              <Left>7.57423cm</Left>
-              <Height>0.6cm</Height>
+              <Top>2.06418cm</Top>
+              <Left>7.42936cm</Left>
+              <Height>0.74111cm</Height>
               <Width>11.05133cm</Width>
               <Style>
                 <Border>
@@ -925,9 +913,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
               <Top>0.46305in</Top>
-              <Left>7.48108in</Left>
+              <Left>6.91722in</Left>
               <Height>0.25in</Height>
-              <Width>2.71528in</Width>
+              <Width>2.57639in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -959,7 +947,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian</rd:DefaultName>
               <Top>2.9464cm</Top>
-              <Left>9.23725cm</Left>
+              <Left>9.31319cm</Left>
               <Height>0.6cm</Height>
               <Width>7.28367cm</Width>
               <ZIndex>2</ZIndex>
@@ -1024,6 +1012,41 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Textbox Name="prLoaiViPham">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!prLoaiViPham.Value</Value>
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>prLoaiViPham</rd:DefaultName>
+              <Top>3.68751cm</Top>
+              <Left>9.31319cm</Left>
+              <Height>0.6cm</Height>
+              <Width>7.28367cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style>
             <Border>
@@ -1046,7 +1069,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1057,7 +1079,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>0.15417in</Top>
-              <Left>8.19636in</Left>
+              <Left>7.6325in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <Style>
@@ -1080,7 +1102,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1091,7 +1112,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.15417in</Top>
-              <Left>9.19636in</Left>
+              <Left>8.6325in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>

@@ -93,12 +93,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.13387in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.35401in</Top>
+            <Left>1.10269in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <Style>
@@ -120,7 +122,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -132,8 +133,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.35401in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.60401in</Top>
+            <Left>1.10269in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <ZIndex>1</ZIndex>
@@ -166,8 +167,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>1.13387in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.35401in</Top>
+            <Left>7.39329in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>2</ZIndex>
@@ -190,7 +191,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -202,8 +202,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.35401in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.60401in</Top>
+            <Left>7.39329in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>3</ZIndex>
@@ -220,9 +220,6 @@
           <Tablix Name="Tablix3">
             <TablixBody>
               <TablixColumns>
-                <TablixColumn>
-                  <Width>1.478cm</Width>
-                </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
                 </TablixColumn>
@@ -249,42 +246,6 @@
                 <TablixRow>
                   <Height>0.6cm</Height>
                   <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox38">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>STT</Value>
-                                  <Style>
-                                    <FontFamily>Times New Roman</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox38</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightBlue</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox50">
@@ -544,39 +505,6 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox39">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=ROWNUMBER("TenDauSach")</Value>
-                                  <Style>
-                                    <FontFamily>Times New Roman</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox39</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="MaSach">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -590,7 +518,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MaSach</rd:DefaultName>
@@ -618,11 +548,19 @@
                                   <Value>=Fields!GiaBia.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -812,7 +750,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox15">
+                        <Textbox Name="Textbox11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -824,7 +762,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Blue</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -833,7 +770,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -844,10 +781,9 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>8</ColSpan>
+                        <ColSpan>7</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -861,7 +797,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox72">
+                        <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -873,7 +809,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -882,7 +817,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox72</rd:DefaultName>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -893,10 +828,9 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>8</ColSpan>
+                        <ColSpan>7</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -916,14 +850,13 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>5.52243cm</Size>
+                    <Size>6.42201cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox69">
                         <CanGrow>true</CanGrow>
@@ -975,7 +908,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>5.52243cm</Size>
+                    <Size>6.42201cm</Size>
                     <CellContents>
                       <Textbox Name="TenDauSach1">
                         <CanGrow>true</CanGrow>
@@ -987,7 +920,6 @@
                                 <Value>=Fields!TenDauSach.Value</Value>
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <Color>Blue</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -1020,7 +952,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>5.52243cm</Size>
+                    <Size>6.42201cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox71">
                         <CanGrow>true</CanGrow>
@@ -1034,7 +966,6 @@
                                   <FontFamily>Times New Roman</FontFamily>
                                   <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
-                                  <Color>Red</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -1062,9 +993,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSetSachMat</DataSetName>
             <Top>0.29563cm</Top>
-            <Left>0.82381cm</Left>
+            <Left>1.14965cm</Left>
             <Height>2.4cm</Height>
-            <Width>25.00843cm</Width>
+            <Width>24.43001cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -1073,7 +1004,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.8888in</Height>
+        <Height>2.47908in</Height>
         <Style />
       </Body>
       <Width>10.42784in</Width>
@@ -1137,7 +1068,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian</rd:DefaultName>
               <Top>2.9464cm</Top>
-              <Left>9.59708cm</Left>
+              <Left>9.60152cm</Left>
               <Height>0.6cm</Height>
               <Width>7.28367cm</Width>
               <ZIndex>1</ZIndex>
@@ -1223,8 +1154,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.17001cm</Top>
-              <Left>7.26261cm</Left>
+              <Top>2.24057cm</Top>
+              <Left>7.23086cm</Left>
               <Height>0.6cm</Height>
               <Width>12.025cm</Width>
               <ZIndex>4</ZIndex>
@@ -1260,7 +1191,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1294,7 +1224,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>

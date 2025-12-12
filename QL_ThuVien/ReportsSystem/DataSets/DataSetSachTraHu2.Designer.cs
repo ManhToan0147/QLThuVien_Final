@@ -299,6 +299,8 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             private global::System.Data.DataColumn columnNgayThucTra;
             
+            private global::System.Data.DataColumn columnTinhTrangMuon;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DataTableSachTraHuDataTable() {
@@ -414,6 +416,14 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TinhTrangMuonColumn {
+                get {
+                    return this.columnTinhTrangMuon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTableSachTraHuRow AddDataTableSachTraHuRow(string MaPhieuMuon, string MaSach, string MaDauSach, string MaKieuMuon, string TenDauSach, string TenKieuMuon, string MaKho, string TinhTrangTra, System.DateTime NgayMuon, System.DateTime NgayThucTra) {
+            public DataTableSachTraHuRow AddDataTableSachTraHuRow(string MaPhieuMuon, string MaSach, string MaDauSach, string MaKieuMuon, string TenDauSach, string TenKieuMuon, string MaKho, string TinhTrangTra, System.DateTime NgayMuon, System.DateTime NgayThucTra, string TinhTrangMuon) {
                 DataTableSachTraHuRow rowDataTableSachTraHuRow = ((DataTableSachTraHuRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaPhieuMuon,
@@ -461,7 +471,8 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                         MaKho,
                         TinhTrangTra,
                         NgayMuon,
-                        NgayThucTra};
+                        NgayThucTra,
+                        TinhTrangMuon};
                 rowDataTableSachTraHuRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableSachTraHuRow);
                 return rowDataTableSachTraHuRow;
@@ -494,6 +505,7 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                 this.columnTinhTrangTra = base.Columns["TinhTrangTra"];
                 this.columnNgayMuon = base.Columns["NgayMuon"];
                 this.columnNgayThucTra = base.Columns["NgayThucTra"];
+                this.columnTinhTrangMuon = base.Columns["TinhTrangMuon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +531,8 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
                 base.Columns.Add(this.columnNgayMuon);
                 this.columnNgayThucTra = new global::System.Data.DataColumn("NgayThucTra", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNgayThucTra);
+                this.columnTinhTrangMuon = new global::System.Data.DataColumn("TinhTrangMuon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTinhTrangMuon);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -821,6 +835,22 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TinhTrangMuon {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTableSachTraHu.TinhTrangMuonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TinhTrangMuon\' in table \'DataTableSachTraHu\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSachTraHu.TinhTrangMuonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaPhieuMuonNull() {
                 return this.IsNull(this.tableDataTableSachTraHu.MaPhieuMuonColumn);
             }
@@ -937,6 +967,18 @@ namespace QL_ThuVien.ReportsSystem.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNgayThucTraNull() {
                 this[this.tableDataTableSachTraHu.NgayThucTraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTinhTrangMuonNull() {
+                return this.IsNull(this.tableDataTableSachTraHu.TinhTrangMuonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTinhTrangMuonNull() {
+                this[this.tableDataTableSachTraHu.TinhTrangMuonColumn] = global::System.Convert.DBNull;
             }
         }
         

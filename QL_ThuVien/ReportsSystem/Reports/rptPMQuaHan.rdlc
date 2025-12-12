@@ -89,12 +89,14 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
             <Top>1.30227in</Top>
-            <Left>0.79747in</Left>
+            <Left>1.23958in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <Style>
@@ -116,7 +118,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -128,8 +129,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.52241in</Top>
-            <Left>0.79747in</Left>
+            <Top>1.55227in</Top>
+            <Left>1.23958in</Left>
             <Height>0.25in</Height>
             <Width>1.39583in</Width>
             <ZIndex>1</ZIndex>
@@ -163,7 +164,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
             <Top>1.30227in</Top>
-            <Left>7.08807in</Left>
+            <Left>7.53018in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>2</ZIndex>
@@ -186,7 +187,6 @@
                   <TextRun>
                     <Value>(Ký, ghi rõ họ tên)</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -198,8 +198,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.52241in</Top>
-            <Left>7.08807in</Left>
+            <Top>1.55227in</Top>
+            <Left>7.53018in</Left>
             <Height>0.25in</Height>
             <Width>1.34722in</Width>
             <ZIndex>3</ZIndex>
@@ -475,7 +475,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox43</rd:DefaultName>
@@ -506,7 +508,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MaSach</rd:DefaultName>
@@ -569,7 +573,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NgayMuon</rd:DefaultName>
@@ -601,7 +607,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>HanTra</rd:DefaultName>
@@ -631,8 +639,16 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
                                 </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox59</rd:DefaultName>
@@ -667,7 +683,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Blue</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -714,7 +729,6 @@
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -906,7 +920,6 @@
                                 <Value>=Fields!MaDocGia.Value</Value>
                                 <Style>
                                   <FontFamily>Times New Roman</FontFamily>
-                                  <Color>Blue</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -943,7 +956,6 @@
                                     <Value>=Fields!HoTen.Value</Value>
                                     <Style>
                                       <FontFamily>Times New Roman</FontFamily>
-                                      <Color>Blue</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -980,7 +992,6 @@
                                         <Value>=Fields!MaPhieuMuon.Value</Value>
                                         <Style>
                                           <FontFamily>Times New Roman</FontFamily>
-                                          <Color>Blue</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -1031,7 +1042,6 @@
                                   <FontFamily>Times New Roman</FontFamily>
                                   <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
-                                  <Color>Red</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -1073,7 +1083,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.8888in</Height>
+        <Height>2.44436in</Height>
         <Style />
       </Body>
       <Width>10.42784in</Width>
@@ -1173,7 +1183,7 @@
               </Paragraphs>
               <rd:DefaultName>prThoiGian</rd:DefaultName>
               <Top>2.87585cm</Top>
-              <Left>9.23725cm</Left>
+              <Left>9.50627cm</Left>
               <Height>0.6cm</Height>
               <Width>7.47417cm</Width>
               <ZIndex>2</ZIndex>
@@ -1260,7 +1270,6 @@
                       <Value>Trang:</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1294,7 +1303,6 @@
                       <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
