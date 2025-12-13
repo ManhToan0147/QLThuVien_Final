@@ -36,6 +36,7 @@
             this.btnNhaXB = new Guna.UI2.WinForms.Guna2Button();
             this.btnChuDe = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoaiSach = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKieuMuon = new Guna.UI2.WinForms.Guna2Button();
             this.panelRibbon.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // panelRibbon
             // 
             this.panelRibbon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            this.panelRibbon.Controls.Add(this.btnKieuMuon);
             this.panelRibbon.Controls.Add(this.btnViPham);
             this.panelRibbon.Controls.Add(this.btnTacGia);
             this.panelRibbon.Controls.Add(this.btnKhoSach);
@@ -79,7 +81,7 @@
             this.btnViPham.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnViPham.HoverState.FillColor = System.Drawing.Color.White;
             this.btnViPham.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
-            this.btnViPham.Location = new System.Drawing.Point(1318, 0);
+            this.btnViPham.Location = new System.Drawing.Point(1571, 0);
             this.btnViPham.Name = "btnViPham";
             this.btnViPham.Size = new System.Drawing.Size(247, 90);
             this.btnViPham.TabIndex = 3;
@@ -196,6 +198,28 @@
             this.btnLoaiSach.Text = "Loại sách";
             this.btnLoaiSach.Click += new System.EventHandler(this.btnLoaiSach_Click);
             // 
+            // btnKieuMuon
+            // 
+            this.btnKieuMuon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKieuMuon.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnKieuMuon.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnKieuMuon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKieuMuon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKieuMuon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKieuMuon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKieuMuon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            this.btnKieuMuon.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKieuMuon.ForeColor = System.Drawing.Color.White;
+            this.btnKieuMuon.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnKieuMuon.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnKieuMuon.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            this.btnKieuMuon.Location = new System.Drawing.Point(1318, 0);
+            this.btnKieuMuon.Name = "btnKieuMuon";
+            this.btnKieuMuon.Size = new System.Drawing.Size(247, 90);
+            this.btnKieuMuon.TabIndex = 4;
+            this.btnKieuMuon.Text = "Kiểu mượn";
+            this.btnKieuMuon.Click += new System.EventHandler(this.btnKieuMuon_Click);
+            // 
             // UC_QLDanhMuc_Ribbon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -222,5 +246,6 @@
         private Guna.UI2.WinForms.Guna2Button btnViPham;
         private Guna.UI2.WinForms.Guna2Button btnTacGia;
         private Guna.UI2.WinForms.Guna2Button btnKhoSach;
+        private Guna.UI2.WinForms.Guna2Button btnKieuMuon;
     }
 }

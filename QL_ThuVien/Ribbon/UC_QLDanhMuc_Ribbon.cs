@@ -67,5 +67,11 @@ namespace QL_ThuVien.Ribbon
             var uc = new UC_DMLoaiSach();
             addUserControl(uc); 
         }
+
+        private void btnKieuMuon_Click(object sender, EventArgs e)
+        {
+            var uc = new UC_DMKieuMuon();
+            addUserControl(uc);
+        }
     }
 }

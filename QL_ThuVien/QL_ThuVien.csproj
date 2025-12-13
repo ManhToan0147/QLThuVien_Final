@@ -211,6 +211,12 @@
     <Compile Include="Main UC\QLDanhMuc\UC_DMKhoSach.Designer.cs">
       <DependentUpon>UC_DMKhoSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main UC\QLDanhMuc\UC_DMKieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main UC\QLDanhMuc\UC_DMKieuMuon.Designer.cs">
+      <DependentUpon>UC_DMKieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main UC\QLDanhMuc\UC_DMLoaiSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -526,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main UC\QLDanhMuc\UC_DMKhoSach.resx">
       <DependentUpon>UC_DMKhoSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main UC\QLDanhMuc\UC_DMKieuMuon.resx">
+      <DependentUpon>UC_DMKieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main UC\QLDanhMuc\UC_DMLoaiSach.resx">
       <DependentUpon>UC_DMLoaiSach.cs</DependentUpon>

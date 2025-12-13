@@ -58,26 +58,32 @@ namespace QL_ThuVien.Main_UC.QLSach
             }
             dgvCuonSach.DataSource = dt;
         }
-
         private void showDauSach()
         {
             using (con = new SqlConnection(strCon))
             {
                 string sql = @"
                     SELECT 
-                        ds.MaDauSach,
+                        ds. MaDauSach,
                         ds.TenDauSach,
                         ks.TenKho,
                         -- Đếm tổng số cuốn sách
                         COUNT(cs.MaSach) AS TongSoCuon,
+                        -- Đếm số cuốn HIỆN TẠI trong kho (chưa thanh lý, chưa mất)
+                        SUM(CASE WHEN cs.TinhTrang NOT IN (N'Thanh lý', N'Mất') THEN 1 ELSE 0 END) AS HienTai,
                         -- Đếm số cuốn còn (có thể mượn)
                         SUM(CASE WHEN cs.TinhTrang = N'Còn' THEN 1 ELSE 0 END) AS SanSangMuon,
                         -- Đếm số cuốn đang mượn
                         SUM(CASE WHEN cs.TinhTrang = N'Đang mượn' THEN 1 ELSE 0 END) AS SoCuonDangMuon,
-                        SUM(CASE WHEN cs.TinhTrang = N'Mất' THEN 1 ELSE 0 END) AS SoCuonMat
+                        -- Đếm số cuốn hư hỏng
+                        SUM(CASE WHEN cs. TinhTrang = N'Hư hỏng' THEN 1 ELSE 0 END) AS HuHong,
+                        -- Đếm số cuốn mất
+                        SUM(CASE WHEN cs.TinhTrang = N'Mất' THEN 1 ELSE 0 END) AS SoCuonMat,
+                        -- Đếm số cuốn thanh lý
+                        SUM(CASE WHEN cs.TinhTrang = N'Thanh lý' THEN 1 ELSE 0 END) AS ThanhLy
                     FROM DauSach ds
                     LEFT JOIN KhoSach ks ON ds.MaKho = ks.MaKho
-                    LEFT JOIN CuonSach cs ON ds. MaDauSach = cs.MaDauSach
+                    LEFT JOIN CuonSach cs ON ds.MaDauSach = cs.MaDauSach
                     GROUP BY ds.MaDauSach, ds.TenDauSach, ks.TenKho
                     ORDER BY ds.MaDauSach";
 

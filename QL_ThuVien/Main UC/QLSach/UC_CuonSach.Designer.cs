@@ -30,20 +30,24 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCuonSach = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDauSach = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCuonSach = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboTruong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnXemChiTiet = new Guna.UI2.WinForms.Guna2Button();
@@ -52,13 +56,19 @@
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.numSoLuongNhap = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSoCuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HienTai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SanSangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCuonDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCuonMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HuHong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDauSach)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -114,31 +124,34 @@
             this.TenDauSach,
             this.TenKho,
             this.TongSoCuon,
+            this.HienTai,
             this.SanSangMuon,
             this.SoCuonDangMuon,
-            this.SoCuonMat});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDauSach.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SoCuonMat,
+            this.HuHong,
+            this.ThanhLy});
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDauSach.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvDauSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDauSach.EnableHeadersVisualStyles = false;
             this.dgvDauSach.GridColor = System.Drawing.Color.Black;
             this.dgvDauSach.Location = new System.Drawing.Point(3, 27);
             this.dgvDauSach.Name = "dgvDauSach";
             this.dgvDauSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDauSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDauSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvDauSach.RowHeadersWidth = 72;
             this.dgvDauSach.RowTemplate.Height = 50;
             this.dgvDauSach.Size = new System.Drawing.Size(1110, 757);
@@ -158,78 +171,58 @@
             // 
             // dgvCuonSach
             // 
+            this.dgvCuonSach.AllowUserToAddRows = false;
             this.dgvCuonSach.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCuonSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCuonSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCuonSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCuonSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCuonSach.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCuonSach.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCuonSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCuonSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCuonSach.ColumnHeadersHeight = 50;
             this.dgvCuonSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
             this.TinhTrang,
             this.MoTa});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCuonSach.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCuonSach.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCuonSach.EnableHeadersVisualStyles = false;
             this.dgvCuonSach.GridColor = System.Drawing.Color.Black;
             this.dgvCuonSach.Location = new System.Drawing.Point(3, 27);
             this.dgvCuonSach.Name = "dgvCuonSach";
             this.dgvCuonSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCuonSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCuonSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCuonSach.RowHeadersWidth = 72;
             this.dgvCuonSach.RowTemplate.Height = 50;
             this.dgvCuonSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvCuonSach.Size = new System.Drawing.Size(724, 757);
             this.dgvCuonSach.TabIndex = 4;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 9;
-            this.MaSach.Name = "MaSach";
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.HeaderText = "Trạng thái";
-            this.TinhTrang.MinimumWidth = 9;
-            this.TinhTrang.Name = "TinhTrang";
-            // 
-            // MoTa
-            // 
-            this.MoTa.DataPropertyName = "MoTa";
-            this.MoTa.HeaderText = "Mô tả";
-            this.MoTa.MinimumWidth = 9;
-            this.MoTa.Name = "MoTa";
             // 
             // txtSearch
             // 
@@ -399,6 +392,36 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Số lượng";
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 9;
+            this.MaSach.Name = "MaSach";
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            this.TinhTrang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.TinhTrang.HeaderText = "Trạng thái";
+            this.TinhTrang.Items.AddRange(new object[] {
+            "Còn",
+            "Đang mượn",
+            "Mất",
+            "Hư hỏng",
+            "Thanh lý"});
+            this.TinhTrang.MinimumWidth = 9;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TinhTrang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 9;
+            this.MoTa.Name = "MoTa";
+            // 
             // MaDauSach
             // 
             this.MaDauSach.DataPropertyName = "MaDauSach";
@@ -427,14 +450,28 @@
             // TongSoCuon
             // 
             this.TongSoCuon.DataPropertyName = "TongSoCuon";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.TongSoCuon.DefaultCellStyle = dataGridViewCellStyle3;
             this.TongSoCuon.HeaderText = "Tổng số cuốn";
             this.TongSoCuon.MinimumWidth = 8;
             this.TongSoCuon.Name = "TongSoCuon";
             this.TongSoCuon.Width = 150;
             // 
+            // HienTai
+            // 
+            this.HienTai.DataPropertyName = "HienTai";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.HienTai.DefaultCellStyle = dataGridViewCellStyle4;
+            this.HienTai.HeaderText = "Hiện tại";
+            this.HienTai.MinimumWidth = 8;
+            this.HienTai.Name = "HienTai";
+            this.HienTai.Width = 150;
+            // 
             // SanSangMuon
             // 
             this.SanSangMuon.DataPropertyName = "SanSangMuon";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SanSangMuon.DefaultCellStyle = dataGridViewCellStyle5;
             this.SanSangMuon.HeaderText = "Sẵn sàng mượn";
             this.SanSangMuon.MinimumWidth = 8;
             this.SanSangMuon.Name = "SanSangMuon";
@@ -443,6 +480,8 @@
             // SoCuonDangMuon
             // 
             this.SoCuonDangMuon.DataPropertyName = "SoCuonDangMuon";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SoCuonDangMuon.DefaultCellStyle = dataGridViewCellStyle6;
             this.SoCuonDangMuon.HeaderText = "Đang mượn";
             this.SoCuonDangMuon.MinimumWidth = 8;
             this.SoCuonDangMuon.Name = "SoCuonDangMuon";
@@ -451,10 +490,32 @@
             // SoCuonMat
             // 
             this.SoCuonMat.DataPropertyName = "SoCuonMat";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SoCuonMat.DefaultCellStyle = dataGridViewCellStyle7;
             this.SoCuonMat.HeaderText = "Đã mất";
             this.SoCuonMat.MinimumWidth = 8;
             this.SoCuonMat.Name = "SoCuonMat";
             this.SoCuonMat.Width = 150;
+            // 
+            // HuHong
+            // 
+            this.HuHong.DataPropertyName = "HuHong";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.HuHong.DefaultCellStyle = dataGridViewCellStyle8;
+            this.HuHong.HeaderText = "Hư hỏng";
+            this.HuHong.MinimumWidth = 8;
+            this.HuHong.Name = "HuHong";
+            this.HuHong.Width = 150;
+            // 
+            // ThanhLy
+            // 
+            this.ThanhLy.DataPropertyName = "ThanhLy";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ThanhLy.DefaultCellStyle = dataGridViewCellStyle9;
+            this.ThanhLy.HeaderText = "Thanh lý";
+            this.ThanhLy.MinimumWidth = 8;
+            this.ThanhLy.Name = "ThanhLy";
+            this.ThanhLy.Width = 150;
             // 
             // UC_CuonSach
             // 
@@ -496,21 +557,24 @@
         private System.Windows.Forms.DataGridView dgvDauSach;
         private System.Windows.Forms.DataGridView dgvCuonSach;
         private Guna.UI2.WinForms.Guna2ComboBox cboTruong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private Guna.UI2.WinForms.Guna2Button btnXemChiTiet;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2NumericUpDown numSoLuongNhap;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKho;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSoCuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HienTai;
         private System.Windows.Forms.DataGridViewTextBoxColumn SanSangMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCuonDangMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCuonMat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HuHong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhLy;
     }
 }

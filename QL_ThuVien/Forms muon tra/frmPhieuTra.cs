@@ -80,7 +80,7 @@ namespace QL_ThuVien
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = "Select * from ViPham";
+                string sql = "Select MaViPham, TenViPham, HinhThucPhat, LoaiTinhPhat, GiaTri from ViPham WHERE TrangThai = 1";
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -90,84 +90,96 @@ namespace QL_ThuVien
 
         private void btnChuyenXuong_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem có dòng nào được chọn trong bảng "Tình trạng mượn trả"
             if (dgvSachTra.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn một sách trong bảng 'Tình trạng mượn trả'.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Kiểm tra xem có dòng nào được chọn trong bảng "Thông tin vi phạm"
             if (dgvViPham.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn một vi phạm trong bảng 'Thông tin vi phạm'.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             foreach (DataGridViewRow row1 in dgvSachTra.SelectedRows)
             {
                 string maSach = row1.Cells[0].Value.ToString();
-
                 string soNgayTreStr = row1.Cells["SoNgayTre"].Value.ToString();
                 string tienCocStr = row1.Cells["TienCoc"].Value.ToString();
                 bool daTraSach = bool.Parse(row1.Cells["DaTraSach"].Value.ToString());
 
-                // Chuyển đổi dữ liệu
                 int soNgayTre = string.IsNullOrEmpty(soNgayTreStr) ? 0 : int.Parse(soNgayTreStr);
                 float tienCoc = string.IsNullOrEmpty(tienCocStr) ? 0 : float.Parse(tienCocStr);
+                float giaBia = tienCoc / 2;
 
                 foreach (DataGridViewRow row2 in dgvViPham.SelectedRows)
                 {
-                    string maViPham = row2.Cells[0].Value.ToString();
+                    string maViPham = row2.Cells["MaViPham"].Value.ToString();
+                    string tenViPham = row2.Cells["TenViPham"].Value.ToString().ToLower(); // Chuyển thành chữ thường
+                    string loaiTinhPhat = row2.Cells["LoaiTinhPhat"].Value?.ToString();
+                    float giaTri = row2.Cells["GiaTri"].Value != DBNull.Value
+                        ? Convert.ToSingle(row2.Cells["GiaTri"].Value)
+                        : 0f;
+
                     float tienNopPhat = 0;
-                    switch (maViPham)
+
+                    // TÍNH TIỀN PHẠT
+                    if (loaiTinhPhat == "Cố định")
                     {
-                        case "VP01": // Làm mất sách
-                            if (!daTraSach) // Chỉ tính phạt nếu chưa trả sách
-                            {
-                                tienNopPhat = tienCoc;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Sách đã được trả", "Thông báo", 
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-                            break;
-
-                        case "VP02": // Giữ sách quá hạn
-                            if (soNgayTre > 0)
-                            {
-                                tienNopPhat = soNgayTre * 3000; // Số ngày trễ * 3000
-                            }
-                            else
-                            {
-                                MessageBox.Show("Sách không trả trễ hạn", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-                            break;
-
-                        case "VP03": // Làm rách, viết hoặc vẽ lên sách
-                            tienNopPhat = 20000; // Phạt cố định 20000
-                            break;
-
-                        case "VP04": // Làm mất giá trị một phần
-                            tienNopPhat = tienCoc / 2; // Phạt bằng nửa tiền cọc
-                            break;
-
-                        //default:
-                        //    MessageBox.Show("Mã vi phạm không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //    continue;
+                        tienNopPhat = giaTri;
                     }
-                    //Them thong tin phat vao dgvSachPhat
+                    else if (loaiTinhPhat == "Theo ngày")
+                    {
+                        // "THEO NGÀY" BẮT BUỘC PHẢI CÓ SỐ NGÀY TRỀ
+                        if (soNgayTre > 0)
+                        {
+                            tienNopPhat = soNgayTre * giaTri;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sách không trả trễ hạn", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            continue;
+                        }
+                    }
+                    else if (loaiTinhPhat == "Theo giá bìa")
+                    {
+                        // KIỂM TRA ĐẶC THÙ: "mất sách"
+                        if (tenViPham.Contains("mất sách"))
+                        {
+                            if (!daTraSach)
+                            {
+                                tienNopPhat = giaBia * giaTri;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sách đã được trả", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            // Các vi phạm khác dùng "Theo giá bìa" (vd: hư hại)
+                            tienNopPhat = giaBia * giaTri;
+                        }
+                    }
+                    else
+                    {
+                        // Không có loại tính phạt → tiền = 0
+                        tienNopPhat = 0;
+                    }
+
+                    // THÊM VÀO DB
                     using (con = new SqlConnection(strCon))
                     {
                         try
                         {
                             con.Open();
                             string sql = @"
-                                INSERT INTO CT_PhieuPhat (MaPhieuPhat, MaSach, MaViPham, NopPhat)
-                                VALUES (@MaPhieuPhat, @MaSach, @MaViPham, @NopPhat)";
+                        INSERT INTO CT_PhieuPhat (MaPhieuPhat, MaSach, MaViPham, NopPhat)
+                        VALUES (@MaPhieuPhat, @MaSach, @MaViPham, @NopPhat)";
 
                             using (SqlCommand cmd = new SqlCommand(sql, con))
                             {
