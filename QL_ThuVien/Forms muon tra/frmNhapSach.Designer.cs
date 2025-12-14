@@ -64,6 +64,8 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboTruong = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.grbPhieuMuon.SuspendLayout();
             this.grbTinhTrangSach.SuspendLayout();
             this.panelCuonSach.SuspendLayout();
@@ -180,6 +182,8 @@
             // 
             // grbTinhTrangSach
             // 
+            this.grbTinhTrangSach.Controls.Add(this.label5);
+            this.grbTinhTrangSach.Controls.Add(this.cboTruong);
             this.grbTinhTrangSach.Controls.Add(this.btnReset);
             this.grbTinhTrangSach.Controls.Add(this.label1);
             this.grbTinhTrangSach.Controls.Add(this.cboTrangThai);
@@ -234,7 +238,7 @@
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cboTrangThai.ForeColor = System.Drawing.Color.Black;
             this.cboTrangThai.ItemHeight = 49;
             this.cboTrangThai.Location = new System.Drawing.Point(868, 66);
@@ -348,13 +352,13 @@
             this.txtSearch.IconLeft = global::QL_ThuVien.Properties.Resources.search;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(20, 0);
             this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch.Location = new System.Drawing.Point(34, 66);
+            this.txtSearch.Location = new System.Drawing.Point(212, 66);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtSearch.PlaceholderText = "Nhập tên đầu sách để tìm kiếm";
+            this.txtSearch.PlaceholderText = "Nhập để tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(802, 55);
+            this.txtSearch.Size = new System.Drawing.Size(624, 55);
             this.txtSearch.TabIndex = 21;
             this.txtSearch.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -530,6 +534,35 @@
             this.TinhTrangMuon.Name = "TinhTrangMuon";
             this.TinhTrangMuon.Width = 225;
             // 
+            // cboTruong
+            // 
+            this.cboTruong.BackColor = System.Drawing.Color.Transparent;
+            this.cboTruong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTruong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTruong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTruong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTruong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboTruong.ForeColor = System.Drawing.Color.Black;
+            this.cboTruong.ItemHeight = 49;
+            this.cboTruong.Items.AddRange(new object[] {
+            "Tên đầu sách",
+            "Mã sách"});
+            this.cboTruong.Location = new System.Drawing.Point(21, 66);
+            this.cboTruong.Name = "cboTruong";
+            this.cboTruong.Size = new System.Drawing.Size(170, 55);
+            this.cboTruong.TabIndex = 32;
+            this.cboTruong.SelectedIndexChanged += new System.EventHandler(this.cboTruong_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(26, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 25);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Tên trường";
+            // 
             // frmNhapSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -589,5 +622,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTruong;
+        private System.Windows.Forms.Label label5;
     }
 }

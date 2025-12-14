@@ -474,6 +474,61 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             }
         }
 
+        private void cboKieuMuon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TinhHanTra();
+        }
+
+        private void dtNgayMuon_ValueChanged(object sender, EventArgs e)
+        {
+            TinhHanTra();
+        }
+
+        private void TinhHanTra()
+        {
+            // KIỂM TRA KIỂU MƯỢN ĐÃ ĐƯỢC CHỌN CHƯA
+            if (cboKieuMuon.SelectedValue == null || cboKieuMuon.SelectedIndex == -1)
+            {
+                // CHƯA CHỌN KIỂU MƯỢN → HẠN TRẢ = NGÀY MƯỢN
+                dtHanTra.Value = dtNgayMuon.Value;
+                return;
+            }
+
+            try
+            {
+                // LẤY SỐ NGÀY MƯỢN TỪ DATABASE
+                string maKieuMuon = cboKieuMuon.SelectedValue.ToString();
+                int soNgayMuon = 0;
+
+                using (SqlConnection con = new SqlConnection(strCon))
+                {
+                    con.Open();
+                    string sql = "SELECT SoNgayMuon FROM KieuMuon WHERE MaKieuMuon = @MaKieuMuon";
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+                        cmd.Parameters.AddWithValue("@MaKieuMuon", maKieuMuon);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            soNgayMuon = Convert.ToInt32(result);
+                        }
+                    }
+                }
+
+                // TÍNH HẠN TRẢ = NGÀY MƯỢN + SỐ NGÀY MƯỢN
+                dtHanTra.Value = dtNgayMuon.Value.AddDays(soNgayMuon);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tính hạn trả:\n{ex.Message}", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                dtHanTra.Value = dtNgayMuon.Value;
+            }
+        }
+
+
         private void dgvPhieuMuon_SelectionChanged(object sender, EventArgs e)
         {
             NapCT();
