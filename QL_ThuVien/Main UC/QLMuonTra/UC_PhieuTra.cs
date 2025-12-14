@@ -39,6 +39,13 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             cboTruong1.SelectedIndex = 0;
             cboTruong2.SelectedIndex = 0;
 
+            // Setup disabled style
+            SetupButtonDisabledStyle(btnSua);
+            SetupButtonDisabledStyle(btnXoa);
+            SetupButtonDisabledStyle(btnTraSach);
+            SetupButtonDisabledStyle(btnInPhieuTra);
+            SetupButtonDisabledStyle(btnRefresh);
+
             //Fix lỗi column header
             dgvPMCanTra.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPMCanTra.Font, FontStyle.Bold);
             dgvPMDaTra.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPMDaTra.Font, FontStyle.Bold);
@@ -47,7 +54,44 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
             LoadPMDaTra();
             LoadPMCanTra();
+            SetStyle();
+            UpdateTongSo();
         }
+        private void UpdateTongSo()
+        {
+            lblTongSo.Text = dgvPMDaTra.Rows.Count.ToString();
+        }
+
+        private void SetupButtonDisabledStyle(dynamic btn)
+        {
+            btn.DisabledState.BorderColor = Color.FromArgb(180, 210, 230);
+            btn.DisabledState.CustomBorderColor = Color.FromArgb(200, 200, 200);
+            btn.DisabledState.FillColor = Color.FromArgb(240, 240, 240);
+            btn.DisabledState.ForeColor = Color.FromArgb(160, 160, 160);
+        }
+
+        private void SetStyle()
+        {
+            if (addNewFlag)
+            {
+                // CHẾ ĐỘ TẠO MỚI - CHỈ TẮT SỬA/XÓA/IN/TRẢ SÁCH
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                btnInPhieuTra.Enabled = false;
+                btnTraSach.Enabled = false;
+                btnRefresh.Enabled = false;
+            }
+            else
+            {
+                // CHẾ ĐỘ BÌNH THƯỜNG - BẬT HẾT
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                btnInPhieuTra.Enabled = true;
+                btnTraSach.Enabled = true;
+                btnRefresh.Enabled = true;
+            }
+        }
+
 
         private void LoadPMCanTra()
         {
@@ -78,7 +122,8 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                                ELSE 0
                            END AS SoNgayTre
                     FROM PhieuMuon
-                    WHERE NgayThucTra IS NOT NULL";
+                    WHERE NgayThucTra IS NOT NULL
+                    ORDER BY NgayThucTra desc, MaPhieuMuon desc";
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -104,8 +149,31 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
         private string selectedMaPM, selectedMaDG;
         private void dgvPMDaTra_SelectionChanged(object sender, EventArgs e)
         {
-            NapCT();
-            LoadSachTra(selectedMaPM);
+            if (addNewFlag)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Bạn có muốn hủy tạo mới? ",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    addNewFlag = false;
+                    NapCT();
+                    LoadSachTra(selectedMaPM);
+                    SetStyle();  // ← GỌI
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                NapCT();
+                LoadSachTra(selectedMaPM);
+            }
         }
 
         private void txtSearch1_TextChanged(object sender, EventArgs e)
@@ -122,14 +190,61 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void txtSearch2_TextChanged(object sender, EventArgs e)
         {
-            if (cboTruong2.SelectedIndex == 0)
+            FilterDataPhieuTra();
+        }
+
+        private void cboTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterDataPhieuTra();
+        }
+
+        private void FilterDataPhieuTra()
+        {
+            if (dvPMDaTra == null)
+                return;
+
+            List<string> filters = new List<string>();
+
+            // === LỌC THEO TRẠNG THÁI ===
+            if (cboTrangThai.SelectedIndex > 0)  // Không phải "Tất cả"
             {
-                dvPMDaTra.RowFilter = $"MaPhieuMuon like '%{txtSearch2.Text}%'";
+                string trangThai = cboTrangThai.SelectedItem.ToString();
+
+                if (trangThai == "Trả đúng hạn")
+                {
+                    filters.Add("SoNgayTre <= 0");
+                }
+                else if (trangThai == "Trả trễ")
+                {
+                    filters.Add("SoNgayTre > 0");
+                }
             }
-            else
+
+            // === LỌC THEO TÌM KIẾM ===
+            string searchText = txtSearch2.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
             {
-                dvPMDaTra.RowFilter = $"MaDocGia like '%{txtSearch2.Text}%'";
+                string column = "";
+
+                switch (cboTruong2.SelectedIndex)
+                {
+                    case 0:  // Mã phiếu mượn
+                        column = "MaPhieuMuon";
+                        break;
+                    case 1:  // Mã độc giả
+                        column = "MaDocGia";
+                        break;
+                }
+
+                if (!string.IsNullOrEmpty(column))
+                {
+                    filters.Add($"{column} LIKE '%{searchText}%'");
+                }
             }
+
+            // === KẾT HỢP CÁC BỘ LỌC ===
+            dvPMDaTra.RowFilter = string.Join(" AND ", filters);
+            UpdateTongSo();
         }
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
@@ -145,6 +260,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             dtHanTra.Value = DateTime.Now;
             dtNgayThucTra.Value = DateTime.Now;
             addNewFlag = true;
+            SetStyle();
         }
 
         private void dgvPMCanTra_DoubleClick(object sender, EventArgs e)
@@ -197,8 +313,10 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                         }
                         addNewFlag = false;
                         LoadPMDaTra();
+                        UpdateTongSo();
                         LoadPMCanTra();
-                        // Tìm dòng chứa mã của bản ghi vừa thêm
+                        SetStyle();
+                        //Tìm dòng chứa mã của bản ghi vừa thêm
                         foreach (DataGridViewRow row in dgvPMDaTra.Rows)
                         {
                             if (row.Cells[0].Value.ToString() == maPhieuMuon)
@@ -232,33 +350,64 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
             int currentIndex = dgvPMDaTra.CurrentRow.Index;
 
-            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin trả cho phiếu mượn này không?",
-             "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin trả cho phiếu mượn này không? ",
+                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (rs == DialogResult.Yes)
             {
                 using (con = new SqlConnection(strCon))
                 {
                     con.Open();
-                    string sql = $"UPDATE PhieuMuon SET NgayThucTra = NULL WHERE MaPhieuMuon = '{selectedMaPM}'";
-                    cmd = new SqlCommand(sql, con);
-                    if (cmd.ExecuteNonQuery() > 0)
+
+                    try
                     {
-                        MessageBox.Show("Xóa thông tin trả sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // === KIỂM TRA CÓ PHIẾU PHẠT KHÔNG ===
+                        string sqlCheck = "SELECT COUNT(*) FROM PhieuPhat WHERE MaPhieuMuon = @MaPhieuMuon";
+                        cmd = new SqlCommand(sqlCheck, con);
+                        cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Không thể xóa!  Phiếu mượn này đã có phiếu phạt.", "Lỗi",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        // 1. Xóa thông tin trả trong PhieuMuon
+                        string sql1 = "UPDATE PhieuMuon SET NgayThucTra = NULL WHERE MaPhieuMuon = @MaPhieuMuon";
+                        cmd = new SqlCommand(sql1, con);
+                        cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
+                        cmd.ExecuteNonQuery();
+
+                        // 2. Xóa thông tin trả trong CT_PhieuMuon
+                        string sql2 = "UPDATE CT_PhieuMuon SET DaTraSach = 0, TinhTrangTra = NULL WHERE MaPhieuMuon = @MaPhieuMuon";
+                        cmd = new SqlCommand(sql2, con);
+                        cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Xóa thông tin trả sách thành công!", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         LoadPMDaTra();
+                        UpdateTongSo();
                         LoadPMCanTra();
 
-                        int beforeRowIndex = currentIndex - 1;
-                        dgvPMDaTra.ClearSelection();
-                        dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[beforeRowIndex].Cells[0];
-                        NapCT();
-                        dgvPMDaTra.FirstDisplayedScrollingRowIndex = beforeRowIndex;
-                        LoadSachTra(txtMaPhieuMuon.Text);
+                        if (dgvPMDaTra.Rows.Count > 0)
+                        {
+                            int beforeRowIndex = Math.Max(0, currentIndex - 1);
+                            dgvPMDaTra.ClearSelection();
+                            dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[beforeRowIndex].Cells[0];
+                            dgvPMDaTra.FirstDisplayedScrollingRowIndex = beforeRowIndex;
+                            NapCT();
+                            LoadSachTra(txtMaPhieuMuon.Text);
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Xóa thất bại! " + ex.Message, "Lỗi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
             }
         }
@@ -309,28 +458,38 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            int currentIndex = dgvPMDaTra.CurrentRow.Index;
-            string currentMaPM = selectedMaPM;
+            // Lưu vị trí cũ
+            int currentIndex = dgvPMDaTra.CurrentRow?.Index ?? -1;
+            string currentMaPM = selectedMaPM ?? "";
 
-            // 1. Load lại danh sách phiếu mượn đã trả (cập nhật NgayThucTra, SoNgayTre)
+            // === RESET BỘ LỌC ===
+            cboTruong2.SelectedIndex = 0;
+            txtSearch2.Clear();
+            if (dvPMDaTra != null)
+                dvPMDaTra.RowFilter = "";
+
+            // Load lại dữ liệu
             LoadPMDaTra();
-
-            // 2. Load lại danh sách phiếu mượn cần trả (cập nhật danh sách)
+            UpdateTongSo();
             LoadPMCanTra();
 
-            // 3. Chọn lại dòng trong dgvPMDaTra (giữ selection)
-            if (currentIndex >= 0 && currentIndex < dgvPMDaTra.Rows.Count)
+            // Chọn lại dòng
+            if (dgvPMDaTra.Rows.Count > 0)
             {
-                dgvPMDaTra.ClearSelection();
-                dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[currentIndex].Cells[0];
-                dgvPMDaTra.FirstDisplayedScrollingRowIndex = currentIndex;
+                if (currentIndex >= 0 && currentIndex < dgvPMDaTra.Rows.Count)
+                {
+                    dgvPMDaTra.ClearSelection();
+                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[currentIndex].Cells[0];
+                    dgvPMDaTra.FirstDisplayedScrollingRowIndex = currentIndex;
+                }
+                else
+                {
+                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[0].Cells[0];
+                }
+
+                NapCT();
+                LoadSachTra(selectedMaPM);
             }
-
-            // 4. Nạp lại thông tin chi tiết groupbox 
-            NapCT();
-
-            // 5. Load lại danh sách sách trả (dgvSachTra)
-            LoadSachTra(currentMaPM);
         }
 
         private void btnInPhieuTra_Click(object sender, EventArgs e)
@@ -358,6 +517,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 }
             }
         }
+
         private void NapCT()
         {
             if (dgvPMDaTra.CurrentCell != null && dgvPMDaTra.CurrentCell.RowIndex >= 0)

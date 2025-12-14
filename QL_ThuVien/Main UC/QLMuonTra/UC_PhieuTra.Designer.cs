@@ -90,6 +90,11 @@
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTongSo = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPMDaTra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSachTra)).BeginInit();
             this.grbCuonSach.SuspendLayout();
@@ -98,6 +103,7 @@
             this.panelPMCanTra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPMCanTra)).BeginInit();
             this.grbDocgia.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPMDaTra
@@ -145,8 +151,7 @@
             this.dgvPMDaTra.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPMDaTra.RowHeadersWidth = 72;
             this.dgvPMDaTra.RowTemplate.Height = 50;
-            this.dgvPMDaTra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPMDaTra.Size = new System.Drawing.Size(1094, 859);
+            this.dgvPMDaTra.Size = new System.Drawing.Size(1094, 806);
             this.dgvPMDaTra.TabIndex = 0;
             this.dgvPMDaTra.SelectionChanged += new System.EventHandler(this.dgvPMDaTra_SelectionChanged);
             // 
@@ -331,7 +336,7 @@
             "Mã ĐG"});
             this.cboTruong2.Location = new System.Drawing.Point(927, 176);
             this.cboTruong2.Name = "cboTruong2";
-            this.cboTruong2.Size = new System.Drawing.Size(219, 52);
+            this.cboTruong2.Size = new System.Drawing.Size(187, 52);
             this.cboTruong2.TabIndex = 33;
             this.cboTruong2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -361,6 +366,7 @@
             // panelDSPhieuMuon
             // 
             this.panelDSPhieuMuon.Controls.Add(this.dgvPMDaTra);
+            this.panelDSPhieuMuon.Controls.Add(this.panel1);
             this.panelDSPhieuMuon.Location = new System.Drawing.Point(927, 271);
             this.panelDSPhieuMuon.Name = "panelDSPhieuMuon";
             this.panelDSPhieuMuon.Size = new System.Drawing.Size(1094, 859);
@@ -411,7 +417,7 @@
             // 
             // dtNgayThucTra
             // 
-            this.dtNgayThucTra.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayThucTra.CustomFormat = "  dd/MM/yyyy";
             this.dtNgayThucTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayThucTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayThucTra.Location = new System.Drawing.Point(593, 220);
@@ -452,7 +458,7 @@
             // 
             // dtHanTra
             // 
-            this.dtHanTra.CustomFormat = "dd/MM/yyyy";
+            this.dtHanTra.CustomFormat = "  dd/MM/yyyy";
             this.dtHanTra.Enabled = false;
             this.dtHanTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtHanTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -473,7 +479,7 @@
             // 
             // dtNgayMuon
             // 
-            this.dtNgayMuon.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayMuon.CustomFormat = "  dd/MM/yyyy";
             this.dtNgayMuon.Enabled = false;
             this.dtNgayMuon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -817,9 +823,9 @@
             this.btnRefresh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnRefresh.HoverState.FillColor = System.Drawing.Color.White;
             this.btnRefresh.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnRefresh.Location = new System.Drawing.Point(1850, 106);
+            this.btnRefresh.Location = new System.Drawing.Point(1876, 176);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(168, 55);
+            this.btnRefresh.Size = new System.Drawing.Size(145, 55);
             this.btnRefresh.TabIndex = 45;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -839,22 +845,88 @@
             this.txtSearch2.IconLeft = global::QL_ThuVien.Properties.Resources.search;
             this.txtSearch2.IconLeftOffset = new System.Drawing.Point(20, 0);
             this.txtSearch2.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch2.Location = new System.Drawing.Point(1155, 176);
+            this.txtSearch2.Location = new System.Drawing.Point(1123, 176);
             this.txtSearch2.Margin = new System.Windows.Forms.Padding(6);
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtSearch2.PlaceholderText = "";
             this.txtSearch2.SelectedText = "";
-            this.txtSearch2.Size = new System.Drawing.Size(863, 52);
+            this.txtSearch2.Size = new System.Drawing.Size(521, 52);
             this.txtSearch2.TabIndex = 32;
             this.txtSearch2.TextOffset = new System.Drawing.Point(10, 0);
             this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1660, 123);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 25);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Trạng thái";
+            // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboTrangThai.ForeColor = System.Drawing.Color.Black;
+            this.cboTrangThai.ItemHeight = 46;
+            this.cboTrangThai.Items.AddRange(new object[] {
+            "Tất cả",
+            "Trả đúng hạn",
+            "Trả trễ"});
+            this.cboTrangThai.Location = new System.Drawing.Point(1665, 176);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(192, 52);
+            this.cboTrangThai.StartIndex = 0;
+            this.cboTrangThai.TabIndex = 53;
+            this.cboTrangThai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboTrangThai.SelectedIndexChanged += new System.EventHandler(this.cboTrangThai_SelectedIndexChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblTongSo);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 806);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1094, 53);
+            this.panel1.TabIndex = 3;
+            // 
+            // lblTongSo
+            // 
+            this.lblTongSo.AutoSize = true;
+            this.lblTongSo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongSo.Location = new System.Drawing.Point(123, 13);
+            this.lblTongSo.Name = "lblTongSo";
+            this.lblTongSo.Size = new System.Drawing.Size(22, 25);
+            this.lblTongSo.TabIndex = 1;
+            this.lblTongSo.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 25);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Số bản ghi:";
             // 
             // UC_PhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cboTrangThai);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnTaoMoi);
             this.Controls.Add(this.btnSua);
@@ -884,6 +956,8 @@
             this.panelPMCanTra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPMCanTra)).EndInit();
             this.grbDocgia.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -940,5 +1014,10 @@
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTongSo;
+        private System.Windows.Forms.Label label12;
     }
 }

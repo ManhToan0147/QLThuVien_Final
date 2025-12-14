@@ -168,7 +168,7 @@
             // 
             this.grbSachPhat.Controls.Add(this.dgvSachPhat);
             this.grbSachPhat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbSachPhat.Location = new System.Drawing.Point(43, 883);
+            this.grbSachPhat.Location = new System.Drawing.Point(43, 880);
             this.grbSachPhat.Name = "grbSachPhat";
             this.grbSachPhat.Size = new System.Drawing.Size(1283, 298);
             this.grbSachPhat.TabIndex = 37;
@@ -367,7 +367,7 @@
             this.grbSachTra.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSachTra.Location = new System.Drawing.Point(37, 281);
             this.grbSachTra.Name = "grbSachTra";
-            this.grbSachTra.Size = new System.Drawing.Size(1286, 242);
+            this.grbSachTra.Size = new System.Drawing.Size(1286, 231);
             this.grbSachTra.TabIndex = 48;
             this.grbSachTra.TabStop = false;
             this.grbSachTra.Text = "Tình trạng mượn trả";
@@ -417,7 +417,7 @@
             this.dgvSachTra.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvSachTra.RowHeadersWidth = 72;
             this.dgvSachTra.RowTemplate.Height = 50;
-            this.dgvSachTra.Size = new System.Drawing.Size(1280, 212);
+            this.dgvSachTra.Size = new System.Drawing.Size(1280, 201);
             this.dgvSachTra.TabIndex = 1;
             // 
             // MaSach2
@@ -479,7 +479,7 @@
             this.grbViPham.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbViPham.Location = new System.Drawing.Point(40, 537);
             this.grbViPham.Name = "grbViPham";
-            this.grbViPham.Size = new System.Drawing.Size(1280, 323);
+            this.grbViPham.Size = new System.Drawing.Size(1280, 306);
             this.grbViPham.TabIndex = 49;
             this.grbViPham.TabStop = false;
             this.grbViPham.Text = "Thông tin vi phạm";
@@ -527,7 +527,7 @@
             this.dgvViPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvViPham.RowHeadersWidth = 72;
             this.dgvViPham.RowTemplate.Height = 50;
-            this.dgvViPham.Size = new System.Drawing.Size(1274, 293);
+            this.dgvViPham.Size = new System.Drawing.Size(1274, 276);
             this.dgvViPham.TabIndex = 1;
             // 
             // MaViPham

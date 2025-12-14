@@ -122,6 +122,32 @@ namespace QL_ThuVien
                         ? Convert.ToSingle(row2.Cells["GiaTri"].Value)
                         : 0f;
 
+                    // === KIỂM TRA TRÙNG LẶP ===
+                    using (con = new SqlConnection(strCon))
+                    {
+                        con.Open();
+                        string checkSql = @"
+                            SELECT COUNT(*) 
+                            FROM CT_PhieuPhat 
+                            WHERE MaPhieuPhat = @MaPhieuPhat 
+                              AND MaSach = @MaSach 
+                              AND MaViPham = @MaViPham";
+
+                        SqlCommand checkCmd = new SqlCommand(checkSql, con);
+                        checkCmd.Parameters.AddWithValue("@MaPhieuPhat", MaPhieuPhat);
+                        checkCmd.Parameters.AddWithValue("@MaSach", maSach);
+                        checkCmd.Parameters.AddWithValue("@MaViPham", maViPham);
+
+                        int count = (int)checkCmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show($"Sách '{maSach}' đã có vi phạm '{tenViPham}' rồi!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            continue;
+                        }
+                    }
+
                     float tienNopPhat = 0;
 
                     // TÍNH TIỀN PHẠT

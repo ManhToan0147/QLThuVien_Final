@@ -32,10 +32,16 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             this.maThuThu = maThuThu;
         }
 
-
-
         private void UC_PhieuMuon_Load(object sender, EventArgs e)
         {
+            // Setup disabled style cho các nút
+            SetupButtonDisabledStyle(btnSua);
+            SetupButtonDisabledStyle(btnXoa);
+            SetupButtonDisabledStyle(btnMuonSach);
+            SetupButtonDisabledStyle(btnInPhieuMuon);
+            SetupButtonDisabledStyle(btnRefresh);
+
+
             cboTruong1.SelectedIndex = 0;
             cboTruong2.SelectedIndex = 0;
 
@@ -44,19 +50,62 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             //Fix lỗi column header
             dgvDocGia.ColumnHeadersDefaultCellStyle.Font = new Font(dgvDocGia.Font, FontStyle.Bold);
             dgvPhieuMuon.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPhieuMuon.Font, FontStyle.Bold);
-            dgvDocGia.Columns["DaTraSach"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDocGia.Columns["DangMuonSach"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDocGia.Columns["HoatDong"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvSachMuon.DefaultCellStyle.Font = new Font(dgvSachMuon.Font, FontStyle.Regular);
 
             LoadDocGia();
             LoadPhieuMuon();
+            SetStyle();
+            UpdateTongSo();
         }
+        private void UpdateTongSo()
+        {
+            lblTongSo.Text = dgvPhieuMuon.Rows.Count.ToString();
+        }
+
+        private void SetupButtonDisabledStyle(dynamic btn)
+        {
+            btn.DisabledState.BorderColor = Color.FromArgb(180, 210, 230);
+            btn.DisabledState.CustomBorderColor = Color.FromArgb(200, 200, 200);
+            btn.DisabledState.FillColor = Color.FromArgb(240, 240, 240);
+            btn.DisabledState.ForeColor = Color.FromArgb(160, 160, 160);
+        }
+
+        private void SetStyle()
+        {
+            bool isTaoMoi = addNewFlag;
+            bool hasRow = dgvPhieuMuon.CurrentRow != null;
+            bool daTra = false;
+
+            if (!isTaoMoi && hasRow)
+            {
+                string trangThai = dgvPhieuMuon.CurrentRow.Cells["TrangThai"].Value?.ToString() ?? "";
+                daTra = (trangThai == "Trả đúng hạn" || trangThai == "Trả trễ");
+            }
+
+            // CHỈ SET ENABLED - Guna2 tự động áp dụng DisabledState
+            btnSua.Enabled = !isTaoMoi && hasRow && !daTra;
+            btnXoa.Enabled = !isTaoMoi && hasRow;
+            btnMuonSach.Enabled = !isTaoMoi && hasRow;
+            btnInPhieuMuon.Enabled = !isTaoMoi && hasRow;
+            btnRefresh.Enabled = !isTaoMoi;
+        }
+
 
         private void LoadComboBox(ComboBox cbo, string tableName, string Ma, string TenMa)
         {
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = $"SELECT * FROM {tableName}";
+                string sql = "";
+                if (addNewFlag)
+                {
+                    sql = $"SELECT * FROM {tableName} WHERE TRANGTHAI = 1";
+                } else
+                {
+                    sql = $"SELECT * FROM {tableName}";
+                }
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -76,7 +125,38 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = "select * from TongQuanPhieuMuon";
+
+                string sql = @"
+                    SELECT 
+                        pm.MaPhieuMuon, 
+                        pm.MaDocGia, 
+                        pm. MaKieuMuon, 
+                        pm.NgayMuon, 
+                        pm.HanTra, 
+                        COALESCE(SUM(ctpm.TienCoc), 0) AS TongTienCoc, 
+                        pm.MaThuThu AS ThuThu,
+                        CASE 
+                            WHEN pm.NgayThucTra IS NULL AND CAST(GETDATE() AS DATE) <= CAST(pm.HanTra AS DATE)
+                                THEN N'Còn hạn mượn'
+                            WHEN pm.NgayThucTra IS NULL AND CAST(GETDATE() AS DATE) > CAST(pm.HanTra AS DATE)
+                                THEN N'Quá hạn mượn'
+                            WHEN pm.NgayThucTra IS NOT NULL AND CAST(pm.NgayThucTra AS DATE) <= CAST(pm.HanTra AS DATE)
+                                THEN N'Trả đúng hạn'
+                            WHEN pm.NgayThucTra IS NOT NULL AND CAST(pm. NgayThucTra AS DATE) > CAST(pm.HanTra AS DATE)
+                                THEN N'Trả trễ'
+                        END AS TrangThai
+                    FROM PhieuMuon pm 
+                    LEFT JOIN CT_PhieuMuon ctpm ON pm.MaPhieuMuon = ctpm. MaPhieuMuon
+                    GROUP BY 
+                        pm.MaPhieuMuon, 
+                        pm.MaDocGia, 
+                        pm.MaKieuMuon, 
+                        pm.NgayMuon, 
+                        pm.HanTra, 
+                        pm. NgayThucTra,
+                        pm.MaThuThu
+                    ORDER BY pm.MaPhieuMuon desc";
+
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -121,12 +201,25 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                //string sql = "SELECT DocGia.MaDocGia, DocGia.HoTen, " +
-                //    "CASE WHEN EXISTS " +
-                //    "(SELECT 1 FROM PhieuMuon WHERE PhieuMuon.MaDocGia = DocGia.MaDocGia AND PhieuMuon.NgayThucTra IS NULL) " +
-                //    "THEN 'False' ELSE 'True' END AS DaTraSach " +
-                //    "FROM DocGia;";
-                string sql = "Select * from DocGia_DaTraSach";
+
+                string sql = @"
+                    SELECT 
+                        dg.MaDocGia, 
+                        dg.HoTen,
+                        CASE 
+                            WHEN EXISTS (
+                                SELECT 1 
+                                FROM PhieuMuon pm 
+                                WHERE pm.MaDocGia = dg.MaDocGia 
+                                AND pm.NgayThucTra IS NULL
+                            ) 
+                            THEN 1
+                            ELSE 0 
+                        END AS DangMuonSach,
+                        dg.TrangThai AS HoatDong
+                    FROM DocGia dg
+                    ORDER BY dg.MaDocGia";
+
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -147,20 +240,63 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             }
         }
 
+        private void cboTruong2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterData();
+        }
+
         private void txtSearch2_TextChanged(object sender, EventArgs e)
         {
-            if (cboTruong2.SelectedIndex == 0)
+            FilterData();
+        }
+
+        private void cboTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterData();
+        }
+
+        private void FilterData()
+        {
+            if (dvPM == null)
+                return;
+
+            List<string> filters = new List<string>();
+
+            // === LỌC THEO TRẠNG THÁI ===
+            if (cboTrangThai.SelectedIndex > 0)  // Không phải "Tất cả"
             {
-                dvPM.RowFilter = $"MaPhieuMuon like '%{txtSearch2.Text}%'";
+                string trangThai = cboTrangThai.SelectedItem.ToString();
+                filters.Add($"TrangThai = '{trangThai}'");
             }
-            else if (cboTruong2.SelectedIndex == 1)
+
+            // === LỌC THEO TÌM KIẾM ===
+            string searchText = txtSearch2.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
             {
-                dvPM.RowFilter = $"MaDocGia like '%{txtSearch2.Text}%'";
+                string column = "";
+
+                switch (cboTruong2.SelectedIndex)
+                {
+                    case 0:  // Mã phiếu mượn
+                        column = "MaPhieuMuon";
+                        break;
+                    case 1:  // Mã độc giả
+                        column = "MaDocGia";
+                        break;
+                    case 2:  // Mã thủ thư
+                        column = "ThuThu";
+                        break;
+                }
+
+                if (!string.IsNullOrEmpty(column))
+                {
+                    filters.Add($"{column} LIKE '%{searchText}%'");
+                }
             }
-            else
-            {
-                dvPM.RowFilter = $"MaThuThu like '%{txtSearch2.Text}%'";
-            }
+
+            // === KẾT HỢP CÁC BỘ LỌC ===
+            dvPM.RowFilter = string.Join(" AND ", filters);
+            UpdateTongSo();
         }
 
         private string selectedMaPM, selectedMaDG;
@@ -187,6 +323,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
         {
+
             //gen mã phiếu mượn
             using (con = new SqlConnection(strCon))
             {
@@ -226,20 +363,26 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             dtHanTra.Enabled = false;
             txtSoLuongMuon.Enabled = false;
             txtTienCoc.Enabled = false;
+            SetStyle();
+            LoadComboBox(cboKieuMuon, "KieuMuon", "MaKieuMuon", "TenKieuMuon");
+            LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(selectedMaPM))
             {
-                MessageBox.Show("Vui lòng chọn một phiếu mượn để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một phiếu mượn để xóa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             int currentIndex = dgvPhieuMuon.CurrentRow.Index;
 
-            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa phiếu mượn với mã {selectedMaPM} không?",
-        "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(
+                $"Bạn có chắc chắn muốn xóa phiếu mượn với mã {selectedMaPM} không?",
+                "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
                 using (SqlConnection con = new SqlConnection(strCon))
@@ -252,29 +395,60 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                         {
                             cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
                             int kq = cmd.ExecuteNonQuery();
+
                             if (kq > 0)
                             {
-                                MessageBox.Show("Xóa phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Xóa phiếu mượn thành công!", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 LoadPhieuMuon();
                                 LoadDocGia();
-                                int beforeRowIndex = currentIndex - 1;
-                                dgvPhieuMuon.ClearSelection();
-                                dgvPhieuMuon.CurrentCell = dgvPhieuMuon.Rows[beforeRowIndex].Cells[0];
-                                NapCT();
+                                UpdateTongSo();
 
-                                LoadSachMuon(txtMaPhieuMuon.Text);
-                                LoadPhieuMuon_DocGia(txtMaDG.Text);
-                                dgvPhieuMuon.FirstDisplayedScrollingRowIndex = beforeRowIndex;
+                                // === CHỌN LẠI DÒNG SAU KHI XÓA ===
+                                if (dgvPhieuMuon.Rows.Count > 0)
+                                {
+                                    int newIndex;
+
+                                    // Nếu index cũ >= số dòng hiện tại → chọn dòng cuối
+                                    if (currentIndex >= dgvPhieuMuon.Rows.Count)
+                                    {
+                                        newIndex = dgvPhieuMuon.Rows.Count - 1;
+                                    }
+                                    else
+                                    {
+                                        // Giữ nguyên vị trí (dòng mới sẽ lên thay chỗ dòng bị xóa)
+                                        newIndex = currentIndex;
+                                    }
+
+                                    dgvPhieuMuon.ClearSelection();
+                                    dgvPhieuMuon.CurrentCell = dgvPhieuMuon.Rows[newIndex].Cells[0];
+                                    dgvPhieuMuon.FirstDisplayedScrollingRowIndex = newIndex;
+
+                                    NapCT();
+                                    LoadSachMuon(txtMaPhieuMuon.Text);
+                                    LoadPhieuMuon_DocGia(txtMaDG.Text);
+                                }
+                                else
+                                {
+                                    // Không còn dòng nào
+                                    selectedMaPM = "";
+                                    txtMaPhieuMuon.Clear();
+                                    txtMaDG.Clear();
+                                    // Clear các field khác nếu cần
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Xóa phiếu mượn không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Xóa phiếu mượn không thành công!", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Phiếu mượn liên quan tới nhiều bảng dữ liệu khác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Phiếu mượn liên quan tới nhiều bảng dữ liệu khác",
+                            "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -285,38 +459,50 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = "Insert into PhieuMuon(MaPhieuMuon, MaDocGia, MaKieuMuon, NgayMuon, MaThuThu) values " +
-                    "(@MaPhieuMuon, @MaDocGia, @MaKieuMuon, @NgayMuon, @MaThuThu)";
+
+                // ← THÊM HanTra VÀO CÂU SQL
+                string sql = "INSERT INTO PhieuMuon(MaPhieuMuon, MaDocGia, MaKieuMuon, NgayMuon, HanTra, MaThuThu) " +
+                             "VALUES (@MaPhieuMuon, @MaDocGia, @MaKieuMuon, @NgayMuon, @HanTra, @MaThuThu)";
                 cmd = new SqlCommand(sql, con);
 
-                // Thêm tham số vào câu lệnh SQL
                 cmd.Parameters.AddWithValue("@MaPhieuMuon", txtMaPhieuMuon.Text);
                 cmd.Parameters.AddWithValue("@MaDocGia", txtMaDG.Text);
-                cmd.Parameters.AddWithValue("@MaKieuMuon", cboKieuMuon.SelectedValue); // Lấy ValueMember của ComboBox
-                cmd.Parameters.AddWithValue("@NgayMuon", dtNgayMuon.Value.ToString("yyyy-MM-dd")); // Định dạng ngày tháng cho SQL
-                cmd.Parameters.AddWithValue("@MaThuThu", cboThuThu.SelectedValue); // Lấy ValueMember của ComboBox
+                cmd.Parameters.AddWithValue("@MaKieuMuon", cboKieuMuon.SelectedValue);
+                cmd.Parameters.AddWithValue("@NgayMuon", dtNgayMuon.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@HanTra", dtHanTra.Value.ToString("yyyy-MM-dd"));  // ← THÊM DÒNG NÀY
+                cmd.Parameters.AddWithValue("@MaThuThu", cboThuThu.SelectedValue);
 
                 int kq = cmd.ExecuteNonQuery();
+
                 if (kq > 0)
                 {
-                    MessageBox.Show("Thêm phiếu mượn thành công, click Mượn sách để lưu thông tin sách mượn!", "Thông báo", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm phiếu mượn thành công, click Mượn sách để lưu thông tin sách mượn!",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    addNewFlag = false;
+
+                    LoadPhieuMuon();
+                    LoadDocGia();
+
+                    //int lastRowIndex = dgvPhieuMuon.RowCount - 1;
+                    //dgvPhieuMuon.ClearSelection();
+                    //dgvPhieuMuon.CurrentCell = dgvPhieuMuon.Rows[lastRowIndex].Cells[0];
+                    //dgvPhieuMuon.FirstDisplayedScrollingRowIndex = lastRowIndex;
+
+                    NapCT();
+                    LoadSachMuon(txtMaPhieuMuon.Text);
+                    LoadPhieuMuon_DocGia(txtMaDG.Text);
+
+                    SetStyle();
+                    LoadComboBox(cboKieuMuon, "KieuMuon", "MaKieuMuon", "TenKieuMuon");
+                    LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
+                    UpdateTongSo();
                 }
                 else
                 {
-                    MessageBox.Show("Không thể thêm phiếu mượn!", "Lỗi");
+                    MessageBox.Show("Không thể thêm phiếu mượn!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                LoadPhieuMuon();
-                LoadDocGia();
-                int lastRowIndex = dgvPhieuMuon.RowCount - 1;
-                dgvPhieuMuon.ClearSelection();
-                dgvPhieuMuon.CurrentCell = dgvPhieuMuon.Rows[lastRowIndex].Cells[0];
-                NapCT();
-                LoadSachMuon(txtMaPhieuMuon.Text);
-                LoadPhieuMuon_DocGia(txtMaDG.Text);
-                dgvPhieuMuon.FirstDisplayedScrollingRowIndex = lastRowIndex;
-
-                addNewFlag = false;
             }
         }
 
@@ -334,33 +520,44 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
+
+                // ← THÊM HanTra VÀO UPDATE
                 string sql = "UPDATE PhieuMuon " +
-                             "SET MaDocGia = @MaDocGia, MaKieuMuon = @MaKieuMuon, NgayMuon = @NgayMuon, MaThuThu = @MaThuThu " +
+                             "SET MaDocGia = @MaDocGia, MaKieuMuon = @MaKieuMuon, NgayMuon = @NgayMuon, HanTra = @HanTra, MaThuThu = @MaThuThu " +
                              "WHERE MaPhieuMuon = @MaPhieuMuon";
                 cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM); 
+
+                cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
                 cmd.Parameters.AddWithValue("@MaDocGia", txtMaDG.Text);
-                cmd.Parameters.AddWithValue("@MaKieuMuon", cboKieuMuon.SelectedValue); 
+                cmd.Parameters.AddWithValue("@MaKieuMuon", cboKieuMuon.SelectedValue);
                 cmd.Parameters.AddWithValue("@NgayMuon", dtNgayMuon.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@HanTra", dtHanTra.Value.ToString("yyyy-MM-dd"));  // ← THÊM DÒNG NÀY
                 cmd.Parameters.AddWithValue("@MaThuThu", cboThuThu.SelectedValue);
+
                 int rowsAffected = cmd.ExecuteNonQuery();
 
-                // Kiểm tra kết quả
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Sửa phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa phiếu mượn thành công!", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     LoadPhieuMuon();
                     LoadDocGia();
+
                     dgvPhieuMuon.ClearSelection();
                     dgvPhieuMuon.CurrentCell = dgvPhieuMuon.Rows[currentIndex].Cells[0];
+                    dgvPhieuMuon.FirstDisplayedScrollingRowIndex = currentIndex;
+
                     NapCT();
                     LoadSachMuon(selectedMaPM);
                     LoadPhieuMuon_DocGia(selectedMaDG);
-                    dgvPhieuMuon.FirstDisplayedScrollingRowIndex = currentIndex;
+
+                    SetStyle();
                 }
                 else
                 {
-                    MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sửa thất bại!", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -372,16 +569,26 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 if (dgvDocGia.SelectedRows.Count > 0)
                 {
                     string maDocGia = dgvDocGia.SelectedRows[0].Cells[0].Value.ToString();
-                    bool dkMuon = bool.Parse(dgvDocGia.SelectedRows[0].Cells[2].Value.ToString());
-                    if (!dkMuon)
+
+                    bool hoatDong = Convert.ToBoolean(dgvDocGia.SelectedRows[0].Cells["HoatDong"].Value);
+
+                    if (!hoatDong)
+                    {
+                        MessageBox.Show("Độc giả không hoạt động, không thể tạo phiếu mượn!", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    bool dangMuonSach = Convert.ToBoolean(dgvDocGia.SelectedRows[0].Cells["DangMuonSach"].Value);
+
+                    if (dangMuonSach)
                     {
                         MessageBox.Show("Độc giả chưa trả sách, không tạo phiếu mượn", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-                    else
-                    {
-                        txtMaDG.Text = maDocGia;
-                    }
+
+                    txtMaDG.Text = maDocGia;
                 }
                 else
                 {
@@ -408,11 +615,24 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (dgvPhieuMuon.CurrentRow == null) return;
+            // Lưu thông tin nếu CÓ dòng hiện tại
+            int currentIndex = -1;
+            string currentMaPM = "";
+            string currentMaDG = "";
 
-            int currentIndex = dgvPhieuMuon.CurrentRow.Index;
-            string currentMaPM = selectedMaPM;
-            string currentMaDG = selectedMaDG;
+            if (dgvPhieuMuon.CurrentRow != null)
+            {
+                currentIndex = dgvPhieuMuon.CurrentRow.Index;
+                currentMaPM = selectedMaPM;
+                currentMaDG = selectedMaDG;
+            }
+
+            // === RESET BỘ LỌC ===
+            cboTrangThai.SelectedIndex = 0;
+            txtSearch2.Clear();
+            cboTruong2.SelectedIndex = 0;
+            if (dvPM != null)
+                dvPM.RowFilter = "";
 
             //Load lại danh sách phiếu mượn (cập nhật TienCoc)
             LoadPhieuMuon();
@@ -434,8 +654,8 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
             //Highlight lại độc giả trong dgvDocGia
             LoadPhieuMuon_DocGia(currentMaDG);
-
-
+            SetStyle();
+            UpdateTongSo();
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)
@@ -484,6 +704,66 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             TinhHanTra();
         }
 
+        private void dgvPhieuMuon_SelectionChanged(object sender, EventArgs e)
+        {
+            if (addNewFlag)
+            {
+                // === ĐANG TẠO MỚI → HỎI CÓ HỦY KHÔNG ===
+                DialogResult result = MessageBox.Show(
+                    "Bạn có muốn hủy tạo mới?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // HỦY TẠO MỚI
+                    addNewFlag = false;
+                    btnTaoMoi.Text = "Tạo mới";
+
+                    NapCT();
+
+                    txtSoLuongMuon.Enabled = true;
+                    txtTienCoc.Enabled = true;
+                    dtHanTra.Enabled = true;
+
+                    LoadSachMuon(selectedMaPM);
+                    LoadPhieuMuon_DocGia(selectedMaDG);
+
+                    SetStyle();
+                }
+                else
+                {
+                    // KHÔNG HỦY → KHÔNG LÀM GÌ
+                    return;
+                }
+            }
+            else
+            {
+                // === CHẾ ĐỘ XEM BÌNH THƯỜNG ===
+                NapCT();
+
+                txtSoLuongMuon.Enabled = true;
+                txtTienCoc.Enabled = true;
+                dtHanTra.Enabled = true;
+
+                LoadSachMuon(selectedMaPM);
+                LoadPhieuMuon_DocGia(selectedMaDG);
+
+                SetStyle();
+            }
+        }
+
+        private void dgvPhieuMuon_DataSourceChanged(object sender, EventArgs e)
+        {
+            lblTongSo.Text = dgvPhieuMuon.Rows.Count.ToString();
+        }
+
+        private void dgvPhieuMuon_DataMemberChanged(object sender, EventArgs e)
+        {
+            lblTongSo.Text = dgvPhieuMuon.Rows.Count.ToString();
+        }
+
         private void TinhHanTra()
         {
             // KIỂM TRA KIỂU MƯỢN ĐÃ ĐƯỢC CHỌN CHƯA
@@ -526,18 +806,6 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
                 dtHanTra.Value = dtNgayMuon.Value;
             }
-        }
-
-
-        private void dgvPhieuMuon_SelectionChanged(object sender, EventArgs e)
-        {
-            NapCT();
-            txtSoLuongMuon.Enabled = true;
-            txtTienCoc.Enabled = true;
-            dtHanTra.Enabled = true;
-
-            LoadSachMuon(selectedMaPM);
-            LoadPhieuMuon_DocGia(selectedMaDG);
         }
     }
 }

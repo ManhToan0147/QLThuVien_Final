@@ -65,8 +65,8 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             DataTable dtTrangThai = new DataTable();
             dtTrangThai.Columns.Add("Value", typeof(int));
             dtTrangThai.Columns.Add("Display", typeof(string));
-            dtTrangThai.Rows.Add(1, "Hoạt động");
-            dtTrangThai.Rows.Add(0, "Bị khóa");
+            dtTrangThai.Rows.Add(1, "Đang làm việc");
+            dtTrangThai.Rows.Add(0, "Đã nghỉ");
 
             cboTrangThai.DataSource = dtTrangThai;
             cboTrangThai.DisplayMember = "Display";
@@ -83,7 +83,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                     SELECT 
                         MaThuThu, TenThuThu, HinhAnh, GioiTinh, NgaySinh, 
                         Email, SDT, ChucVu, TrangThai,
-                        CASE WHEN TrangThai = 1 THEN N'Hoạt động' ELSE N'Bị khóa' END AS TrangThaiText
+                        CASE WHEN TrangThai = 1 THEN N'Đang làm việc' ELSE N'Đã nghỉ' END AS TrangThaiText
                     FROM ThuThu ORDER BY MaThuThu";
 
                 adapter = new SqlDataAdapter(sql, con);
