@@ -663,7 +663,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             var f = new frmNhapSach();
             f.MaPhieuMuon = txtMaPhieuMuon.Text;
             f.MaDocGia = txtMaDG.Text;
-            f.KieuMuon = cboKieuMuon.Text.Substring(5);
+            f.KieuMuon = cboKieuMuon.Text;
             f.ShowDialog();
         }
 
@@ -692,11 +692,6 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                     reportForm.ShowDialog();
                 }
             }
-        }
-
-        private void cboKieuMuon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TinhHanTra();
         }
 
         private void dtNgayMuon_ValueChanged(object sender, EventArgs e)
@@ -762,6 +757,11 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
         private void dgvPhieuMuon_DataMemberChanged(object sender, EventArgs e)
         {
             lblTongSo.Text = dgvPhieuMuon.Rows.Count.ToString();
+        }
+
+        private void cboKieuMuon_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            TinhHanTra();
         }
 
         private void TinhHanTra()

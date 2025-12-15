@@ -96,7 +96,6 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
                 // RELOAD COMBO - HIỂN THỊ TẤT CẢ
             }
-            LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
         }
 
         private void LoadCboTrangThai2()
@@ -291,6 +290,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 if (result == DialogResult.Yes)
                 {
                     addNewFlag = false;
+                    LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
                     NapCT();
                     LoadSachPhat(selectedMaPP);
                     LoadSachTra(txtMaPhieuMuon.Text);
@@ -303,6 +303,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             }
             else
             {
+                LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
                 NapCT();
                 LoadSachPhat(selectedMaPP);
                 LoadPhieuPhat_PhieuMuon(selectedMaPM2);
@@ -357,6 +358,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
             addNewFlag = true;
             SetStyle();
+            LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
         }
 
         private void dgvPhieuMuon_DoubleClick(object sender, EventArgs e)
@@ -438,6 +440,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                     LoadPhieuPhat_PhieuMuon(txtMaPhieuMuon.Text);
                     LoadSachTra(txtMaPhieuMuon.Text);
                     SetStyle();
+                    LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
                     UpdateTongSo();
                 }
                 else
