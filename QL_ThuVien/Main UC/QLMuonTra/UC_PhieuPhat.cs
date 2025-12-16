@@ -147,27 +147,65 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
         string selectedMaPP, selectedMaPM2;
         private void NapCT()
         {
+            // ✅ KIỂM TRA CÓ DÒNG KHÔNG
+            if (dgvPhieuPhat.Rows.Count == 0) return;
+
             if (dgvPhieuPhat.CurrentCell != null && dgvPhieuPhat.CurrentCell.RowIndex >= 0)
             {
                 int i = dgvPhieuPhat.CurrentRow.Index;
 
-                selectedMaPP = dgvPhieuPhat.Rows[i].Cells[0].Value.ToString();
+                // ✅ DÙNG TÊN CỘT THAY VÌ INDEX
+
+                // Mã phiếu phạt
+                selectedMaPP = dgvPhieuPhat.Rows[i].Cells["MaPhieuPhat"]?.Value?.ToString() ?? "";
                 txtMaPhieuPhat.Text = selectedMaPP;
                 txtMaPhieuPhat.Enabled = string.IsNullOrEmpty(selectedMaPP);
 
-                selectedMaPM2 = dgvPhieuPhat.Rows[i].Cells[1].Value.ToString();
+                // Mã phiếu mượn
+                selectedMaPM2 = dgvPhieuPhat.Rows[i].Cells["MaPhieuMuon"]?.Value?.ToString() ?? "";
                 txtMaPhieuMuon.Text = selectedMaPM2;
                 txtMaPhieuMuon.Enabled = string.IsNullOrEmpty(selectedMaPM2);
 
-                txtMaDocGia.Text = dgvPhieuPhat.Rows[i].Cells[2].Value.ToString();
+                // Mã độc giả
+                txtMaDocGia.Text = dgvPhieuPhat.Rows[i].Cells["MaDocGia2"]?.Value?.ToString() ?? "";
 
-                dtNgayNopPhat.Text = dgvPhieuPhat.Rows[i].Cells[3].Value.ToString();
-                txtTongTienPhat.Text = dgvPhieuPhat.Rows[i].Cells[4].Value.ToString();
+                // Ngày nộp phạt
+                var ngayNopPhat = dgvPhieuPhat.Rows[i].Cells["NgayNopPhat"]?.Value;
+                if (ngayNopPhat != null && ngayNopPhat != DBNull.Value)
+                {
+                    dtNgayNopPhat.Value = Convert.ToDateTime(ngayNopPhat);
+                }
+                else
+                {
+                    dtNgayNopPhat.Value = DateTime.Now;
+                }
+
+                // Tổng tiền phạt
+                var tongTienPhat = dgvPhieuPhat.Rows[i].Cells["TongTienPhat"]?.Value;
+                if (tongTienPhat != null && tongTienPhat != DBNull.Value)
+                {
+                    txtTongTienPhat.Text = tongTienPhat.ToString();
+                }
+                else
+                {
+                    txtTongTienPhat.Text = "0";
+                }
                 txtTongTienPhat.Enabled = !string.IsNullOrEmpty(txtTongTienPhat.Text);
-                cboThuThu.SelectedValue = dgvPhieuPhat.Rows[i].Cells[5].Value.ToString();
+
+                // Mã thủ thư
+                var maThuThu = dgvPhieuPhat.Rows[i].Cells["ThuThu"]?.Value;
+                if (maThuThu != null && maThuThu != DBNull.Value)
+                {
+                    cboThuThu.SelectedValue = maThuThu.ToString();
+                }
+                else
+                {
+                    cboThuThu.SelectedIndex = -1;
+                }
                 cboThuThu.Enabled = true;
 
-                string trangThaiText = dgvPhieuPhat.Rows[i].Cells["TrangThaiText"].Value?.ToString();
+                // Trạng thái
+                string trangThaiText = dgvPhieuPhat.Rows[i].Cells["TrangThaiText"]?.Value?.ToString();
                 if (trangThaiText == "Đã nộp")
                     cboTrangThai2.SelectedValue = 1;
                 else
@@ -827,20 +865,32 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 con.Open();
                 string sql = @"
                     SELECT 
-                        pp.MaPhieuPhat, 
+                        pp. MaPhieuPhat, 
                         pp.MaPhieuMuon, 
-                        pm.MaDocGia, 
+                        pm.MaDocGia,
+                        dg.HoTen AS TenDocGia,
                         pp.NgayNopPhat, 
                         COALESCE(SUM(ct_pp.NopPhat), 0) AS TongTienPhat, 
-                        pp.MaThuThu as ThuThu,
+                        pp.MaThuThu AS ThuThu,
+                        tt.TenThuThu,
                         CASE 
                             WHEN pp.TrangThai = 1 THEN N'Đã nộp'
                             ELSE N'Chưa nộp'
                         END AS TrangThaiText
                     FROM PhieuPhat pp 
                     LEFT JOIN CT_PhieuPhat ct_pp ON pp.MaPhieuPhat = ct_pp.MaPhieuPhat 
-                    JOIN PhieuMuon pm ON pp.MaPhieuMuon = pm.MaPhieuMuon 
-                    GROUP BY pp.MaPhieuPhat, pp.MaPhieuMuon, pm.MaDocGia, pp.NgayNopPhat, pp.MaThuThu, pp.TrangThai
+                    JOIN PhieuMuon pm ON pp.MaPhieuMuon = pm.MaPhieuMuon
+                    LEFT JOIN DocGia dg ON pm.MaDocGia = dg. MaDocGia
+                    LEFT JOIN ThuThu tt ON pp.MaThuThu = tt.MaThuThu
+                    GROUP BY 
+                        pp.MaPhieuPhat, 
+                        pp.MaPhieuMuon, 
+                        pm.MaDocGia,
+                        dg.HoTen,
+                        pp.NgayNopPhat, 
+                        pp.MaThuThu,
+                        tt.TenThuThu,
+                        pp.TrangThai
                     ORDER BY pp.MaPhieuPhat DESC";
 
                 adapter = new SqlDataAdapter(sql, con);

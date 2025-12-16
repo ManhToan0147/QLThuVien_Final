@@ -92,7 +92,7 @@ namespace QL_ThuVien
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = @"SELECT cs.MaSach, ds.TenDauSach, ds.GiaBia, cs.TinhTrang 
+                string sql = @"SELECT cs.MaSach, ds.TenDauSach, ds.GiaBia, cs.TinhTrang, cs.MoTa as TinhTrang2
                                FROM CuonSach cs 
                                JOIN DauSach ds ON cs. MaDauSach = ds. MaDauSach";
                 adapter = new SqlDataAdapter(sql, con);

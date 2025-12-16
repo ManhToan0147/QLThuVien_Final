@@ -43,13 +43,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSachPhat = new System.Windows.Forms.DataGridView();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenViPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +86,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaPhieuMuon = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtNgayNopPhat = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -95,13 +94,6 @@
             this.lblPhieuPhat = new System.Windows.Forms.Label();
             this.panelDSPhieuMuon = new System.Windows.Forms.Panel();
             this.dgvPhieuPhat = new System.Windows.Forms.DataGridView();
-            this.MaPhieuPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDocGia2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNopPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThaiText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTongSo = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -117,6 +109,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtNgayNopPhat = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.MaPhieuPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDocGia2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNopPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaiText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSachPhat)).BeginInit();
             this.panelDocGia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
@@ -403,7 +405,7 @@
             this.cboTruong1.Items.AddRange(new object[] {
             "Mã PM",
             "Mã ĐG"});
-            this.cboTruong1.Location = new System.Drawing.Point(16, 50);
+            this.cboTruong1.Location = new System.Drawing.Point(13, 50);
             this.cboTruong1.Name = "cboTruong1";
             this.cboTruong1.Size = new System.Drawing.Size(162, 52);
             this.cboTruong1.TabIndex = 20;
@@ -425,13 +427,13 @@
             this.txtSearch1.IconLeft = global::QL_ThuVien.Properties.Resources.search;
             this.txtSearch1.IconLeftOffset = new System.Drawing.Point(20, 0);
             this.txtSearch1.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch1.Location = new System.Drawing.Point(203, 50);
+            this.txtSearch1.Location = new System.Drawing.Point(184, 50);
             this.txtSearch1.Margin = new System.Windows.Forms.Padding(6);
             this.txtSearch1.Name = "txtSearch1";
             this.txtSearch1.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtSearch1.PlaceholderText = "Nhập để tìm kiếm";
             this.txtSearch1.SelectedText = "";
-            this.txtSearch1.Size = new System.Drawing.Size(660, 52);
+            this.txtSearch1.Size = new System.Drawing.Size(679, 52);
             this.txtSearch1.TabIndex = 19;
             this.txtSearch1.TextOffset = new System.Drawing.Point(10, 0);
             this.txtSearch1.TextChanged += new System.EventHandler(this.txtSearch1_TextChanged);
@@ -593,6 +595,7 @@
             // 
             // grbPhieuPhat
             // 
+            this.grbPhieuPhat.Controls.Add(this.dtNgayNopPhat);
             this.grbPhieuPhat.Controls.Add(this.cboThuThu);
             this.grbPhieuPhat.Controls.Add(this.cboTrangThai2);
             this.grbPhieuPhat.Controls.Add(this.label9);
@@ -602,7 +605,6 @@
             this.grbPhieuPhat.Controls.Add(this.label5);
             this.grbPhieuPhat.Controls.Add(this.txtMaPhieuMuon);
             this.grbPhieuPhat.Controls.Add(this.label7);
-            this.grbPhieuPhat.Controls.Add(this.dtNgayNopPhat);
             this.grbPhieuPhat.Controls.Add(this.label6);
             this.grbPhieuPhat.Controls.Add(this.label4);
             this.grbPhieuPhat.Controls.Add(this.label3);
@@ -752,16 +754,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Ngày nộp phạt";
             // 
-            // dtNgayNopPhat
-            // 
-            this.dtNgayNopPhat.CustomFormat = "  dd/MM/yyyy";
-            this.dtNgayNopPhat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayNopPhat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgayNopPhat.Location = new System.Drawing.Point(558, 48);
-            this.dtNgayNopPhat.Name = "dtNgayNopPhat";
-            this.dtNgayNopPhat.Size = new System.Drawing.Size(307, 31);
-            this.dtNgayNopPhat.TabIndex = 3;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -867,8 +859,10 @@
             this.MaPhieuPhat,
             this.MaPhieuMuon,
             this.MaDocGia2,
+            this.TenDocGia,
             this.NgayNopPhat,
             this.ThuThu,
+            this.TenThuThu,
             this.TongTienPhat,
             this.TrangThaiText});
             this.dgvPhieuPhat.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -889,68 +883,6 @@
             this.dgvPhieuPhat.Size = new System.Drawing.Size(1094, 585);
             this.dgvPhieuPhat.TabIndex = 0;
             this.dgvPhieuPhat.SelectionChanged += new System.EventHandler(this.dgvPhieuPhat_SelectionChanged);
-            // 
-            // MaPhieuPhat
-            // 
-            this.MaPhieuPhat.DataPropertyName = "MaPhieuPhat";
-            this.MaPhieuPhat.HeaderText = "Mã PP";
-            this.MaPhieuPhat.MinimumWidth = 9;
-            this.MaPhieuPhat.Name = "MaPhieuPhat";
-            this.MaPhieuPhat.Width = 125;
-            // 
-            // MaPhieuMuon
-            // 
-            this.MaPhieuMuon.DataPropertyName = "MaPhieuMuon";
-            this.MaPhieuMuon.HeaderText = "Mã PM";
-            this.MaPhieuMuon.MinimumWidth = 9;
-            this.MaPhieuMuon.Name = "MaPhieuMuon";
-            this.MaPhieuMuon.Width = 125;
-            // 
-            // MaDocGia2
-            // 
-            this.MaDocGia2.DataPropertyName = "MaDocGia";
-            this.MaDocGia2.HeaderText = "Mã ĐG";
-            this.MaDocGia2.MinimumWidth = 9;
-            this.MaDocGia2.Name = "MaDocGia2";
-            this.MaDocGia2.Width = 125;
-            // 
-            // NgayNopPhat
-            // 
-            this.NgayNopPhat.DataPropertyName = "NgayNopPhat";
-            dataGridViewCellStyle15.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle15.NullValue = null;
-            this.NgayNopPhat.DefaultCellStyle = dataGridViewCellStyle15;
-            this.NgayNopPhat.HeaderText = "Ngày nộp phạt";
-            this.NgayNopPhat.MinimumWidth = 9;
-            this.NgayNopPhat.Name = "NgayNopPhat";
-            this.NgayNopPhat.Width = 175;
-            // 
-            // ThuThu
-            // 
-            this.ThuThu.DataPropertyName = "ThuThu";
-            this.ThuThu.HeaderText = "Mã TT";
-            this.ThuThu.MinimumWidth = 8;
-            this.ThuThu.Name = "ThuThu";
-            this.ThuThu.Width = 125;
-            // 
-            // TongTienPhat
-            // 
-            this.TongTienPhat.DataPropertyName = "TongTienPhat";
-            dataGridViewCellStyle16.Format = "#,###";
-            dataGridViewCellStyle16.NullValue = null;
-            this.TongTienPhat.DefaultCellStyle = dataGridViewCellStyle16;
-            this.TongTienPhat.HeaderText = "Tổng tiền phạt";
-            this.TongTienPhat.MinimumWidth = 9;
-            this.TongTienPhat.Name = "TongTienPhat";
-            this.TongTienPhat.Width = 175;
-            // 
-            // TrangThaiText
-            // 
-            this.TrangThaiText.DataPropertyName = "TrangThaiText";
-            this.TrangThaiText.HeaderText = "Trạng thái";
-            this.TrangThaiText.MinimumWidth = 8;
-            this.TrangThaiText.Name = "TrangThaiText";
-            this.TrangThaiText.Width = 175;
             // 
             // panel1
             // 
@@ -1177,6 +1109,105 @@
             this.cboTrangThai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cboTrangThai.SelectedIndexChanged += new System.EventHandler(this.cboTrangThai_SelectedIndexChanged);
             // 
+            // dtNgayNopPhat
+            // 
+            this.dtNgayNopPhat.BackColor = System.Drawing.Color.White;
+            this.dtNgayNopPhat.BorderColor = System.Drawing.Color.Silver;
+            this.dtNgayNopPhat.BorderRadius = 6;
+            this.dtNgayNopPhat.BorderThickness = 1;
+            this.dtNgayNopPhat.Checked = true;
+            this.dtNgayNopPhat.CheckedState.FillColor = System.Drawing.Color.White;
+            this.dtNgayNopPhat.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayNopPhat.FillColor = System.Drawing.Color.White;
+            this.dtNgayNopPhat.FocusedColor = System.Drawing.Color.White;
+            this.dtNgayNopPhat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayNopPhat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayNopPhat.Location = new System.Drawing.Point(558, 41);
+            this.dtNgayNopPhat.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNgayNopPhat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNgayNopPhat.Name = "dtNgayNopPhat";
+            this.dtNgayNopPhat.Size = new System.Drawing.Size(307, 38);
+            this.dtNgayNopPhat.TabIndex = 46;
+            this.dtNgayNopPhat.Value = new System.DateTime(2025, 11, 1, 0, 0, 0, 0);
+            // 
+            // MaPhieuPhat
+            // 
+            this.MaPhieuPhat.DataPropertyName = "MaPhieuPhat";
+            this.MaPhieuPhat.HeaderText = "Mã PP";
+            this.MaPhieuPhat.MinimumWidth = 9;
+            this.MaPhieuPhat.Name = "MaPhieuPhat";
+            this.MaPhieuPhat.Width = 125;
+            // 
+            // MaPhieuMuon
+            // 
+            this.MaPhieuMuon.DataPropertyName = "MaPhieuMuon";
+            this.MaPhieuMuon.HeaderText = "Mã PM";
+            this.MaPhieuMuon.MinimumWidth = 9;
+            this.MaPhieuMuon.Name = "MaPhieuMuon";
+            this.MaPhieuMuon.Width = 125;
+            // 
+            // MaDocGia2
+            // 
+            this.MaDocGia2.DataPropertyName = "MaDocGia";
+            this.MaDocGia2.HeaderText = "Mã ĐG";
+            this.MaDocGia2.MinimumWidth = 9;
+            this.MaDocGia2.Name = "MaDocGia2";
+            this.MaDocGia2.Width = 125;
+            // 
+            // TenDocGia
+            // 
+            this.TenDocGia.DataPropertyName = "TenDocGia";
+            this.TenDocGia.HeaderText = "Tên độc giả";
+            this.TenDocGia.MinimumWidth = 8;
+            this.TenDocGia.Name = "TenDocGia";
+            this.TenDocGia.Width = 175;
+            // 
+            // NgayNopPhat
+            // 
+            this.NgayNopPhat.DataPropertyName = "NgayNopPhat";
+            dataGridViewCellStyle15.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle15.NullValue = null;
+            this.NgayNopPhat.DefaultCellStyle = dataGridViewCellStyle15;
+            this.NgayNopPhat.HeaderText = "Ngày nộp phạt";
+            this.NgayNopPhat.MinimumWidth = 9;
+            this.NgayNopPhat.Name = "NgayNopPhat";
+            this.NgayNopPhat.Width = 175;
+            // 
+            // ThuThu
+            // 
+            this.ThuThu.DataPropertyName = "ThuThu";
+            this.ThuThu.HeaderText = "Mã TT";
+            this.ThuThu.MinimumWidth = 8;
+            this.ThuThu.Name = "ThuThu";
+            this.ThuThu.Width = 125;
+            // 
+            // TenThuThu
+            // 
+            this.TenThuThu.DataPropertyName = "TenThuThu";
+            this.TenThuThu.HeaderText = "Tên thủ thư";
+            this.TenThuThu.MinimumWidth = 8;
+            this.TenThuThu.Name = "TenThuThu";
+            this.TenThuThu.Width = 175;
+            // 
+            // TongTienPhat
+            // 
+            this.TongTienPhat.DataPropertyName = "TongTienPhat";
+            dataGridViewCellStyle16.Format = "#,###";
+            dataGridViewCellStyle16.NullValue = null;
+            this.TongTienPhat.DefaultCellStyle = dataGridViewCellStyle16;
+            this.TongTienPhat.HeaderText = "Tổng tiền phạt";
+            this.TongTienPhat.MinimumWidth = 9;
+            this.TongTienPhat.Name = "TongTienPhat";
+            this.TongTienPhat.Width = 175;
+            // 
+            // TrangThaiText
+            // 
+            this.TrangThaiText.DataPropertyName = "TrangThaiText";
+            this.TrangThaiText.HeaderText = "Trạng thái";
+            this.TrangThaiText.MinimumWidth = 8;
+            this.TrangThaiText.Name = "TrangThaiText";
+            this.TrangThaiText.Width = 175;
+            // 
             // UC_PhieuPhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -1241,7 +1272,6 @@
         private System.Windows.Forms.GroupBox grbPhieuPhat;
         private Guna.UI2.WinForms.Guna2TextBox txtMaPhieuMuon;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dtNgayNopPhat;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -1279,17 +1309,20 @@
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuPhat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNopPhat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienPhat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaiText;
         private Guna.UI2.WinForms.Guna2ComboBox cboThuThu;
         private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTongSo;
         private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtNgayNopPhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuPhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNopPhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThuThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenThuThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienPhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaiText;
     }
 }

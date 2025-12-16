@@ -133,12 +133,14 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 string sql = @"
                     SELECT 
                         pm.MaPhieuMuon, 
-                        pm.MaDocGia, 
-                        pm. MaKieuMuon, 
+                        pm.MaDocGia,
+                        dg.HoTen AS TenDocGia,
+                        pm.MaKieuMuon, 
                         pm.NgayMuon, 
-                        pm.HanTra, 
+                        pm. HanTra, 
                         COALESCE(SUM(ctpm.TienCoc), 0) AS TongTienCoc, 
-                        pm.MaThuThu AS ThuThu,
+                        pm. MaThuThu as ThuThu,
+                        tt.TenThuThu,
                         CASE 
                             WHEN pm.NgayThucTra IS NULL AND CAST(GETDATE() AS DATE) <= CAST(pm.HanTra AS DATE)
                                 THEN N'Còn hạn mượn'
@@ -146,20 +148,24 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                                 THEN N'Quá hạn mượn'
                             WHEN pm.NgayThucTra IS NOT NULL AND CAST(pm.NgayThucTra AS DATE) <= CAST(pm.HanTra AS DATE)
                                 THEN N'Trả đúng hạn'
-                            WHEN pm.NgayThucTra IS NOT NULL AND CAST(pm. NgayThucTra AS DATE) > CAST(pm.HanTra AS DATE)
+                            WHEN pm.NgayThucTra IS NOT NULL AND CAST(pm.NgayThucTra AS DATE) > CAST(pm.HanTra AS DATE)
                                 THEN N'Trả trễ'
                         END AS TrangThai
                     FROM PhieuMuon pm 
-                    LEFT JOIN CT_PhieuMuon ctpm ON pm.MaPhieuMuon = ctpm. MaPhieuMuon
+                    LEFT JOIN CT_PhieuMuon ctpm ON pm.MaPhieuMuon = ctpm.MaPhieuMuon
+                    LEFT JOIN DocGia dg ON pm.MaDocGia = dg.MaDocGia
+                    LEFT JOIN ThuThu tt ON pm.MaThuThu = tt.MaThuThu
                     GROUP BY 
                         pm.MaPhieuMuon, 
-                        pm.MaDocGia, 
+                        pm.MaDocGia,
+                        dg.HoTen,
                         pm.MaKieuMuon, 
                         pm.NgayMuon, 
-                        pm.HanTra, 
-                        pm. NgayThucTra,
-                        pm.MaThuThu
-                    ORDER BY pm.MaPhieuMuon desc";
+                        pm. HanTra, 
+                        pm.NgayThucTra,
+                        pm.MaThuThu,
+                        tt.TenThuThu
+                    ORDER BY pm.MaPhieuMuon DESC";
 
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
@@ -316,18 +322,61 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             if (dgvPhieuMuon.CurrentCell != null && dgvPhieuMuon.CurrentCell.RowIndex >= 0)
             {
                 int i = dgvPhieuMuon.CurrentRow.Index;
-                selectedMaPM = dgvPhieuMuon.Rows[i].Cells[0].Value.ToString();
+
+                // ✅ DÙNG DataPropertyName THAY VÌ INDEX
+                selectedMaPM = dgvPhieuMuon.Rows[i].Cells["MaPhieuMuon"]?.Value?.ToString() ?? "";
                 txtMaPhieuMuon.Text = selectedMaPM;
                 txtMaPhieuMuon.Enabled = string.IsNullOrEmpty(selectedMaPM);
-                
-                selectedMaDG = dgvPhieuMuon.Rows[i].Cells[1].Value.ToString();
-                txtMaDG.Text = selectedMaDG;
-                cboKieuMuon.SelectedValue = dgvPhieuMuon.Rows[i].Cells[2].Value.ToString();
-                dtNgayMuon.Text = dgvPhieuMuon.Rows[i].Cells[3].Value.ToString();
-                dtHanTra.Text = dgvPhieuMuon.Rows[i].Cells[4].Value.ToString();
 
-                txtTienCoc.Text = dgvPhieuMuon.Rows[i].Cells[5].Value.ToString();
-                cboThuThu.SelectedValue = dgvPhieuMuon.Rows[i].Cells[6].Value.ToString();
+                selectedMaDG = dgvPhieuMuon.Rows[i].Cells["MaDG2"]?.Value?.ToString() ?? "";
+                txtMaDG.Text = selectedMaDG;
+
+                // ✅ XỬ LÝ AN TOÀN CHO COMBOBOX
+                string maKieuMuon = dgvPhieuMuon.Rows[i].Cells["MaKieuMuon"]?.Value?.ToString();
+                if (!string.IsNullOrEmpty(maKieuMuon))
+                {
+                    cboKieuMuon.SelectedValue = maKieuMuon;
+                }
+                else
+                {
+                    cboKieuMuon.SelectedIndex = -1;
+                }
+
+                // ✅ XỬ LÝ NGÀY THÁNG
+                if (dgvPhieuMuon.Rows[i].Cells["NgayMuon"].Value != null &&
+                    dgvPhieuMuon.Rows[i].Cells["NgayMuon"].Value != DBNull.Value)
+                {
+                    dtNgayMuon.Value = Convert.ToDateTime(dgvPhieuMuon.Rows[i].Cells["NgayMuon"].Value);
+                }
+                else
+                {
+                    dtNgayMuon.Value = DateTime.Now;
+                }
+
+                if (dgvPhieuMuon.Rows[i].Cells["HanTra"].Value != null &&
+                    dgvPhieuMuon.Rows[i].Cells["HanTra"].Value != DBNull.Value)
+                {
+                    dtHanTra.Value = Convert.ToDateTime(dgvPhieuMuon.Rows[i].Cells["HanTra"].Value);
+                }
+                else
+                {
+                    dtHanTra.Value = DateTime.Now;
+                }
+
+                // ✅ TIỀN CỌC
+                txtTienCoc.Text = dgvPhieuMuon.Rows[i].Cells["TongTienCoc"]?.Value?.ToString() ?? "0";
+                txtTrangThai.Text = dgvPhieuMuon.Rows[i].Cells["TrangThai"]?.Value?.ToString() ?? "";
+
+                // ✅ THỦ THƯ
+                string maThuThu = dgvPhieuMuon.Rows[i].Cells["ThuThu"]?.Value?.ToString();
+                if (!string.IsNullOrEmpty(maThuThu))
+                {
+                    cboThuThu.SelectedValue = maThuThu;
+                }
+                else
+                {
+                    cboThuThu.SelectedIndex = -1;
+                }
                 cboThuThu.Enabled = true;
             }
         }
@@ -368,12 +417,14 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
             txtSoLuongMuon.Text = "";
             txtTienCoc.Text = "";
-            
+            txtTrangThai.Text = "Còn hạn mượn";
+
             txtMaDG.Focus();
             addNewFlag = true;
             dtHanTra.Enabled = false;
             txtSoLuongMuon.Enabled = false;
             txtTienCoc.Enabled = false;
+            txtTrangThai.Enabled = false;
             SetStyle();
             LoadComboBox(cboKieuMuon, "KieuMuon", "MaKieuMuon", "TenKieuMuon");
             LoadComboBox(cboThuThu, "ThuThu", "MaThuThu", "TenThuThu");
@@ -812,6 +863,11 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                     FilterData();
                 }
             }
+        }
+
+        private void dtNgayMuon_ValueChanged_1(object sender, EventArgs e)
+        {
+            TinhHanTra();
         }
 
         private void TinhHanTra()

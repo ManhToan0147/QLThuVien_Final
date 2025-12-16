@@ -153,14 +153,21 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             {
                 con.Open();
                 string sql = @"
-                    SELECT MaPhieuMuon, MaDocGia, NgayMuon, HanTra, NgayThucTra,
-                           CASE 
-                               WHEN HanTra < NgayThucTra THEN DATEDIFF(DAY, HanTra, NgayThucTra) 
-                               ELSE 0
-                           END AS SoNgayTre
-                    FROM PhieuMuon
-                    WHERE NgayThucTra IS NOT NULL
-                    ORDER BY NgayThucTra desc, MaPhieuMuon desc";
+                    SELECT 
+                        pm.MaPhieuMuon, 
+                        pm.MaDocGia,
+                        dg.HoTen AS TenDocGia,
+                        pm.NgayMuon, 
+                        pm.HanTra, 
+                        pm.NgayThucTra,
+                        CASE 
+                            WHEN pm.HanTra < pm.NgayThucTra THEN DATEDIFF(DAY, pm.HanTra, pm.NgayThucTra) 
+                            ELSE 0
+                        END AS SoNgayTre
+                    FROM PhieuMuon pm
+                    LEFT JOIN DocGia dg ON pm.MaDocGia = dg.MaDocGia
+                    WHERE pm.NgayThucTra IS NOT NULL
+                    ORDER BY pm.NgayThucTra DESC, pm.MaPhieuMuon DESC";
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -590,23 +597,68 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void NapCT()
         {
+            // ✅ KIỂM TRA CÓ DÒNG KHÔNG
+            if (dgvPMDaTra.Rows.Count == 0) return;
+
             if (dgvPMDaTra.CurrentCell != null && dgvPMDaTra.CurrentCell.RowIndex >= 0)
             {
                 int i = dgvPMDaTra.CurrentRow.Index;
-                selectedMaPM = dgvPMDaTra.Rows[i].Cells[0].Value.ToString();
+
+                // ✅ DÙNG TÊN CỘT THAY VÌ INDEX
+
+                // Mã phiếu mượn
+                selectedMaPM = dgvPMDaTra.Rows[i].Cells["MaPhieuMuon"]?.Value?.ToString() ?? "";
                 txtMaPhieuMuon.Text = selectedMaPM;
                 txtMaPhieuMuon.Enabled = string.IsNullOrEmpty(selectedMaPM);
 
-                selectedMaDG = dgvPMDaTra.Rows[i].Cells[1].Value.ToString();
+                // Mã độc giả
+                selectedMaDG = dgvPMDaTra.Rows[i].Cells["MaDocGia"]?.Value?.ToString() ?? "";
                 txtMaDG.Text = selectedMaDG;
 
-                dtNgayMuon.Text = dgvPMDaTra.Rows[i].Cells[2].Value.ToString();
-                dtHanTra.Text = dgvPMDaTra.Rows[i].Cells[3].Value.ToString();
-                dtNgayThucTra.Text = dgvPMDaTra.Rows[i].Cells[4].Value.ToString();
+                // Ngày mượn
+                var ngayMuon = dgvPMDaTra.Rows[i].Cells["NgayMuon"]?.Value;
+                if (ngayMuon != null && ngayMuon != DBNull.Value)
+                {
+                    dtNgayMuon.Value = Convert.ToDateTime(ngayMuon);
+                }
+                else
+                {
+                    dtNgayMuon.Value = DateTime.Now;
+                }
 
-                txtSoNgayTre.Text = dgvPMDaTra.Rows[i].Cells[5].Value.ToString();
+                // Hạn trả
+                var hanTra = dgvPMDaTra.Rows[i].Cells["HanTra"]?.Value;
+                if (hanTra != null && hanTra != DBNull.Value)
+                {
+                    dtHanTra.Value = Convert.ToDateTime(hanTra);
+                }
+                else
+                {
+                    dtHanTra.Value = DateTime.Now;
+                }
+
+                // Ngày thực trả
+                var ngayThucTra = dgvPMDaTra.Rows[i].Cells["NgayThucTra"]?.Value;
+                if (ngayThucTra != null && ngayThucTra != DBNull.Value)
+                {
+                    dtNgayThucTra.Value = Convert.ToDateTime(ngayThucTra);
+                }
+                else
+                {
+                    dtNgayThucTra.Value = DateTime.Now;
+                }
+
+                // Số ngày trễ
+                var soNgayTre = dgvPMDaTra.Rows[i].Cells["SoNgayTre"]?.Value;
+                if (soNgayTre != null && soNgayTre != DBNull.Value)
+                {
+                    txtSoNgayTre.Text = soNgayTre.ToString();
+                }
+                else
+                {
+                    txtSoNgayTre.Text = "0";
+                }
                 txtSoNgayTre.Enabled = !string.IsNullOrEmpty(txtSoNgayTre.Text);
-
             }
         }
     }
