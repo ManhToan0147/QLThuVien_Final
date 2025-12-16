@@ -72,6 +72,7 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.BorderColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BorderRadius = 10;
             this.btnXoa.BorderThickness = 2;
             this.btnXoa.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -95,6 +96,7 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThem.BorderRadius = 10;
             this.btnThem.BorderThickness = 2;
             this.btnThem.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -118,6 +120,7 @@
             // 
             this.btnTaoMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTaoMoi.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTaoMoi.BorderRadius = 10;
             this.btnTaoMoi.BorderThickness = 2;
             this.btnTaoMoi.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnTaoMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -139,6 +142,7 @@
             // 
             // txtHinhThucPhat
             // 
+            this.txtHinhThucPhat.BorderRadius = 6;
             this.txtHinhThucPhat.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHinhThucPhat.DefaultText = "";
             this.txtHinhThucPhat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -169,6 +173,7 @@
             // 
             // txtMaViPham
             // 
+            this.txtMaViPham.BorderRadius = 6;
             this.txtMaViPham.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaViPham.DefaultText = "";
             this.txtMaViPham.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -192,6 +197,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSua.BorderRadius = 10;
             this.btnSua.BorderThickness = 2;
             this.btnSua.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -357,6 +363,7 @@
             // cboTrangThai
             // 
             this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 6;
             this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -376,6 +383,7 @@
             // cboLoaiTinhPhat
             // 
             this.cboLoaiTinhPhat.BackColor = System.Drawing.Color.Transparent;
+            this.cboLoaiTinhPhat.BorderRadius = 6;
             this.cboLoaiTinhPhat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboLoaiTinhPhat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiTinhPhat.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -404,6 +412,7 @@
             // 
             // txtGiaTri
             // 
+            this.txtGiaTri.BorderRadius = 6;
             this.txtGiaTri.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaTri.DefaultText = "";
             this.txtGiaTri.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -444,6 +453,7 @@
             // 
             // txtTenViPham
             // 
+            this.txtTenViPham.BorderRadius = 6;
             this.txtTenViPham.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenViPham.DefaultText = "";
             this.txtTenViPham.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));

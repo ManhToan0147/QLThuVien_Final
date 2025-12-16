@@ -50,7 +50,7 @@
             this.lblSaoLuuPhucHoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(170)))));
             this.lblSaoLuuPhucHoi.Location = new System.Drawing.Point(604, 96);
             this.lblSaoLuuPhucHoi.Name = "lblSaoLuuPhucHoi";
-            this.lblSaoLuuPhucHoi.Size = new System.Drawing.Size(826, 74);
+            this.lblSaoLuuPhucHoi.Size = new System.Drawing.Size(712, 65);
             this.lblSaoLuuPhucHoi.TabIndex = 5;
             this.lblSaoLuuPhucHoi.Text = "SAO LƯU - PHỤC HỒI DỮ LIỆU";
             // 
@@ -72,6 +72,7 @@
             // 
             this.btnBackup.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBackup.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBackup.BorderRadius = 10;
             this.btnBackup.BorderThickness = 2;
             this.btnBackup.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnBackup.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -96,6 +97,7 @@
             // 
             this.btnBrowse1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBrowse1.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBrowse1.BorderRadius = 10;
             this.btnBrowse1.BorderThickness = 2;
             this.btnBrowse1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnBrowse1.CheckedState.FillColor = System.Drawing.Color.White;
@@ -125,6 +127,7 @@
             // 
             // txtBackupPath
             // 
+            this.txtBackupPath.BorderRadius = 6;
             this.txtBackupPath.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBackupPath.DefaultText = "";
             this.txtBackupPath.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -138,7 +141,6 @@
             this.txtBackupPath.Location = new System.Drawing.Point(400, 114);
             this.txtBackupPath.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBackupPath.Name = "txtBackupPath";
-            this.txtBackupPath.PasswordChar = '\0';
             this.txtBackupPath.PlaceholderText = "";
             this.txtBackupPath.SelectedText = "";
             this.txtBackupPath.Size = new System.Drawing.Size(758, 60);
@@ -150,7 +152,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(112, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 38);
+            this.label1.Size = new System.Drawing.Size(215, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đường dẫn lưu file";
             // 
@@ -172,6 +174,7 @@
             // 
             this.btnRestore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRestore.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRestore.BorderRadius = 10;
             this.btnRestore.BorderThickness = 2;
             this.btnRestore.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnRestore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -196,6 +199,7 @@
             // 
             this.btnBrowse2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBrowse2.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBrowse2.BorderRadius = 10;
             this.btnBrowse2.BorderThickness = 2;
             this.btnBrowse2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnBrowse2.CheckedState.FillColor = System.Drawing.Color.White;
@@ -225,6 +229,7 @@
             // 
             // txtRestorePath
             // 
+            this.txtRestorePath.BorderRadius = 6;
             this.txtRestorePath.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRestorePath.DefaultText = "";
             this.txtRestorePath.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -238,7 +243,6 @@
             this.txtRestorePath.Location = new System.Drawing.Point(400, 114);
             this.txtRestorePath.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtRestorePath.Name = "txtRestorePath";
-            this.txtRestorePath.PasswordChar = '\0';
             this.txtRestorePath.PlaceholderText = "";
             this.txtRestorePath.SelectedText = "";
             this.txtRestorePath.Size = new System.Drawing.Size(758, 60);
@@ -250,13 +254,13 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(233, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 38);
+            this.label2.Size = new System.Drawing.Size(111, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chọn file";
             // 
             // UC_SaoLuu_PhucHoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.Controls.Add(this.groupBox2);

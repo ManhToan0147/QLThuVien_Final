@@ -99,6 +99,7 @@
             // 
             // txtKhoSach
             // 
+            this.txtKhoSach.BorderRadius = 6;
             this.txtKhoSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKhoSach.DefaultText = "";
             this.txtKhoSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -129,6 +130,7 @@
             // 
             // txtNXB
             // 
+            this.txtNXB.BorderRadius = 6;
             this.txtNXB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNXB.DefaultText = "";
             this.txtNXB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -159,6 +161,7 @@
             // 
             // txtChuDe
             // 
+            this.txtChuDe.BorderRadius = 6;
             this.txtChuDe.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChuDe.DefaultText = "";
             this.txtChuDe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -189,6 +192,7 @@
             // 
             // txtLoaiSach
             // 
+            this.txtLoaiSach.BorderRadius = 6;
             this.txtLoaiSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLoaiSach.DefaultText = "";
             this.txtLoaiSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -219,6 +223,7 @@
             // 
             // txtSoLuong
             // 
+            this.txtSoLuong.BorderRadius = 6;
             this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoLuong.DefaultText = "";
             this.txtSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -250,6 +255,7 @@
             // txtTenTacGia
             // 
             this.txtTenTacGia.AllowDrop = true;
+            this.txtTenTacGia.BorderRadius = 6;
             this.txtTenTacGia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenTacGia.DefaultText = "";
             this.txtTenTacGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -282,6 +288,7 @@
             // 
             // txtSoTrang
             // 
+            this.txtSoTrang.BorderRadius = 6;
             this.txtSoTrang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoTrang.DefaultText = "";
             this.txtSoTrang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -312,6 +319,7 @@
             // 
             // txtGiaBia
             // 
+            this.txtGiaBia.BorderRadius = 6;
             this.txtGiaBia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaBia.DefaultText = "";
             this.txtGiaBia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -342,6 +350,7 @@
             // 
             // txtNamXuatBan
             // 
+            this.txtNamXuatBan.BorderRadius = 6;
             this.txtNamXuatBan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNamXuatBan.DefaultText = "";
             this.txtNamXuatBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -372,6 +381,7 @@
             // 
             // txtTenDauSach
             // 
+            this.txtTenDauSach.BorderRadius = 6;
             this.txtTenDauSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDauSach.DefaultText = "";
             this.txtTenDauSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -402,6 +412,7 @@
             // 
             // txtMaDauSach
             // 
+            this.txtMaDauSach.BorderRadius = 6;
             this.txtMaDauSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaDauSach.DefaultText = "";
             this.txtMaDauSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));

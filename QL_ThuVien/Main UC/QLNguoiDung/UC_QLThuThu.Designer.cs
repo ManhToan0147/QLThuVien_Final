@@ -79,6 +79,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblTongSo = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cboTrangThai2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.grbTTTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -86,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblQLThuThu
@@ -112,6 +118,7 @@
             // cboTruong
             // 
             this.cboTruong.BackColor = System.Drawing.Color.Transparent;
+            this.cboTruong.BorderRadius = 6;
             this.cboTruong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboTruong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTruong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -161,6 +168,7 @@
             // cboChucVu
             // 
             this.cboChucVu.BackColor = System.Drawing.Color.Transparent;
+            this.cboChucVu.BorderRadius = 6;
             this.cboChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboChucVu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -179,6 +187,7 @@
             // cboTrangThai
             // 
             this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 6;
             this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -204,6 +213,7 @@
             // cboGioiTinh
             // 
             this.cboGioiTinh.BackColor = System.Drawing.Color.Transparent;
+            this.cboGioiTinh.BorderRadius = 6;
             this.cboGioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGioiTinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -222,6 +232,7 @@
             // dateNgaySinh
             // 
             this.dateNgaySinh.BackColor = System.Drawing.Color.White;
+            this.dateNgaySinh.BorderRadius = 6;
             this.dateNgaySinh.Checked = true;
             this.dateNgaySinh.CheckedState.FillColor = System.Drawing.Color.White;
             this.dateNgaySinh.CustomFormat = "dd/MM/yyyy";
@@ -269,6 +280,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.BorderRadius = 6;
             this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSDT.DefaultText = "";
             this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -323,6 +335,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderRadius = 6;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -353,6 +366,7 @@
             // 
             // txtTenThuThu
             // 
+            this.txtTenThuThu.BorderRadius = 6;
             this.txtTenThuThu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenThuThu.DefaultText = "";
             this.txtTenThuThu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -383,6 +397,7 @@
             // 
             // txtMaThuThu
             // 
+            this.txtMaThuThu.BorderRadius = 6;
             this.txtMaThuThu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaThuThu.DefaultText = "";
             this.txtMaThuThu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -415,6 +430,7 @@
             // 
             this.btnBrowse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBrowse.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.BorderRadius = 10;
             this.btnBrowse.BorderThickness = 2;
             this.btnBrowse.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnBrowse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -448,12 +464,13 @@
             // panelContainer
             // 
             this.panelContainer.Controls.Add(this.dgvThuThu);
+            this.panelContainer.Controls.Add(this.panel5);
             this.panelContainer.Controls.Add(this.panel3);
             this.panelContainer.Controls.Add(this.panel2);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(0, 717);
+            this.panelContainer.Location = new System.Drawing.Point(0, 697);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(2035, 407);
+            this.panelContainer.Size = new System.Drawing.Size(2035, 433);
             this.panelContainer.TabIndex = 19;
             // 
             // dgvThuThu
@@ -513,7 +530,7 @@
             this.dgvThuThu.RowHeadersWidth = 72;
             this.dgvThuThu.RowTemplate.Height = 100;
             this.dgvThuThu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvThuThu.Size = new System.Drawing.Size(1813, 407);
+            this.dgvThuThu.Size = new System.Drawing.Size(1813, 380);
             this.dgvThuThu.TabIndex = 3;
             this.dgvThuThu.SelectionChanged += new System.EventHandler(this.dgvThuThu_SelectionChanged);
             // 
@@ -603,7 +620,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1928, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(107, 407);
+            this.panel3.Size = new System.Drawing.Size(107, 433);
             this.panel3.TabIndex = 5;
             // 
             // panel2
@@ -611,13 +628,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(115, 407);
+            this.panel2.Size = new System.Drawing.Size(115, 433);
             this.panel2.TabIndex = 4;
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.BorderColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BorderRadius = 10;
             this.btnXoa.BorderThickness = 2;
             this.btnXoa.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -630,7 +648,7 @@
             this.btnXoa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnXoa.HoverState.FillColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnXoa.Location = new System.Drawing.Point(1045, 37);
+            this.btnXoa.Location = new System.Drawing.Point(1045, 34);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(263, 79);
             this.btnXoa.TabIndex = 21;
@@ -641,6 +659,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSua.BorderRadius = 10;
             this.btnSua.BorderThickness = 2;
             this.btnSua.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -653,7 +672,7 @@
             this.btnSua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnSua.HoverState.FillColor = System.Drawing.Color.White;
             this.btnSua.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnSua.Location = new System.Drawing.Point(1363, 37);
+            this.btnSua.Location = new System.Drawing.Point(1363, 34);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(263, 79);
             this.btnSua.TabIndex = 22;
@@ -664,6 +683,7 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThem.BorderRadius = 10;
             this.btnThem.BorderThickness = 2;
             this.btnThem.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -676,7 +696,7 @@
             this.btnThem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnThem.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThem.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnThem.Location = new System.Drawing.Point(727, 37);
+            this.btnThem.Location = new System.Drawing.Point(727, 34);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(263, 79);
             this.btnThem.TabIndex = 23;
@@ -687,6 +707,7 @@
             // 
             this.btnTaoMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTaoMoi.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTaoMoi.BorderRadius = 10;
             this.btnTaoMoi.BorderThickness = 2;
             this.btnTaoMoi.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnTaoMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -699,7 +720,7 @@
             this.btnTaoMoi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
             this.btnTaoMoi.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTaoMoi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(232)))));
-            this.btnTaoMoi.Location = new System.Drawing.Point(409, 37);
+            this.btnTaoMoi.Location = new System.Drawing.Point(409, 34);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(263, 79);
             this.btnTaoMoi.TabIndex = 24;
@@ -717,13 +738,15 @@
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1124);
+            this.panel1.Location = new System.Drawing.Point(0, 1130);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2035, 153);
+            this.panel1.Size = new System.Drawing.Size(2035, 147);
             this.panel1.TabIndex = 25;
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.cboTrangThai2);
+            this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.Controls.Add(this.lblQLThuThu);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.cboTruong);
@@ -732,11 +755,12 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(2035, 717);
+            this.guna2Panel1.Size = new System.Drawing.Size(2035, 697);
             this.guna2Panel1.TabIndex = 26;
             // 
             // txtSearch
             // 
+            this.txtSearch.BorderRadius = 6;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -756,10 +780,75 @@
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.PlaceholderText = "Nhập tên thủ thư để tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(1586, 61);
+            this.txtSearch.Size = new System.Drawing.Size(1329, 61);
             this.txtSearch.TabIndex = 15;
             this.txtSearch.TextOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.lblTongSo);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(115, 380);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1813, 53);
+            this.panel5.TabIndex = 6;
+            // 
+            // lblTongSo
+            // 
+            this.lblTongSo.AutoSize = true;
+            this.lblTongSo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongSo.Location = new System.Drawing.Point(123, 13);
+            this.lblTongSo.Name = "lblTongSo";
+            this.lblTongSo.Size = new System.Drawing.Size(22, 25);
+            this.lblTongSo.TabIndex = 1;
+            this.lblTongSo.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 25);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Số bản ghi:";
+            // 
+            // cboTrangThai2
+            // 
+            this.cboTrangThai2.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai2.BorderRadius = 10;
+            this.cboTrangThai2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTrangThai2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTrangThai2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboTrangThai2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTrangThai2.ItemHeight = 55;
+            this.cboTrangThai2.Items.AddRange(new object[] {
+            "Tất cả",
+            "Đang làm việc",
+            "Đã nghỉ"});
+            this.cboTrangThai2.Location = new System.Drawing.Point(1709, 145);
+            this.cboTrangThai2.Name = "cboTrangThai2";
+            this.cboTrangThai2.Size = new System.Drawing.Size(219, 61);
+            this.cboTrangThai2.StartIndex = 0;
+            this.cboTrangThai2.TabIndex = 19;
+            this.cboTrangThai2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboTrangThai2.SelectedIndexChanged += new System.EventHandler(this.cboTrangThai2_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1715, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 28);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Trạng thái";
             // 
             // UC_QLThuThu
             // 
@@ -783,6 +872,8 @@
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -833,5 +924,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaiText;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblTongSo;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai2;
+        private System.Windows.Forms.Label label11;
     }
 }

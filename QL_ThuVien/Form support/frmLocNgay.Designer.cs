@@ -59,6 +59,7 @@
             // btnNgungApDung
             // 
             this.btnNgungApDung.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNgungApDung.BorderRadius = 10;
             this.btnNgungApDung.BorderThickness = 2;
             this.btnNgungApDung.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnNgungApDung.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -81,6 +82,7 @@
             // btnApDung
             // 
             this.btnApDung.BorderColor = System.Drawing.Color.Transparent;
+            this.btnApDung.BorderRadius = 10;
             this.btnApDung.BorderThickness = 2;
             this.btnApDung.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnApDung.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -104,6 +106,7 @@
             // 
             this.dtpDenNgay.BackColor = System.Drawing.Color.White;
             this.dtpDenNgay.BorderColor = System.Drawing.Color.Silver;
+            this.dtpDenNgay.BorderRadius = 6;
             this.dtpDenNgay.BorderThickness = 1;
             this.dtpDenNgay.Checked = true;
             this.dtpDenNgay.CheckedState.FillColor = System.Drawing.Color.White;
@@ -135,6 +138,7 @@
             // 
             this.dtpTuNgay.BackColor = System.Drawing.Color.White;
             this.dtpTuNgay.BorderColor = System.Drawing.Color.Silver;
+            this.dtpTuNgay.BorderRadius = 6;
             this.dtpTuNgay.BorderThickness = 1;
             this.dtpTuNgay.Checked = true;
             this.dtpTuNgay.CheckedState.FillColor = System.Drawing.Color.White;

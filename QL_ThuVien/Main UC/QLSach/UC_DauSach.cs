@@ -86,6 +86,7 @@ namespace QL_ThuVien.Main_UC.QLSach
             {
                 dv.RowFilter = $"TenDauSach LIKE '%{search}%'";
             }
+            UpdateTongSo();
         }
 
         private void UC_DauSach_Load(object sender, EventArgs e)
@@ -115,6 +116,12 @@ namespace QL_ThuVien.Main_UC.QLSach
 
             // ✅ VỪA VÀO - SÁNG HẾT
             EnableButtons(true, true, true, true, true);
+            UpdateTongSo();
+        }
+
+        private void UpdateTongSo()
+        {
+            lblTongSo.Text = dgvDSDauSach.Rows.Count.ToString();
         }
 
         private void ShowDauSach()
@@ -410,7 +417,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                         addNewFlag = false;
                         txtSearch.Clear();
                         ShowDauSach();
-
+                        UpdateTongSo();
                         // ✅ SÁNG HẾT
                         EnableButtons(true, true, true, true, true);
 
@@ -506,6 +513,7 @@ namespace QL_ThuVien.Main_UC.QLSach
                         MessageBoxIcon.Information);
 
                     ShowDauSach();
+                    UpdateTongSo();
 
                     if (dgvDSDauSach.Rows.Count > 0)
                     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QL_ThuVien.Form_support;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,8 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
         DataView dvPMCanTra;
         DataView dvPMDaTra;
         bool addNewFlag;
+        private DateTime? filterTuNgay = null;
+        private DateTime? filterDenNgay = null;
         public UC_PhieuTra()
         {
             InitializeComponent();
@@ -31,7 +34,41 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             var f = new frmTraSach();
             f.MaPhieuMuon = txtMaPhieuMuon.Text;
             f.MaDocGia = txtMaDG.Text;
+
             f.ShowDialog();
+
+            // ✅ SAU KHI ĐÓNG FORM → LOAD LẠI
+
+            // Lưu vị trí
+            int currentIndex = dgvPMDaTra.CurrentRow?.Index ?? -1;
+            string currentMaPM = selectedMaPM ?? "";
+
+            // Load lại dữ liệu
+            LoadPMDaTra();
+            LoadPMCanTra();
+
+            // ✅ GỌI LẠI FILTER (giữ filter hiện tại)
+            FilterDataPhieuTra();
+
+            UpdateTongSo();
+
+            // Chọn lại dòng
+            if (dgvPMDaTra.Rows.Count > 0)
+            {
+                if (currentIndex >= 0 && currentIndex < dgvPMDaTra.Rows.Count)
+                {
+                    dgvPMDaTra.ClearSelection();
+                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[currentIndex].Cells[0];
+                    dgvPMDaTra.FirstDisplayedScrollingRowIndex = currentIndex;
+                }
+                else
+                {
+                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[0].Cells[0];
+                }
+
+                NapCT();
+                LoadSachTra(selectedMaPM);
+            }
         }
 
         private void UC_PhieuTra_Load(object sender, EventArgs e)
@@ -44,7 +81,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             SetupButtonDisabledStyle(btnXoa);
             SetupButtonDisabledStyle(btnTraSach);
             SetupButtonDisabledStyle(btnInPhieuTra);
-            SetupButtonDisabledStyle(btnRefresh);
+            SetupButtonDisabledStyle(btnLocNgay);
 
             //Fix lỗi column header
             dgvPMCanTra.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPMCanTra.Font, FontStyle.Bold);
@@ -79,7 +116,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 btnXoa.Enabled = false;
                 btnInPhieuTra.Enabled = false;
                 btnTraSach.Enabled = false;
-                btnRefresh.Enabled = false;
+                btnLocNgay.Enabled = false;
             }
             else
             {
@@ -88,7 +125,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 btnXoa.Enabled = true;
                 btnInPhieuTra.Enabled = true;
                 btnTraSach.Enabled = true;
-                btnRefresh.Enabled = true;
+                btnLocNgay.Enabled = true;
             }
         }
 
@@ -242,6 +279,13 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 }
             }
 
+            // ✅ LỌC THEO NGÀY TRẢ (NẾU CÓ)
+            if (filterTuNgay.HasValue && filterDenNgay.HasValue)
+            {
+                filters.Add($"NgayThucTra >= #{filterTuNgay.Value: MM/dd/yyyy}#");
+                filters.Add($"NgayThucTra <= #{filterDenNgay.Value:MM/dd/yyyy}#");
+            }
+
             // === KẾT HỢP CÁC BỘ LỌC ===
             dvPMDaTra.RowFilter = string.Join(" AND ", filters);
             UpdateTongSo();
@@ -313,7 +357,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                         }
                         addNewFlag = false;
                         LoadPMDaTra();
-                        UpdateTongSo();
+                        FilterDataPhieuTra();
                         LoadPMCanTra();
                         SetStyle();
                         //Tìm dòng chứa mã của bản ghi vừa thêm
@@ -390,7 +434,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LoadPMDaTra();
-                        UpdateTongSo();
+                        FilterDataPhieuTra();
                         LoadPMCanTra();
 
                         if (dgvPMDaTra.Rows.Count > 0)
@@ -414,22 +458,33 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            // === VALIDATION ===
             if (string.IsNullOrEmpty(selectedMaPM))
             {
-                MessageBox.Show("Chưa chọn phiếu mượn để sửa thông tin trả");
+                MessageBox.Show("Chưa chọn phiếu mượn để sửa thông tin trả", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int currentIndex = dgvPMDaTra.CurrentRow.Index;
+
+            // ✅ LƯU MÃ PHIẾU MƯỢN (không dùng index)
+            string currentMaPM = selectedMaPM;
+
+            // === UPDATE DATABASE ===
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
-                string sql = "Update PhieuMuon set NgayThucTra = @NgayThucTra " +
-                        $"where MaPhieuMuon = '{selectedMaPM}'";
+
+                // ✅ SỬA SQL - Dùng parameter thay vì string interpolation
+                string sql = "UPDATE PhieuMuon SET NgayThucTra = @NgayThucTra WHERE MaPhieuMuon = @MaPhieuMuon";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@NgayThucTra", dtNgayThucTra.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@MaPhieuMuon", selectedMaPM);
+
                 try
                 {
-                    if (cmd.ExecuteNonQuery() > 0)
+                    int kq = cmd.ExecuteNonQuery();
+
+                    if (kq > 0)
                     {
                         MessageBox.Show("Sửa thông tin trả thành công!", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -440,56 +495,47 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+
+                    // === LOAD LẠI DỮ LIỆU ===
                     LoadPMDaTra();
                     LoadPMCanTra();
-                    dgvPMDaTra.ClearSelection();
-                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[currentIndex].Cells[0];
-                    dgvPMDaTra.FirstDisplayedScrollingRowIndex = currentIndex;
+
+                    // ✅ FILTER TRƯỚC KHI CHỌN DÒNG
+                    FilterDataPhieuTra();  // ← Di chuyển lên trước
+
+                    // === TÌM DÒNG VỪA SỬA ===
+                    int newIndex = -1;
+                    foreach (DataGridViewRow row in dgvPMDaTra.Rows)
+                    {
+                        if (row.Cells["MaPhieuMuon"].Value?.ToString() == currentMaPM)
+                        {
+                            newIndex = row.Index;
+                            break;
+                        }
+                    }
+
+                    // === CHỌN LẠI DÒNG ===
+                    if (dgvPMDaTra.Rows.Count > 0)
+                    {
+                        dgvPMDaTra.ClearSelection();
+                        dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[newIndex >= 0 ? newIndex : 0].Cells[0];
+                    }
+
+                    // === NẠP CHI TIẾT ===
                     NapCT();
                     LoadSachTra(selectedMaPM);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi " + ex.Message, "Lỗi",
-                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi:  " + ex.Message, "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            // Lưu vị trí cũ
-            int currentIndex = dgvPMDaTra.CurrentRow?.Index ?? -1;
-            string currentMaPM = selectedMaPM ?? "";
 
-            // === RESET BỘ LỌC ===
-            cboTruong2.SelectedIndex = 0;
-            txtSearch2.Clear();
-            if (dvPMDaTra != null)
-                dvPMDaTra.RowFilter = "";
-
-            // Load lại dữ liệu
-            LoadPMDaTra();
-            UpdateTongSo();
-            LoadPMCanTra();
-
-            // Chọn lại dòng
-            if (dgvPMDaTra.Rows.Count > 0)
-            {
-                if (currentIndex >= 0 && currentIndex < dgvPMDaTra.Rows.Count)
-                {
-                    dgvPMDaTra.ClearSelection();
-                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[currentIndex].Cells[0];
-                    dgvPMDaTra.FirstDisplayedScrollingRowIndex = currentIndex;
-                }
-                else
-                {
-                    dgvPMDaTra.CurrentCell = dgvPMDaTra.Rows[0].Cells[0];
-                }
-
-                NapCT();
-                LoadSachTra(selectedMaPM);
-            }
         }
 
         private void btnInPhieuTra_Click(object sender, EventArgs e)
@@ -514,6 +560,30 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 using (frmInPhieuTra reportForm = new frmInPhieuTra(dt, mapm, madg, hoten, ngayMuon, hanTra, soNgayTre))
                 {
                     reportForm.ShowDialog();
+                }
+            }
+        }
+
+        private void btnLocNgay_Click(object sender, EventArgs e)
+        {
+            using (var f = new frmLocNgay())
+            {
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    if (f.IsApplied && f.TuNgay.HasValue && f.DenNgay.HasValue)
+                    {
+                        // ✅ ÁP DỤNG LỌC NGÀY
+                        filterTuNgay = f.TuNgay.Value;
+                        filterDenNgay = f.DenNgay.Value;
+                    }
+                    else
+                    {
+                        // ✅ NGỪNG ÁP DỤNG
+                        filterTuNgay = null;
+                        filterDenNgay = null;
+                    }
+
+                    FilterDataPhieuTra();
                 }
             }
         }

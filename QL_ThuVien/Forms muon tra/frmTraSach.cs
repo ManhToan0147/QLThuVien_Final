@@ -167,6 +167,8 @@ namespace QL_ThuVien
                 }
             }
             MessageBox.Show("Dữ liệu đã được lưu thành công.");
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

@@ -190,6 +190,7 @@
             // btnLuu
             // 
             this.btnLuu.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLuu.BorderRadius = 10;
             this.btnLuu.BorderThickness = 2;
             this.btnLuu.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -212,6 +213,7 @@
             // btnXoa
             // 
             this.btnXoa.BorderColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BorderRadius = 10;
             this.btnXoa.BorderThickness = 2;
             this.btnXoa.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -233,6 +235,7 @@
             // 
             // txtMaDocGia
             // 
+            this.txtMaDocGia.BorderRadius = 6;
             this.txtMaDocGia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaDocGia.DefaultText = "";
             this.txtMaDocGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -263,6 +266,7 @@
             // 
             // txtMaPhieuMuon
             // 
+            this.txtMaPhieuMuon.BorderRadius = 6;
             this.txtMaPhieuMuon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhieuMuon.DefaultText = "";
             this.txtMaPhieuMuon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -293,6 +297,7 @@
             // 
             // txtMaPhieuPhat
             // 
+            this.txtMaPhieuPhat.BorderRadius = 6;
             this.txtMaPhieuPhat.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhieuPhat.DefaultText = "";
             this.txtMaPhieuPhat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -324,6 +329,7 @@
             // btnChuyenXuong
             // 
             this.btnChuyenXuong.BorderColor = System.Drawing.Color.Transparent;
+            this.btnChuyenXuong.BorderRadius = 10;
             this.btnChuyenXuong.BorderThickness = 2;
             this.btnChuyenXuong.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnChuyenXuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

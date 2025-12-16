@@ -44,6 +44,8 @@
             this.txtMaPhieuMuon = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.grbTinhTrangSach = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboTruong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -64,8 +66,6 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboTruong = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.grbPhieuMuon.SuspendLayout();
             this.grbTinhTrangSach.SuspendLayout();
             this.panelCuonSach.SuspendLayout();
@@ -92,6 +92,7 @@
             // 
             // txtKieuMuon
             // 
+            this.txtKieuMuon.BorderRadius = 6;
             this.txtKieuMuon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKieuMuon.DefaultText = "";
             this.txtKieuMuon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -122,6 +123,7 @@
             // 
             // txtMaDG
             // 
+            this.txtMaDG.BorderRadius = 6;
             this.txtMaDG.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaDG.DefaultText = "";
             this.txtMaDG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -152,6 +154,7 @@
             // 
             // txtMaPhieuMuon
             // 
+            this.txtMaPhieuMuon.BorderRadius = 6;
             this.txtMaPhieuMuon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPhieuMuon.DefaultText = "";
             this.txtMaPhieuMuon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -197,6 +200,36 @@
             this.grbTinhTrangSach.TabStop = false;
             this.grbTinhTrangSach.Text = "Cuốn sách";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(26, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 25);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Tên trường";
+            // 
+            // cboTruong
+            // 
+            this.cboTruong.BackColor = System.Drawing.Color.Transparent;
+            this.cboTruong.BorderRadius = 6;
+            this.cboTruong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTruong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTruong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTruong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTruong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboTruong.ForeColor = System.Drawing.Color.Black;
+            this.cboTruong.ItemHeight = 49;
+            this.cboTruong.Items.AddRange(new object[] {
+            "Tên đầu sách",
+            "Mã sách"});
+            this.cboTruong.Location = new System.Drawing.Point(21, 66);
+            this.cboTruong.Name = "cboTruong";
+            this.cboTruong.Size = new System.Drawing.Size(170, 55);
+            this.cboTruong.TabIndex = 32;
+            this.cboTruong.SelectedIndexChanged += new System.EventHandler(this.cboTruong_SelectedIndexChanged);
+            // 
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -234,6 +267,7 @@
             // cboTrangThai
             // 
             this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 6;
             this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -365,6 +399,7 @@
             // btnXoa
             // 
             this.btnXoa.BorderColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BorderRadius = 10;
             this.btnXoa.BorderThickness = 2;
             this.btnXoa.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -387,6 +422,7 @@
             // btnLuu
             // 
             this.btnLuu.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLuu.BorderRadius = 10;
             this.btnLuu.BorderThickness = 2;
             this.btnLuu.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -421,6 +457,7 @@
             // btnChuyenXuong
             // 
             this.btnChuyenXuong.BorderColor = System.Drawing.Color.Transparent;
+            this.btnChuyenXuong.BorderRadius = 10;
             this.btnChuyenXuong.BorderThickness = 2;
             this.btnChuyenXuong.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnChuyenXuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -532,36 +569,7 @@
             this.TinhTrangMuon.HeaderText = "Tình trạng mượn";
             this.TinhTrangMuon.MinimumWidth = 9;
             this.TinhTrangMuon.Name = "TinhTrangMuon";
-            this.TinhTrangMuon.Width = 225;
-            // 
-            // cboTruong
-            // 
-            this.cboTruong.BackColor = System.Drawing.Color.Transparent;
-            this.cboTruong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboTruong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTruong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTruong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTruong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cboTruong.ForeColor = System.Drawing.Color.Black;
-            this.cboTruong.ItemHeight = 49;
-            this.cboTruong.Items.AddRange(new object[] {
-            "Tên đầu sách",
-            "Mã sách"});
-            this.cboTruong.Location = new System.Drawing.Point(21, 66);
-            this.cboTruong.Name = "cboTruong";
-            this.cboTruong.Size = new System.Drawing.Size(170, 55);
-            this.cboTruong.TabIndex = 32;
-            this.cboTruong.SelectedIndexChanged += new System.EventHandler(this.cboTruong_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 25);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Tên trường";
+            this.TinhTrangMuon.Width = 230;
             // 
             // frmNhapSach
             // 
@@ -614,15 +622,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grbCuonSach;
         private System.Windows.Forms.DataGridView dgvSachMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TienCoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrangMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
         private Guna.UI2.WinForms.Guna2ComboBox cboTruong;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TienCoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrangMuon;
     }
 }

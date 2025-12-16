@@ -20,6 +20,7 @@ namespace QL_ThuVien.Main_UC.QLSach
         SqlDataAdapter adapter;
         DataTable dt;
         DataView dv;
+        DataView dvCuonSach;
         bool addNewFlag = false;
 
         string role;
@@ -47,6 +48,7 @@ namespace QL_ThuVien.Main_UC.QLSach
             showCuonSach();
         }
 
+
         private void showCuonSach()
         {
             using (con = new SqlConnection(strCon))
@@ -55,8 +57,10 @@ namespace QL_ThuVien.Main_UC.QLSach
                 adapter = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 adapter.Fill(dt);
+
+                dvCuonSach = new DataView(dt);
+                dgvCuonSach.DataSource = dvCuonSach;  // ← Đổi từ dt → dvCuonSach
             }
-            dgvCuonSach.DataSource = dt;
         }
         private void showDauSach()
         {
@@ -141,6 +145,7 @@ namespace QL_ThuVien.Main_UC.QLSach
             {
                 int i = dgvDauSach.CurrentRow.Index;
                 var maDauSachCell = dgvDauSach.Rows[i].Cells["MaDauSach"].Value;
+
                 if (maDauSachCell != null && !string.IsNullOrWhiteSpace(maDauSachCell.ToString()))
                 {
                     selectedMaDauSach = maDauSachCell.ToString();
@@ -154,9 +159,15 @@ namespace QL_ThuVien.Main_UC.QLSach
                             adapter.SelectCommand.Parameters.AddWithValue("@MaDauSach", selectedMaDauSach);
                             dt = new DataTable();
                             adapter.Fill(dt);
-                            dgvCuonSach.DataSource = dt;
+
+                            // ✅ THAY ĐỔI:  Tạo DataView thay vì gán trực tiếp
+                            dvCuonSach = new DataView(dt);
+                            dgvCuonSach.DataSource = dvCuonSach;
                         }
                     }
+
+                    // ✅ THÊM: Apply filter hiện tại
+                    ApplyFilterCuonSach();
                 }
                 else
                 {
@@ -396,6 +407,8 @@ namespace QL_ThuVien.Main_UC.QLSach
 
         private void dgvDauSach_SelectionChanged_1(object sender, EventArgs e)
         {
+            cboTrangThai.SelectedIndex = 0;
+            txtSearch2.Text = string.Empty;
             ShowCuonSach_DauSach();
         }
 
@@ -410,5 +423,39 @@ namespace QL_ThuVien.Main_UC.QLSach
                 txtSearch.PlaceholderText = "Nhập tên đầu sách để tìm kiếm";
             }
         }
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilterCuonSach();
+        }
+
+        private void cboTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplyFilterCuonSach();
+        }
+        private void ApplyFilterCuonSach()
+        {
+            if (dvCuonSach == null) return;
+
+            List<string> filters = new List<string>();
+
+            // Lọc theo trạng thái
+            if (cboTrangThai.SelectedIndex > 0)  // Không phải "Tất cả"
+            {
+                string trangThai = cboTrangThai.SelectedItem.ToString();
+                filters.Add($"TinhTrang = '{trangThai}'");
+            }
+
+            // Lọc theo tìm kiếm (Mã sách)
+            string searchText = txtSearch2.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                filters.Add($"MaSach LIKE '%{searchText}%'");
+            }
+
+            // Apply filter
+            dvCuonSach.RowFilter = string.Join(" AND ", filters);
+        }
+
     }
 }

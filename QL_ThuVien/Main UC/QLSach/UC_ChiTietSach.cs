@@ -53,6 +53,8 @@ namespace QL_ThuVien.Main_UC.QLSach
             cboNXB.SelectedIndexChanged += FilterData;
             cboKho.SelectedIndexChanged += FilterData;
             txtSearch.TextChanged += FilterData;
+
+            lblTongSo.Text = dgvChiTietDauSach.Rows.Count.ToString();
         }
 
         private void FilterData(object sender, EventArgs e)
@@ -81,6 +83,7 @@ namespace QL_ThuVien.Main_UC.QLSach
 
             // Áp dụng bộ lọc vào DataView
             dv.RowFilter = filter;
+            lblTongSo.Text = dgvChiTietDauSach.Rows.Count.ToString();
         }
 
         private void LoadComboBox(ComboBox cbo, string tableName, string columnName)

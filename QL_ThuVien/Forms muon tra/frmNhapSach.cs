@@ -446,11 +446,8 @@ namespace QL_ThuVien
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadSachMuon(MaPhieuMuon);
                 }
-                else
-                {
-                    MessageBox.Show("Không có dữ liệu nào được cập nhật!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {

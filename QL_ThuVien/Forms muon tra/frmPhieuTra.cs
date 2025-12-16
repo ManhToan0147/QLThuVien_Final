@@ -269,8 +269,10 @@ namespace QL_ThuVien
         {
             if (dgvSachPhat.Rows.Count == 0)
             {
-                MessageBox.Show("Không có dữ liệu để lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                //MessageBox.Show("Không có dữ liệu để lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //return;
             }
             using (SqlConnection con = new SqlConnection(strCon))
             {
@@ -308,6 +310,8 @@ namespace QL_ThuVien
 
                     MessageBox.Show("Lưu dữ liệu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadSachPhat();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 catch (Exception ex)
                 {

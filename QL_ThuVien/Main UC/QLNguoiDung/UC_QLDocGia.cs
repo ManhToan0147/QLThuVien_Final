@@ -43,9 +43,15 @@ namespace QL_ThuVien.Main_UC.QLDocGia
             SetupComboBoxTrangThai();
             AutoUpdateTrangThaiDocGia();
             LoadDocGia();
-
+            UpdateTongSo();
             EnableButtons(true, true, true, true);
         }
+
+        private void UpdateTongSo()
+        {
+            lblTongSo.Text = dgvDocGia.Rows.Count.ToString();
+        }
+
 
         // ✅ HÀM TỰ ĐỘNG CẬP NHẬT TRẠNG THÁI ĐỘC GIẢ
         private void AutoUpdateTrangThaiDocGia()
@@ -483,6 +489,7 @@ namespace QL_ThuVien.Main_UC.QLDocGia
                             // ✅ TẮT CỜ TẠO MỚI
                             isCreatingNew = false;
                             LoadDocGia();
+                            ApplyFilter();
 
                             // ✅ CHỌN DÒNG CUỐI CÙNG (vừa thêm)
                             int lastRowIndex = dgvDocGia.RowCount - 1;
@@ -505,6 +512,7 @@ namespace QL_ThuVien.Main_UC.QLDocGia
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            // === VALIDATION ===
             if (string.IsNullOrEmpty(selectedMaDocGia))
             {
                 MessageBox.Show("Chưa chọn bản ghi để sửa", "Thông báo",
@@ -528,9 +536,10 @@ namespace QL_ThuVien.Main_UC.QLDocGia
                 return;
             }
 
-            int currentIndex = dgvDocGia.CurrentRow.Index;
-            int currentScrollIndex = dgvDocGia.FirstDisplayedScrollingRowIndex;
+            // === LƯU MÃ ĐỘC GIẢ ===
+            string currentMaDG = selectedMaDocGia;
 
+            // === UPDATE DATABASE ===
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 con.Open();
@@ -541,17 +550,17 @@ namespace QL_ThuVien.Main_UC.QLDocGia
                 string ngayHan = dateNgayHan.Value.ToString("yyyy-MM-dd");
 
                 string sql = @"UPDATE DocGia 
-                               SET HoTen = @HoTen, 
-                                   HinhAnh = @HinhAnh,
-                                   GioiTinh = @GioiTinh,
-                                   NgaySinh = @NgaySinh,
-                                   Email = @Email, 
-                                   SoDienThoai = @SoDienThoai, 
-                                   NgheNghiep = @NgheNghiep, 
-                                   NgayCapThe = @NgayCapThe, 
-                                   NgayHanThe = @NgayHanThe,
-                                   TrangThai = @TrangThai
-                               WHERE MaDocGia = @MaDocGia";
+                       SET HoTen = @HoTen, 
+                           HinhAnh = @HinhAnh,
+                           GioiTinh = @GioiTinh,
+                           NgaySinh = @NgaySinh,
+                           Email = @Email, 
+                           SoDienThoai = @SoDienThoai, 
+                           NgheNghiep = @NgheNghiep, 
+                           NgayCapThe = @NgayCapThe, 
+                           NgayHanThe = @NgayHanThe,
+                           TrangThai = @TrangThai
+                       WHERE MaDocGia = @MaDocGia";
 
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
@@ -578,42 +587,91 @@ namespace QL_ThuVien.Main_UC.QLDocGia
                     {
                         MessageBox.Show("Cập nhật thất bại.", "Lỗi",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                 }
             }
 
+            // === LOAD LẠI DỮ LIỆU ===
             LoadDocGia();
-            dgvDocGia.ClearSelection();
-            dgvDocGia.CurrentCell = dgvDocGia.Rows[currentIndex].Cells[0];
+            ApplyFilter();
 
-            // ✅ GIỮ NGUYÊN VỊ TRÍ SCROLL (QUAN TRỌNG!)
-            if (currentScrollIndex >= 0 && currentScrollIndex < dgvDocGia.Rows.Count)
+            // === TÌM DÒNG VỪA SỬA ===
+            int newIndex = -1;
+            foreach (DataGridViewRow row in dgvDocGia.Rows)
             {
-                dgvDocGia.FirstDisplayedScrollingRowIndex = currentScrollIndex;
+                if (row.Cells["MaDocGia"].Value?.ToString() == currentMaDG)
+                {
+                    newIndex = row.Index;
+                    break;
+                }
             }
+
+            // === CHỌN LẠI DÒNG ===
+            if (newIndex >= 0)
+            {
+                // ✅ TÌM THẤY → Chọn lại dòng đó
+                dgvDocGia.ClearSelection();
+                dgvDocGia.CurrentCell = dgvDocGia.Rows[newIndex].Cells[0];
+            }
+            else
+            {
+                // ✅ KHÔNG TÌM THẤY (bị ẩn do filter)
+                if (dgvDocGia.Rows.Count > 0)
+                {
+                    // ✅ CÒN DÒNG KHÁC → Chọn dòng đầu tiên
+                    dgvDocGia.ClearSelection();
+                    dgvDocGia.CurrentCell = dgvDocGia.Rows[0].Cells[0];
+                }
+                // ✅ KHÔNG CÒN DÒNG NÀO → Không làm gì (NapCT sẽ xử lý)
+            }
+
+            // === NẠP CHI TIẾT ===
             NapCT();
             EnableButtons(true, true, true, true);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string search = txtSearch.Text.Trim();
-            if (string.IsNullOrEmpty(search))
-            {
-                dv.RowFilter = "";
-            }
-            else
-            {
-                if (cboTruong.SelectedIndex == 0)
-                {
-                    dv.RowFilter = $"HoTen LIKE '%{search}%'";
-                }
-                else
-                {
-                    dv.RowFilter = $"MaDocGia LIKE '%{search}%'";
-                }
-            }
+            ApplyFilter();
         }
+        private void cboTrangThai2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+        }
+
+        private void ApplyFilter()
+        {
+            if (dv == null) return;
+
+            List<string> filters = new List<string>();
+
+            // === LỌC THEO TRẠNG THÁI ===
+            if (cboTrangThai2.SelectedIndex > 0)  // Không phải "Tất cả"
+            {
+                string trangThai = cboTrangThai2.SelectedItem.ToString();
+                filters.Add($"TrangThaiText = '{trangThai}'");
+            }
+
+            // === LỌC THEO TÌM KIẾM ===
+            string searchText = txtSearch.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                if (cboTruong.SelectedIndex == 0)  // Tìm theo Họ tên
+                {
+                    filters.Add($"HoTen LIKE '%{searchText}%'");
+                }
+                else  // Tìm theo Mã độc giả
+                {
+                    filters.Add($"MaDocGia LIKE '%{searchText}%'");
+                }
+            }
+
+            // === KẾT HỢP CÁC BỘ LỌC ===
+            dv.RowFilter = string.Join(" AND ", filters);
+            UpdateTongSo();
+        }
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -677,6 +735,7 @@ namespace QL_ThuVien.Main_UC.QLDocGia
                 }
 
                 LoadDocGia();
+                ApplyFilter();
 
                 if (dgvDocGia.Rows.Count > 0)
                 {

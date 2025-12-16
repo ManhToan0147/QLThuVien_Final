@@ -44,6 +44,7 @@
             this.MaNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbTTTT = new System.Windows.Forms.GroupBox();
+            this.txtMaNguoiDung = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboQuyen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnTaoMoi = new Guna.UI2.WinForms.Guna2Button();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.txtMaNguoiDung = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.grbTTTT.SuspendLayout();
@@ -65,6 +65,7 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.BorderColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BorderRadius = 10;
             this.btnXoa.BorderThickness = 2;
             this.btnXoa.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -88,6 +89,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSua.BorderRadius = 10;
             this.btnSua.BorderThickness = 2;
             this.btnSua.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -111,6 +113,7 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThem.BorderRadius = 10;
             this.btnThem.BorderThickness = 2;
             this.btnThem.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -260,9 +263,31 @@
             this.grbTTTT.TabStop = false;
             this.grbTTTT.Text = "Thông tin tài khoản";
             // 
+            // txtMaNguoiDung
+            // 
+            this.txtMaNguoiDung.BorderRadius = 6;
+            this.txtMaNguoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNguoiDung.DefaultText = "";
+            this.txtMaNguoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaNguoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaNguoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNguoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNguoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNguoiDung.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNguoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNguoiDung.Location = new System.Drawing.Point(1182, 56);
+            this.txtMaNguoiDung.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtMaNguoiDung.Name = "txtMaNguoiDung";
+            this.txtMaNguoiDung.PlaceholderText = "";
+            this.txtMaNguoiDung.SelectedText = "";
+            this.txtMaNguoiDung.Size = new System.Drawing.Size(485, 54);
+            this.txtMaNguoiDung.TabIndex = 15;
+            // 
             // cboQuyen
             // 
             this.cboQuyen.BackColor = System.Drawing.Color.Transparent;
+            this.cboQuyen.BorderRadius = 6;
             this.cboQuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboQuyen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -282,6 +307,7 @@
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.BorderRadius = 6;
             this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhau.DefaultText = "";
             this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -332,6 +358,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderRadius = 6;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -362,6 +389,7 @@
             // 
             // txtTenDN
             // 
+            this.txtTenDN.BorderRadius = 6;
             this.txtTenDN.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDN.DefaultText = "";
             this.txtTenDN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -394,6 +422,7 @@
             // 
             this.btnTaoMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTaoMoi.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTaoMoi.BorderRadius = 10;
             this.btnTaoMoi.BorderThickness = 2;
             this.btnTaoMoi.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnTaoMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -423,26 +452,6 @@
             this.lblTaiKhoan.Size = new System.Drawing.Size(512, 65);
             this.lblTaiKhoan.TabIndex = 14;
             this.lblTaiKhoan.Text = "QUẢN LÝ TÀI KHOẢN";
-            // 
-            // txtMaNguoiDung
-            // 
-            this.txtMaNguoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNguoiDung.DefaultText = "";
-            this.txtMaNguoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaNguoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaNguoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNguoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNguoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNguoiDung.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNguoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNguoiDung.Location = new System.Drawing.Point(1182, 56);
-            this.txtMaNguoiDung.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtMaNguoiDung.Name = "txtMaNguoiDung";
-            this.txtMaNguoiDung.PlaceholderText = "";
-            this.txtMaNguoiDung.SelectedText = "";
-            this.txtMaNguoiDung.Size = new System.Drawing.Size(485, 54);
-            this.txtMaNguoiDung.TabIndex = 15;
             // 
             // UC_QLTaiKhoan
             // 

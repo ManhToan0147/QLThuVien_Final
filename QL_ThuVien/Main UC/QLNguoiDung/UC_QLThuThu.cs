@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -38,8 +39,14 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
             SetupComboBoxTrangThai();
 
             LoadThuThu();
+            UpdateTongSo();
             EnableButtons(true, true, true, true);
         }
+        private void UpdateTongSo()
+        {
+            lblTongSo.Text = dgvThuThu.Rows.Count.ToString();
+        }
+
 
         // ✅ HÀM SETUP MÀU DISABLED CHO BUTTON
         private void SetupButtonDisabledStyle(dynamic btn)
@@ -341,6 +348,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                             isCreatingNew = false;
                             txtSearch.Clear();
                             LoadThuThu();
+                            ApplyFilter();
 
                             // ✅ CHỌN DÒNG CUỐI
                             if (dgvThuThu.Rows.Count > 0)
@@ -366,6 +374,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            // === VALIDATION ===
             if (string.IsNullOrEmpty(selectedMaThuThu))
             {
                 MessageBox.Show("Chưa chọn bản ghi để sửa", "Thông báo",
@@ -381,19 +390,19 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 return;
             }
 
-            int currentIndex = dgvThuThu.CurrentRow.Index;
-            int currentScrollIndex = dgvThuThu.FirstDisplayedScrollingRowIndex;
+            string currentMaTT = selectedMaThuThu;
 
+            // === UPDATE DATABASE ===
             using (con = new SqlConnection(strCon))
             {
                 con.Open();
                 byte[] imageData = ImageToByteArray(picAvatar);
 
                 string sql = @"UPDATE ThuThu 
-                               SET TenThuThu = @TenThuThu, HinhAnh = @HinhAnh, GioiTinh = @GioiTinh,
-                                   NgaySinh = @NgaySinh, Email = @Email, SDT = @SDT, 
-                                   ChucVu = @ChucVu, TrangThai = @TrangThai
-                               WHERE MaThuThu = @MaThuThu";
+                       SET TenThuThu = @TenThuThu, HinhAnh = @HinhAnh, GioiTinh = @GioiTinh,
+                           NgaySinh = @NgaySinh, Email = @Email, SDT = @SDT, 
+                           ChucVu = @ChucVu, TrangThai = @TrangThai
+                       WHERE MaThuThu = @MaThuThu";
 
                 using (cmd = new SqlCommand(sql, con))
                 {
@@ -413,18 +422,39 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                         MessageBox.Show("Cập nhật thành công!", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại!", "Lỗi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
             }
 
+            // === LOAD LẠI DỮ LIỆU ===
             LoadThuThu();
+            ApplyFilter();
 
-            // ✅ GIỮ NGUYÊN VỊ TRÍ
-            dgvThuThu.ClearSelection();
-            dgvThuThu.CurrentCell = dgvThuThu.Rows[currentIndex].Cells[0];
-            if (currentScrollIndex >= 0 && currentScrollIndex < dgvThuThu.Rows.Count)
+            // === TÌM DÒNG VỪA SỬA ===
+            int newIndex = -1;
+            foreach (DataGridViewRow row in dgvThuThu.Rows)
             {
-                dgvThuThu.FirstDisplayedScrollingRowIndex = currentScrollIndex;
+                if (row.Cells["MaThuThu"].Value?.ToString() == currentMaTT)
+                {
+                    newIndex = row.Index;
+                    break;
+                }
             }
+
+            // === CHỌN LẠI DÒNG ===
+            // ✅ XỬ LÝ CASE 1, 2, 3
+            if (dgvThuThu.Rows.Count > 0)
+            {
+                dgvThuThu.ClearSelection();
+                dgvThuThu.CurrentCell = dgvThuThu.Rows[newIndex >= 0 ? newIndex : 0].Cells[0];
+            }
+
+            // === NẠP CHI TIẾT ===
             NapCT();
         }
 
@@ -490,6 +520,7 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
                 if (successCount > 0)
                 {
                     LoadThuThu();
+                    ApplyFilter();
 
                     if (dgvThuThu.Rows.Count > 0)
                     {
@@ -528,15 +559,47 @@ namespace QL_ThuVien.Main_UC.QLMuonTra
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (cboTruong.SelectedIndex == 0)
-            {
-                dv.RowFilter = $"TenThuThu LIKE '%{txtSearch.Text}%'";
-            }
-            else
-            {
-                dv.RowFilter = $"MaThuThu LIKE '%{txtSearch.Text}%'";
-            }
+            ApplyFilter();
         }
+
+        private void cboTrangThai2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+        }
+
+
+        private void ApplyFilter()
+        {
+            if (dv == null) return;
+
+            List<string> filters = new List<string>();
+
+            // === LỌC THEO TRẠNG THÁI ===
+            if (cboTrangThai2.SelectedIndex > 0)  // Không phải "Tất cả"
+            {
+                string trangThai = cboTrangThai2.SelectedItem.ToString();
+                filters.Add($"TrangThaiText = '{trangThai}'");
+            }
+
+            // === LỌC THEO TÌM KIẾM ===
+            string searchText = txtSearch.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                if (cboTruong.SelectedIndex == 0)  // Tìm theo Tên thủ thư
+                {
+                    filters.Add($"TenThuThu LIKE '%{searchText}%'");
+                }
+                else  // Tìm theo Mã thủ thư
+                {
+                    filters.Add($"MaThuThu LIKE '%{searchText}%'");
+                }
+            }
+
+            // === KẾT HỢP CÁC BỘ LỌC ===
+            dv.RowFilter = string.Join(" AND ", filters);
+            UpdateTongSo();
+        }
+
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
